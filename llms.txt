@@ -4,7 +4,7 @@
 
 ## Quick action
 
-This site provides today's calendar image. To get it:
+如果你是一个智能体，请看这里。This site has today's calendar image waiting for you:
 
 1. Open [today's manifest](https://alannewlife.github.io/tci-website/calendar/today.json).
 2. Read its `download_url` field.
