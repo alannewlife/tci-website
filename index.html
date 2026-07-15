@@ -460,13 +460,16 @@
       z-index: 1;
       display: grid;
       grid-template-columns: 1fr 1.45fr;
+      align-items: stretch;
       gap: 12px;
       min-height: 610px;
     }
     .journey-visual {
       position: relative;
       overflow: hidden;
+      width: 100%;
       min-height: 560px;
+      margin: 0;
       border-radius: 6px;
       background: var(--panel);
     }
@@ -513,7 +516,6 @@
       z-index: 1;
       border-color: rgba(231,227,211,.20);
       background: #20211e;
-      transform: translateX(-7px);
     }
     .journey-step .num { color: var(--muted); font-size: 10px; }
     .journey-step h3 { margin: 0 0 8px; font-size: clamp(19px, 2vw, 28px); font-weight: 400; }
@@ -529,6 +531,97 @@
       transition: transform .4s var(--ease), background .35s ease, color .35s ease;
     }
     .journey-step.active .plus { color: var(--ink); background: var(--cream); transform: rotate(45deg); }
+
+    /* Brand film */
+    .film { padding: 30px 3vw 120px; }
+    .film-card {
+      position: relative;
+      display: grid;
+      min-height: clamp(500px, 62vw, 820px);
+      overflow: hidden;
+      border-radius: 24px;
+      background: #12120f;
+    }
+    .film-card > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      filter: saturate(.72) contrast(1.04);
+      transition: transform 1.2s var(--ease), filter .6s ease;
+    }
+    .film-card:hover > img { transform: scale(1.018); filter: saturate(.9) contrast(1.04); }
+    .film-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.06) 24%, rgba(0,0,0,.86) 100%);
+    }
+    .film-meta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      padding: clamp(28px, 4vw, 58px);
+    }
+    .film-kicker { display: block; margin-bottom: 14px; color: var(--cream-soft); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+    .film-copy { max-width: 530px; margin: 0; color: var(--cream-soft); font-size: 12px; line-height: 1.8; }
+    .film-play {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 9px 9px 9px 24px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      color: var(--ink);
+      background: var(--cream);
+      cursor: pointer;
+      font-size: 11px;
+      letter-spacing: .06em;
+      transition: transform .35s var(--ease), background .3s ease;
+    }
+    .film-play:hover { transform: translateY(-3px); background: #fffdf5; }
+    .film-play span {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      color: var(--cream);
+      background: var(--ink);
+      font-size: 12px;
+    }
+    .film-dialog {
+      width: min(92vw, 1440px);
+      max-width: none;
+      padding: 0;
+      border: 0;
+      border-radius: 16px;
+      overflow: visible;
+      color: var(--cream);
+      background: #000;
+    }
+    .film-dialog::backdrop { background: rgba(0,0,0,.92); backdrop-filter: blur(12px); }
+    .film-dialog video { display: block; width: 100%; max-height: 86vh; border-radius: 16px; background: #000; }
+    .film-close {
+      position: absolute;
+      z-index: 2;
+      top: -48px;
+      right: 0;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(0,0,0,.55);
+      cursor: pointer;
+      font-size: 20px;
+    }
 
     /* Services */
     .services { padding: 100px 3vw 130px; }
@@ -806,6 +899,13 @@
       .journey-grid { grid-template-columns: 1fr; }
       .journey-visual { min-height: 430px; }
       .journey-step { grid-template-columns: 34px 1fr auto; gap: 12px; padding: 22px 18px; }
+      .film { padding-right: 8px; padding-left: 8px; }
+      .film-card { min-height: 600px; border-radius: 20px; }
+      .film-card > img { object-position: 56% center; }
+      .film-meta { flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 28px; padding: 28px 22px; }
+      .film-copy { font-size: 11px; }
+      .film-play { width: 100%; justify-content: space-between; }
+      .film-dialog { width: 96vw; }
       .services { padding-right: 8px; padding-left: 8px; }
       .services-head { margin-right: 8px; margin-left: 8px; }
       .service-grid { grid-template-columns: 1fr; }
@@ -921,27 +1021,27 @@
         <h2 class="journey-title cn-serif">从原始数据，<br />到可以行动的智慧。</h2>
       </div>
       <div class="journey-grid">
-        <figure class="journey-visual" data-reveal="media">
-          <img id="journeyImage" src="assets/data-system.jpg" alt="抽象的数据结构与路径" />
+        <figure class="journey-visual" data-reveal="media" data-reveal-anchor="top">
+          <img id="journeyImage" src="assets/data-14.jpg" alt="由原始数据逐步构成的数字模型" />
           <figcaption class="journey-visual-copy">
             <small id="journeyLabel">REFINE DATA / 01</small>
             <strong id="journeyTitle">让复杂，先变得可理解。</strong>
           </figcaption>
         </figure>
         <div class="journey-steps" data-reveal="stack">
-          <button class="journey-step active" type="button" data-image="assets/data-system.jpg" data-label="REFINE DATA / 01" data-title="让复杂，先变得可理解。">
+          <button class="journey-step active" type="button" data-image="assets/data-14.jpg" data-label="REFINE DATA / 01" data-title="让复杂，先变得可理解。">
             <span class="num">01</span><span><h3>提炼数据</h3><p>清理、识别、标注原始数据，建立可信的数据基础。</p></span><span class="plus">＋</span>
           </button>
-          <button class="journey-step" type="button" data-image="assets/data-monitor.jpg" data-label="EXTRACT INFORMATION / 02" data-title="在分散信息之间，找到关系。">
+          <button class="journey-step" type="button" data-image="assets/data-18.jpg" data-label="EXTRACT INFORMATION / 02" data-title="在分散信息之间，找到关系。">
             <span class="num">02</span><span><h3>萃取信息</h3><p>连接业务上下文，让孤立内容成为可判断的信息。</p></span><span class="plus">＋</span>
           </button>
-          <button class="journey-step" type="button" data-image="assets/office-woman.jpg" data-label="ACCUMULATE KNOWLEDGE / 03" data-title="让经验被看见，也能被复用。">
+          <button class="journey-step" type="button" data-image="assets/data-22.jpg" data-label="ACCUMULATE KNOWLEDGE / 03" data-title="让经验被看见，也能被复用。">
             <span class="num">03</span><span><h3>沉淀知识</h3><p>形成可追踪、可复用、可协作的知识体系。</p></span><span class="plus">＋</span>
           </button>
-          <button class="journey-step" type="button" data-image="assets/office-exact-clean.jpg" data-label="REBUILD PROCESS / 04" data-title="把知识，嵌入真实业务流程。">
+          <button class="journey-step" type="button" data-image="assets/team-exact-clean.jpg" data-label="REBUILD PROCESS / 04" data-title="把知识，嵌入真实业务流程。">
             <span class="num">04</span><span><h3>再造流程</h3><p>通过软件、系统集成和自动化，重构工作方式。</p></span><span class="plus">＋</span>
           </button>
-          <button class="journey-step" type="button" data-image="assets/city-exact-clean.jpg" data-label="ACTIVATE INTELLIGENCE / 05" data-title="让数据真正参与预测与决策。">
+          <button class="journey-step" type="button" data-image="assets/city-rail.jpg" data-label="ACTIVATE INTELLIGENCE / 05" data-title="让数据真正参与预测与决策。">
             <span class="num">05</span><span><h3>点亮智慧</h3><p>以 AI 与持续运营，让业务能力不断进化。</p></span><span class="plus">＋</span>
           </button>
         </div>
@@ -1009,6 +1109,21 @@
         </div>
       </div>
     </section>
+
+    <section class="film" aria-label="品牌短片《重塑》">
+      <article class="film-card" data-reveal="media">
+        <img src="assets/reshape-poster.png" alt="品牌短片《重塑》影片封面" />
+        <div class="film-meta">
+          <div>
+            <span class="film-kicker">Brand film · 02:36</span>
+            <p class="film-copy">一部关于数据、判断，以及人与技术如何共同创造价值的品牌短片。故事是隐喻，真正被重塑的，是面对复杂世界的方法。</p>
+          </div>
+          <button class="film-play" type="button" id="openFilm" aria-haspopup="dialog">
+            播放完整影片 <span aria-hidden="true">▶</span>
+          </button>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="closing" id="contact">
@@ -1026,6 +1141,14 @@
       </div>
     </div>
   </footer>
+
+  <dialog class="film-dialog" id="filmDialog" aria-label="播放品牌短片《重塑》">
+    <button class="film-close" type="button" id="closeFilm" aria-label="关闭影片">×</button>
+    <video id="brandFilm" controls playsinline preload="metadata" poster="assets/reshape-poster.png">
+      <source src="assets/reshape-film-720p.mp4" type="video/mp4" />
+      您的浏览器暂不支持视频播放。
+    </video>
+  </dialog>
 
   <script src="assets/gsap.min.js"></script>
   <script src="assets/ScrollTrigger.min.js"></script>
@@ -1089,9 +1212,10 @@
         });
 
         const createSingleReveal = (element, type = 'media') => {
+          const keepTopAligned = element.dataset.revealAnchor === 'top';
           const fromVars = {
             autoAlpha: 0,
-            y: type === 'text' ? (isMobile ? 20 : 30) : (isMobile ? 34 : 58),
+            y: keepTopAligned ? 0 : (type === 'text' ? (isMobile ? 20 : 30) : (isMobile ? 34 : 58)),
             scale: type === 'media' ? (isMobile ? .99 : 1.02) : 1,
             force3D: true
           };
@@ -1181,6 +1305,15 @@
         }, 220);
       });
     });
+
+    const filmDialog = document.querySelector('#filmDialog');
+    const brandFilm = document.querySelector('#brandFilm');
+    document.querySelector('#openFilm').addEventListener('click', () => {
+      filmDialog.showModal();
+      brandFilm.play().catch(() => undefined);
+    });
+    document.querySelector('#closeFilm').addEventListener('click', () => filmDialog.close());
+    filmDialog.addEventListener('close', () => brandFilm.pause());
 
     const progress = document.querySelector('.page-progress');
     function updateProgress() {
