@@ -5,6 +5,7 @@
   "content_type": "image/png",
   "download_url": "https://alannewlife.github.io/tci-website/calendar/2026-07-15.png",
   "url_template": "https://alannewlife.github.io/tci-website/calendar/{YYYY-MM-DD}.png",
+  "agent_action": "Return download_url to the user as the direct image link.",
   "availability": "published_dates_only",
   "instructions": "Replace {YYYY-MM-DD} with the requested calendar date in the Asia/Shanghai timezone. A 404 response means no poster is published for that date. This is a public read-only resource and requires no user data or side effects."
 }
