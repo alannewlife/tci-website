@@ -135,16 +135,6 @@
     }
     .pill-cta:hover .arrow { transform: rotate(-35deg) scale(1.06); }
 
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--cream-soft);
-      font-size: 12px;
-    }
-    .text-link span { transition: transform .3s var(--ease); }
-    .text-link:hover span { transform: translateX(4px); }
-
     .gsap-motion [data-reveal],
     .gsap-motion [data-reveal="stack"] > * {
       will-change: transform, opacity;
@@ -212,11 +202,11 @@
       top: 0;
       left: 50%;
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr;
       align-items: center;
       gap: 34px;
       width: min(1120px, calc(100% - 70px));
-      padding: 13px 16px 13px 22px;
+      padding: 13px 32px 13px 22px;
       transform: translateX(-50%);
       border: 1px solid rgba(255,255,255,.08);
       border-top: 0;
@@ -227,7 +217,9 @@
     }
     .brand {
       display: flex;
+      grid-column: 1;
       align-items: center;
+      justify-self: start;
       white-space: nowrap;
     }
     .brand-logo {
@@ -237,7 +229,9 @@
     }
     .nav-links {
       display: flex;
-      justify-content: center;
+      grid-column: 2;
+      justify-content: flex-end;
+      justify-self: end;
       gap: clamp(16px, 2.4vw, 34px);
     }
     .nav-links a {
@@ -264,19 +258,10 @@
     }
     .nav-links a:hover { color: var(--cream); }
     .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-    .nav-contact {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      color: var(--ink);
-      background: var(--cream);
-      font-size: 12px;
-      font-weight: 700;
-    }
     .menu-toggle {
       display: none;
+      grid-column: 2;
+      justify-self: end;
       width: 42px;
       height: 42px;
       border: 1px solid var(--line);
@@ -293,14 +278,12 @@
       left: 4.3%;
     }
     .hero-kicker,
-    .hero-title,
-    .hero-lower {
+    .hero-main {
       opacity: 0;
       animation: hero-arrive 1.05s var(--ease) forwards;
     }
     .hero-kicker { animation-delay: .18s; }
-    .hero-title { animation-delay: .30s; }
-    .hero-lower { animation-delay: .46s; }
+    .hero-main { animation-delay: .32s; }
     .hero-kicker {
       display: flex;
       align-items: center;
@@ -311,6 +294,12 @@
       color: rgba(231,227,211,.72);
       font-size: 10px;
       letter-spacing: .1em;
+    }
+    .hero-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(290px, .72fr);
+      align-items: end;
+      gap: clamp(42px, 6vw, 112px);
     }
     .hero-title {
       margin: 0;
@@ -323,7 +312,7 @@
     }
     .hero-title span { display: block; }
     .hero-title .second {
-      margin-left: 11vw;
+      margin-left: 0;
       color: transparent;
       -webkit-text-stroke: 1.5px rgba(231,227,211,.88);
     }
@@ -336,20 +325,6 @@
       font-size: .2em;
       font-style: italic;
       -webkit-text-stroke: 0;
-    }
-    .hero-lower {
-      display: grid;
-      grid-template-columns: 1.55fr .9fr;
-      align-items: end;
-      gap: 8vw;
-      margin-top: clamp(28px, 4vh, 50px);
-    }
-    .hero-cn {
-      margin: 0;
-      max-width: 720px;
-      font-size: clamp(25px, 3.2vw, 50px);
-      line-height: 1.18;
-      letter-spacing: -.045em;
     }
     .hero-side p {
       max-width: 430px;
@@ -379,8 +354,6 @@
       transition: width .35s var(--ease), background .35s ease;
     }
     .slide-dot.active { width: 52px; background: var(--cream); }
-    .slide-label { color: rgba(231,227,211,.55); font-size: 9px; letter-spacing: .17em; }
-
     /* Intro */
     .intro { padding: 125px 5vw 90px; }
     .intro-head {
@@ -852,12 +825,12 @@
     }
 
     @media (max-width: 1000px) {
-      .site-nav { width: calc(100% - 38px); grid-template-columns: auto 1fr auto; }
+      .site-nav { width: calc(100% - 38px); }
       .nav-links { gap: 14px; }
       .nav-links a { font-size: 12px; }
       .nav-links a:nth-child(4) { display: none; }
       .hero-title { font-size: 15vw; }
-      .hero-lower { grid-template-columns: 1.2fr 1fr; gap: 5vw; }
+      .hero-main { grid-template-columns: minmax(0, 1.2fr) minmax(260px, 1fr); gap: 5vw; }
       .service-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
       .service-card.visual { grid-row: auto; grid-column: 1 / -1; min-height: 500px; }
       .service-card.content { min-height: 300px; }
@@ -889,7 +862,6 @@
       .nav-links.open { transform: translateX(0); }
       .nav-links a,
       .nav-links a:nth-child(4) { display: block; font-size: 19px; }
-      .nav-contact { display: none; }
       .menu-toggle { position: relative; z-index: 40; display: grid; place-items: center; }
       .menu-toggle::before,
       .menu-toggle::after { content: ""; position: absolute; width: 16px; height: 1px; background: var(--cream); transition: transform .3s ease; }
@@ -900,11 +872,8 @@
       .hero-content { right: 20px; bottom: 30px; left: 20px; }
       .hero-kicker-note { display: none; }
       .hero-title { font-size: 20.7vw; line-height: .78; }
-      .hero-title .second { margin-left: 4vw; }
-      .hero-lower { display: block; margin-top: 30px; }
-      .hero-cn { font-size: 28px; }
-      .hero-side p { margin-top: 22px; font-size: 12px; }
-      .hero-actions { flex-wrap: wrap; }
+      .hero-main { display: block; }
+      .hero-side { display: none; }
       .hero-bottom { right: 20px; bottom: 18px; display: none; }
       .intro,
       .journey,
@@ -988,33 +957,29 @@
           <a href="#people">人与技术</a>
           <a href="#contact">关于我们</a>
         </div>
-        <a class="nav-contact" href="#contact">联系我们 <span>↗</span></a>
         <button class="menu-toggle" type="button" aria-label="切换导航" aria-expanded="false" aria-controls="navLinks"></button>
       </nav>
 
       <div class="hero-content">
         <div class="hero-kicker">
           <div class="eyebrow">People · Technology · Transformation</div>
-          <div class="hero-kicker-note">SUZHOU / SHANGHAI / JAPAN</div>
+          <div class="hero-kicker-note">SUZHOU / CHANGZHOU / SHANGHAI</div>
         </div>
-        <h1 class="hero-title" aria-label="Value, evolved">
-          <span>VALUE,</span>
-          <span class="second">EVOLVED<sup>＊</sup></span>
-        </h1>
-        <div class="hero-lower">
-          <p class="hero-cn cn-serif">让数据与技术，<br />持续创造价值。</p>
+        <div class="hero-main">
+          <h1 class="hero-title" aria-label="Value, evolved">
+            <span>VALUE,</span>
+            <span class="second">EVOLVED<sup>＊</sup></span>
+          </h1>
           <div class="hero-side">
             <p>从方案设计、软件开发与系统集成，到数据智能与持续运维。我们与客户一起，把复杂问题转化为可运行、可增长的业务能力。</p>
             <div class="hero-actions">
               <a class="pill-cta" href="#services">探索我们的能力 <span class="arrow">↗</span></a>
-              <a class="text-link" href="#value">了解我们的方式 <span>→</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="hero-bottom" aria-label="首屏视频切换">
-        <span class="slide-label">MOTION SEQUENCE</span>
         <div class="slide-dots">
           <button class="slide-dot active" type="button" aria-label="显示未来城市"></button>
           <button class="slide-dot" type="button" aria-label="显示人物进入城市"></button>
@@ -1249,10 +1214,10 @@
         }
 
         document.documentElement.classList.add('gsap-motion');
-        const scrub = isMobile ? .22 : .42;
+        const scrub = isMobile ? .34 : .58;
         let refreshPriority = 0;
 
-        const scrollConfig = (trigger, start = 'top 88%', end = 'top 48%') => ({
+        const scrollConfig = (trigger, start = 'top 92%', end = 'top 56%') => ({
           trigger,
           start: `clamp(${start})`,
           end: `clamp(${end})`,
@@ -1265,27 +1230,21 @@
           const keepTopAligned = element.dataset.revealAnchor === 'top';
           const fromVars = {
             autoAlpha: 0,
-            y: keepTopAligned ? 0 : (type === 'text' ? (isMobile ? 20 : 30) : (isMobile ? 34 : 58)),
-            scale: type === 'media' ? (isMobile ? .99 : 1.02) : 1,
+            x: type === 'text' && isDesktop ? -40 : 0,
+            y: keepTopAligned ? 0 : (type === 'text' ? (isMobile ? 36 : 68) : (isMobile ? 56 : 100)),
+            scale: type === 'media' ? (isMobile ? .965 : .93) : .985,
+            transformOrigin: '50% 100%',
             force3D: true
           };
           const toVars = {
             autoAlpha: 1,
+            x: 0,
             y: 0,
             scale: 1,
             duration: 1,
             ease: 'none',
             immediateRender: true
           };
-
-          if (isDesktop && type === 'text') {
-            fromVars.filter = 'blur(5px)';
-            toVars.filter = 'blur(0px)';
-          }
-          if (isDesktop && type === 'media') {
-            fromVars.clipPath = 'inset(0% 0% 10% 0% round 24px)';
-            toVars.clipPath = 'inset(0% 0% 0% 0% round 24px)';
-          }
 
           return gsap.timeline({
             scrollTrigger: scrollConfig(element)
@@ -1308,18 +1267,19 @@
           }
 
           gsap.timeline({
-            scrollTrigger: scrollConfig(element, 'top 90%', 'top 38%')
+            scrollTrigger: scrollConfig(element, 'top 94%', 'top 44%')
           }).fromTo(children, {
             autoAlpha: 0,
-            y: isMobile ? 24 : 36,
-            scale: .985,
+            y: isMobile ? 46 : 84,
+            scale: isMobile ? .97 : .95,
+            transformOrigin: '50% 100%',
             force3D: true
           }, {
             autoAlpha: 1,
             y: 0,
             scale: 1,
-            duration: .52,
-            stagger: .13,
+            duration: .64,
+            stagger: .18,
             ease: 'none',
             immediateRender: true
           }, 0);
