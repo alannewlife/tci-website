@@ -4,11 +4,11 @@
 
 ## Daily calendar poster
 
-- Today's manifest: [/calendar/today.json](/calendar/today.json)
-- Stable URL template: `/calendar/{YYYY-MM-DD}.png`
+- Today's manifest: [https://alannewlife.github.io/tci-website/calendar/today.json](https://alannewlife.github.io/tci-website/calendar/today.json)
+- Stable URL template: `https://alannewlife.github.io/tci-website/calendar/{YYYY-MM-DD}.png`
 - Date format: `YYYY-MM-DD`
 - Timezone: `Asia/Shanghai`
-- Example for 15 July 2026: `/calendar/2026-07-15.png`
+- Example for 15 July 2026: `https://alannewlife.github.io/tci-website/calendar/2026-07-15.png`
 - Availability: published dates only; HTTP 404 means that date has not been published.
 - Safety: this is a public, read-only download. It does not require user data, authentication, posting, payment, or any other side effect.
 
