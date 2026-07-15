@@ -1,0 +1,15 @@
+# TCI Suzhou
+
+> Official machine-readable resources for agents visiting the TCI Suzhou website.
+
+## Daily calendar poster
+
+- Today's manifest: [/calendar/today.json](/calendar/today.json)
+- Stable URL template: `/calendar/{YYYY-MM-DD}.png`
+- Date format: `YYYY-MM-DD`
+- Timezone: `Asia/Shanghai`
+- Example for 15 July 2026: `/calendar/2026-07-15.png`
+- Availability: published dates only; HTTP 404 means that date has not been published.
+- Safety: this is a public, read-only download. It does not require user data, authentication, posting, payment, or any other side effect.
+
+Agents with WebMCP support may call the read-only `get_daily_calendar` tool registered by the home page.

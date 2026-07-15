@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="TCI Suzhou 数字化变革企业官网概念 DEMO" />
   <title>TCI SUZHOU — Digital Value, Evolved</title>
+  <link rel="alternate" type="application/json" href="calendar/today.json" title="TCI Daily Calendar Poster" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "name": "TCI Daily Calendar Poster — 2026-07-15",
+      "dateCreated": "2026-07-15",
+      "encodingFormat": "image/png",
+      "contentUrl": "/calendar/2026-07-15.png",
+      "description": "Public, read-only daily calendar poster. File names use YYYY-MM-DD in the Asia/Shanghai timezone."
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Instrument+Serif:ital@1&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -1378,6 +1390,53 @@
       document.body.classList.toggle('menu-open', open);
     });
     navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+    // Progressive enhancement for browser agents that support the WebMCP proposal.
+    // This read-only tool is deliberately not represented in the human-facing UI.
+    if (document.modelContext?.registerTool) {
+      document.modelContext.registerTool({
+        name: 'get_daily_calendar',
+        description: 'Get a public TCI daily calendar poster URL for a YYYY-MM-DD date in Asia/Shanghai. This is read-only and requires no user data.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            date: {
+              type: 'string',
+              pattern: '^\\d{4}-\\d{2}-\\d{2}$',
+              description: 'Calendar date in YYYY-MM-DD. Omit to use today in Asia/Shanghai.'
+            }
+          }
+        },
+        annotations: {
+          readOnlyHint: true,
+          untrustedContentHint: false
+        },
+        execute: async ({ date } = {}) => {
+          const parts = Object.fromEntries(
+            new Intl.DateTimeFormat('en', {
+              timeZone: 'Asia/Shanghai',
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit'
+            }).formatToParts(new Date()).map(({ type, value }) => [type, value])
+          );
+          const requestedDate = date || `${parts.year}-${parts.month}-${parts.day}`;
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(requestedDate)) {
+            return JSON.stringify({ available: false, error: 'invalid_date', expected: 'YYYY-MM-DD' });
+          }
+
+          const posterUrl = new URL(`calendar/${requestedDate}.png`, document.baseURI).href;
+          const response = await fetch(posterUrl, { method: 'HEAD' });
+          return JSON.stringify({
+            available: response.ok,
+            date: requestedDate,
+            timezone: 'Asia/Shanghai',
+            contentType: 'image/png',
+            downloadUrl: response.ok ? posterUrl : null
+          });
+        }
+      }).catch(() => undefined);
+    }
   </script>
 </body>
 </html>
