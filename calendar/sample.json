@@ -1,0 +1,13 @@
+{
+  "name": "TCI Daily Calendar Poster URL Format",
+  "sample_only": true,
+  "timezone": "Asia/Shanghai",
+  "date_format": "YYYY-MM-DD",
+  "filename_format": "YYYY-MM-DD.png",
+  "url_template": "https://alannewlife.github.io/tci-website/calendar/{YYYY-MM-DD}.png",
+  "sample_date": "2026-07-15",
+  "sample_filename": "2026-07-15.png",
+  "sample_url": "https://alannewlife.github.io/tci-website/calendar/2026-07-15.png",
+  "agent_action": "Determine the requested date, replace {YYYY-MM-DD} in url_template, and return the resulting image URL. Do not treat sample_date as today's date.",
+  "availability": "published_dates_only"
+}
