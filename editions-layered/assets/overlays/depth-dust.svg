@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1110 275) rotate(145) scale(620 440)">
+      <stop stop-color="#FFF3C5" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#FFF3C5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.8"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g fill="#FFF8DA" filter="url(#soft)">
+    <circle cx="1035" cy="148" r="3.2" opacity=".62"/>
+    <circle cx="1168" cy="208" r="1.8" opacity=".54"/>
+    <circle cx="1280" cy="301" r="2.5" opacity=".48"/>
+    <circle cx="965" cy="352" r="1.4" opacity=".48"/>
+    <circle cx="1370" cy="403" r="2.1" opacity=".42"/>
+    <circle cx="1182" cy="470" r="3.7" opacity=".34"/>
+    <circle cx="1440" cy="542" r="1.6" opacity=".56"/>
+    <circle cx="884" cy="561" r="2.1" opacity=".42"/>
+    <circle cx="1055" cy="643" r="1.3" opacity=".48"/>
+    <circle cx="1314" cy="688" r="2.6" opacity=".4"/>
+    <circle cx="740" cy="246" r="1.7" opacity=".34"/>
+    <circle cx="620" cy="397" r="2.4" opacity=".28"/>
+    <circle cx="420" cy="185" r="1.4" opacity=".34"/>
+    <circle cx="328" cy="615" r="2.2" opacity=".25"/>
+    <circle cx="560" cy="738" r="1.2" opacity=".38"/>
+  </g>
+  <g stroke="#FFF2BE" stroke-linecap="round">
+    <path d="M879 209l18-7" opacity=".22"/>
+    <path d="M1230 168l27-12" opacity=".2"/>
+    <path d="M1092 516l19-9" opacity=".16"/>
+    <path d="M1375 617l31-12" opacity=".18"/>
+    <path d="M706 486l17-6" opacity=".14"/>
+  </g>
+</svg>
