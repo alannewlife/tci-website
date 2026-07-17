@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="120" y1="175" x2="1480" y2="725" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0B3" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#FFE6A0" stop-opacity=".16"/>
+      <stop offset=".72" stop-color="#FFF4CD" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#FFF4CD" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="rough" x="-15%" y="-30%" width="130%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency=".007 .055" numOctaves="2" seed="17" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="28" xChannelSelector="R" yChannelSelector="B"/>
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+  <g stroke="url(#gold)" stroke-linecap="round" filter="url(#rough)">
+    <path d="M-120 640C260 430 382 315 771 320c342 4 536 158 966 27" stroke-width="48"/>
+    <path d="M-180 734C218 543 480 427 795 449c310 22 548 157 930 33" stroke-width="18" opacity=".72"/>
+    <path d="M-90 515C260 380 483 221 840 244c306 19 477 123 833 15" stroke-width="9" opacity=".46"/>
+  </g>
+</svg>
