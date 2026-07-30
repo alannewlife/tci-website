@@ -100,7 +100,7 @@ window.TCI_PAGES = {
         index: "04 / Representative cases",
         title: "代表案例",
         items: [
-          { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["本地部署", "知识库"] },
+          { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["本地部署", "知识库"], href: "cases/manufacturing-knowledge/" },
           { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", tags: ["制造", "系统内嵌AI"] },
           { title: "IT运维智能体平台", text: "把知识、工具与任务编排接入运维流程。", image: "cloud.jpg", tags: ["Agent", "AIOps"] }
         ]

@@ -815,6 +815,8 @@ img, video { display: block; max-width: 100%; }
 
 .case-card { min-height: 470px; }
 .case-card.featured { grid-column: span 2; }
+.case-card-static { cursor: default; }
+.case-card-static:hover img { transform: none; filter: saturate(.72) contrast(1.04); }
 
 .case-card-copy p {
   max-width: 520px;
