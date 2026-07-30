@@ -1525,11 +1525,6 @@ body[data-page] .quote-block {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .gsap-motion .reveal {
-    transition: none;
-    will-change: transform, opacity;
-  }
-
   .reveal {
     transition: transform .9s var(--ease), filter .9s var(--ease);
   }
@@ -1540,6 +1535,13 @@ body[data-page] .quote-block {
   .reveal.revealed {
     transform: translateY(0);
     filter: blur(0);
+  }
+
+  .gsap-motion .reveal,
+  .gsap-motion .reveal:not(.revealed) {
+    filter: none;
+    transition: none;
+    will-change: transform, opacity;
   }
 }
 
