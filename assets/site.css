@@ -1715,6 +1715,7 @@ body[data-page] .split-copy {
 }
 
 body[data-page] .related-section {
+  padding-bottom: 48px;
   color: var(--paper-ink);
   background: var(--paper-2);
 }
@@ -1734,6 +1735,14 @@ body[data-page] .related-card:hover {
   color: var(--paper-ink);
   border-color: var(--line-light);
   background: transparent;
+}
+
+body[data-page] .site-footer {
+  margin: 0;
+  padding-top: 48px;
+  border-top: 1px solid var(--line-light);
+  border-radius: 0;
+  background: var(--paper-2);
 }
 
 .footer-top {
@@ -2015,6 +2024,8 @@ body[data-page] .related-card:hover {
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .legal-nav { grid-template-columns: 1fr; }
   .site-footer { margin: 0 8px 8px; padding: 42px 25px; border-radius: 0 0 20px 20px; }
+  body[data-page] .related-section { padding-bottom: 36px; }
+  body[data-page] .site-footer { margin: 0; padding: 40px 25px; border-radius: 0; }
   .footer-title { margin-top: 45px; font-size: 44px; }
   .footer-links { grid-template-columns: 1fr 1fr; gap: 26px 16px; margin-top: 55px; }
   .footer-bottom { flex-direction: column; }
