@@ -446,6 +446,8 @@
 
   function renderSection(section, index) {
     const id = section.id || `section-${index + 1}`;
+    const lightSectionTypes = new Set(["cards", "timeline", "cases", "articles", "contact", "legal"]);
+    const tone = section.tone || (lightSectionTypes.has(section.type) ? "light" : "dark");
     let inner = "";
     if (section.type === "cards") inner = renderCards(section);
     if (section.type === "split") inner = renderSplit(section, index);
@@ -455,8 +457,7 @@
     if (section.type === "quote") inner = renderQuote(section);
     if (section.type === "contact") inner = renderContact();
     if (section.type === "legal") inner = renderLegal();
-    const useShell = section.type !== "quote" || true;
-    return `<section class="content-section ${index % 2 ? "alt" : ""}" id="${id}"><div class="page-shell">${inner}</div></section>`;
+    return `<section class="content-section section-${esc(section.type)} tone-${tone}" id="${id}"><div class="page-shell">${inner}</div></section>`;
   }
 
   function renderRelated(page) {
