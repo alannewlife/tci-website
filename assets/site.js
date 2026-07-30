@@ -39,6 +39,29 @@
     privacy: "privacy/"
   };
 
+  const pageContexts = {
+    capabilities: { key: "capabilities", group: "能力与服务", current: "能力总览", href: "capabilities/" },
+    "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "AI应用与智能体", href: "capabilities/" },
+    "capabilities-digital": { key: "capabilities", group: "能力与服务", current: "数字工程与系统开发", href: "capabilities/" },
+    "capabilities-manufacturing": { key: "capabilities", group: "能力与服务", current: "智能制造与机器人", href: "capabilities/" },
+    "capabilities-cloud": { key: "capabilities", group: "能力与服务", current: "云与智能运维", href: "capabilities/" },
+    industries: { key: "industries", group: "应用领域", current: "领域总览", href: "industries/" },
+    "industry-manufacturing": { key: "industries", group: "应用领域", current: "制造与物流", href: "industries/" },
+    "industry-enterprise": { key: "industries", group: "应用领域", current: "企业运营与专业业务", href: "industries/" },
+    "industry-it": { key: "industries", group: "应用领域", current: "IT与基础设施", href: "industries/" },
+    "how-we-work": { key: "delivery", group: "服务与交付", current: "合作与交付方式", href: "how-we-work/" },
+    cases: { key: "cases", group: "案例", current: "案例中心", href: "cases/" },
+    "case-detail": { key: "cases", group: "案例", current: "制造企业本地知识库", href: "cases/" },
+    insights: { key: "insights", group: "洞察", current: "洞察与新闻", href: "insights/" },
+    about: { key: "about", group: "关于我们", current: "公司介绍", href: "about/" },
+    "ai-transformation": { key: "about", group: "关于我们", current: "AI时代的苏州大宇宙", href: "about/" },
+    quality: { key: "about", group: "关于我们", current: "品质与安全", href: "about/" },
+    global: { key: "about", group: "关于我们", current: "集团与全球网络", href: "about/" },
+    careers: { key: "about", group: "关于我们", current: "招贤纳士", href: "about/" },
+    contact: { key: "contact", group: "联系", current: "联系我们", href: "contact/" },
+    privacy: { key: "legal", group: "网站信息", current: "隐私与法律", href: "privacy/" }
+  };
+
   const navGroups = [
     {
       id: "capabilities",
@@ -88,6 +111,8 @@
     const host = document.querySelector("#siteHeader");
     if (!host) return;
     const active = activeNavId();
+    const context = pageContexts[pageId];
+    if (context) body.dataset.context = context.key;
     const links = navGroups.map((group) => {
       const dropdown = group.items ? `
         <div class="nav-dropdown">
@@ -114,7 +139,14 @@
         <div class="nav-links" id="navLinks">${links}</div>
         <a class="nav-contact" href="${url("contact/")}">联系我们 <i>↗</i></a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span></button>
-      </nav>`;
+      </nav>
+      ${context ? `
+        <nav class="page-context" aria-label="当前位置">
+          <span class="page-context-line" aria-hidden="true"></span>
+          <a href="${url(context.href)}">${esc(context.group)}</a>
+          <span class="page-context-separator" aria-hidden="true">/</span>
+          <strong aria-current="page">${esc(context.current)}</strong>
+        </nav>` : ""}`;
 
     const toggle = host.querySelector("#menuToggle");
     const navLinks = host.querySelector("#navLinks");
