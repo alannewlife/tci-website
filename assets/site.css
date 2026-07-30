@@ -1481,7 +1481,7 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
 .site-footer {
   margin: 0 16px 16px;
   padding: clamp(55px, 7vw, 100px);
-  border-radius: 26px;
+  border-radius: 0 0 26px 26px;
   color: var(--ink);
   background: var(--cream);
 }
@@ -2014,7 +2014,7 @@ body[data-page] .related-card:hover {
   .article-card h3 { margin-top: 65px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .legal-nav { grid-template-columns: 1fr; }
-  .site-footer { margin: 0 8px 8px; padding: 42px 25px; border-radius: 20px; }
+  .site-footer { margin: 0 8px 8px; padding: 42px 25px; border-radius: 0 0 20px 20px; }
   .footer-title { margin-top: 45px; font-size: 44px; }
   .footer-links { grid-template-columns: 1fr 1fr; gap: 26px 16px; margin-top: 55px; }
   .footer-bottom { flex-direction: column; }
