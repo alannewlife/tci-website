@@ -495,12 +495,6 @@
     if (meta) meta.setAttribute("content", page.description);
     host.innerHTML = `
       ${renderHero(page)}
-      <section class="lead-section">
-        <div class="page-shell lead-grid">
-          <div class="section-index">Position / ${esc(page.eyebrow)}</div>
-          <p class="lead-copy cn-serif reveal">${page.lead}</p>
-        </div>
-      </section>
       ${(page.sections || []).map(renderSection).join("")}
       ${renderRelated(page)}`;
   }

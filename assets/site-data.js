@@ -294,7 +294,7 @@ window.TCI_PAGES = {
     nav: "industries",
     eyebrow: "Manufacturing & Logistics",
     title: "让现场看得见、连得上、能够持续改善",
-    description: "长期服务生产、仓储、品质、设备和现场运营场景，连接ERP、MES、WMS、IoT和作业人员。",
+    description: "连接生产、仓储、品质、设备与现场运营，让ERP、MES、WMS和IoT数据进入决策与执行，再逐步引入AI、自动化和机器人。",
     heroImage: "city-wide.jpg",
     cta: ["讨论现场课题", "contact/"],
     lead: "让数据真正进入决策与执行，逐步引入AI、自动化和机器人。",
@@ -431,7 +431,7 @@ window.TCI_PAGES = {
     eyebrow: "Case Stories",
     title: "从真实业务问题，到可验证的改善",
     description: "每一个案例都围绕客户问题、解决方式、系统连接、人机协作和实际结果展开。",
-    heroImage: "precise-encounter.jpg",
+    heroImage: "hero-cases-from-film.jpg",
     cta: ["查找相近经验", "#case-list"],
     lead: "先讲清楚客户的问题与改变，再说明技术如何进入流程。",
     sections: [
@@ -1083,8 +1083,8 @@ window.TCI_PAGES = {
     nav: "insights",
     eyebrow: "Insights & News",
     title: "来自AI、工程与真实业务现场的实践洞察",
-    description: "记录AI、智能制造、机器人、软件工程与运维实践中的方法、限制和案例。",
-    heroImage: "precise-data.jpg",
+    description: "记录AI、智能制造、机器人、软件工程与运维实践中的方法、限制和案例，帮助客户判断新技术如何进入真实业务。",
+    heroImage: "hero-insights-from-film.jpg",
     cta: ["浏览首批选题", "#insight-list"],
     lead: "帮助客户更清晰地判断，新技术如何进入业务。",
     sections: [

@@ -1155,24 +1155,6 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
   font-size: 10px;
 }
 
-.lead-section { padding: 115px 0 80px; }
-
-.lead-grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 32px;
-}
-
-.lead-copy {
-  max-width: 1030px;
-  margin: 0;
-  font-size: clamp(34px, 4.7vw, 66px);
-  line-height: 1.18;
-  letter-spacing: -.045em;
-}
-
-.lead-copy em { color: var(--amber); font-style: normal; }
-
 .content-section.alt {
   background: var(--ink-2);
 }
@@ -1491,11 +1473,11 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
  * They reuse the same visual language, but prioritize explanation and scanning.
  */
 body[data-page] .page-hero {
-  min-height: 74svh;
+  min-height: 100svh;
 }
 
 body[data-page] .page-hero-frame {
-  min-height: calc(74svh - 32px);
+  min-height: calc(100svh - 32px);
 }
 
 body[data-page] .page-hero-media img {
@@ -1503,19 +1485,16 @@ body[data-page] .page-hero-media img {
 }
 
 body[data-page] .page-hero-copy h1 {
-  max-width: 900px;
-  font-size: clamp(48px, 6.7vw, 96px);
+  max-width: 980px;
+  font-size: clamp(46px, 5.3vw, 82px);
   line-height: 1.04;
+  text-wrap: balance;
 }
 
 body[data-context="cases"]:not([data-page="cases"]) .page-hero-copy h1 {
   max-width: 780px;
   font-size: clamp(46px, 5.2vw, 76px);
   text-wrap: balance;
-}
-
-body[data-page] .lead-section {
-  padding: 90px 0 65px;
 }
 
 body[data-page] .content-section {
@@ -1920,7 +1899,6 @@ body[data-page] .site-footer {
   .nav-dropdown a { padding: 9px 0; }
   .home-hero-grid,
   .page-hero-content,
-  .lead-grid,
   .section-head { grid-template-columns: 1fr; }
   .home-hero-content { bottom: 72px; }
   .home-title { font-size: clamp(57px, 16vw, 104px); }
@@ -2011,8 +1989,6 @@ body[data-page] .site-footer {
   .page-hero-copy h1 { font-size: clamp(46px, 14vw, 68px); }
   .page-hero-content { gap: 26px; }
   .page-hero-aside p { font-size: 14px; }
-  .lead-section { padding-top: 85px; }
-  .lead-copy { font-size: 33px; }
   .data-card { min-height: 260px; }
   .split-copy { padding: 38px 26px; }
   .split-media { min-height: 400px; }
