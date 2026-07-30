@@ -17,18 +17,23 @@
   };
 
   const pageHref = {
-    capabilities: "capabilities/",
     "capabilities-ai": "capabilities/ai/",
     "capabilities-digital": "capabilities/digital-engineering/",
     "capabilities-manufacturing": "capabilities/smart-factory-robotics/",
     "capabilities-cloud": "capabilities/cloud-operations/",
-    industries: "industries/",
     "industry-manufacturing": "industries/manufacturing-logistics/",
     "industry-enterprise": "industries/enterprise-operations/",
     "industry-it": "industries/it-infrastructure/",
-    "how-we-work": "how-we-work/",
     cases: "cases/",
     "case-detail": "cases/manufacturing-knowledge/",
+    "case-mes-copilot": "cases/mes-query-copilot/",
+    "case-pharma-contract": "cases/pharma-budget-contract-generation/",
+    "case-it-operations-agent": "cases/it-operations-agent-platform/",
+    "case-smart-warehouse": "cases/smart-warehouse-paperless/",
+    "case-agv-kitting": "cases/agv-kitting-management/",
+    "case-outsystems": "cases/outsystems-business-platform/",
+    "case-sap-managed": "cases/sap-long-term-managed-services/",
+    "case-bi-analytics": "cases/bi-management-analytics/",
     about: "about/",
     "ai-transformation": "about/ai-transformation/",
     quality: "about/quality-security/",
@@ -40,18 +45,23 @@
   };
 
   const pageContexts = {
-    capabilities: { key: "capabilities", group: "能力与服务", current: "能力总览", href: "capabilities/" },
-    "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "AI应用与智能体", href: "capabilities/" },
-    "capabilities-digital": { key: "capabilities", group: "能力与服务", current: "数字工程与系统开发", href: "capabilities/" },
-    "capabilities-manufacturing": { key: "capabilities", group: "能力与服务", current: "智能制造与机器人", href: "capabilities/" },
-    "capabilities-cloud": { key: "capabilities", group: "能力与服务", current: "云与智能运维", href: "capabilities/" },
-    industries: { key: "industries", group: "应用领域", current: "领域总览", href: "industries/" },
-    "industry-manufacturing": { key: "industries", group: "应用领域", current: "制造与物流", href: "industries/" },
-    "industry-enterprise": { key: "industries", group: "应用领域", current: "企业运营与专业业务", href: "industries/" },
-    "industry-it": { key: "industries", group: "应用领域", current: "IT与基础设施", href: "industries/" },
-    "how-we-work": { key: "delivery", group: "服务与交付", current: "合作与交付方式", href: "how-we-work/" },
+    "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "AI应用与智能体", href: "index.html#capabilities" },
+    "capabilities-digital": { key: "capabilities", group: "能力与服务", current: "数字工程与系统开发", href: "index.html#capabilities" },
+    "capabilities-manufacturing": { key: "capabilities", group: "能力与服务", current: "智能制造与机器人", href: "index.html#capabilities" },
+    "capabilities-cloud": { key: "capabilities", group: "能力与服务", current: "云与智能运维", href: "index.html#capabilities" },
+    "industry-manufacturing": { key: "industries", group: "应用领域", current: "制造与物流", href: "index.html#industries" },
+    "industry-enterprise": { key: "industries", group: "应用领域", current: "企业运营与专业服务", href: "index.html#industries" },
+    "industry-it": { key: "industries", group: "应用领域", current: "IT与基础设施", href: "index.html#industries" },
     cases: { key: "cases", group: "案例", current: "案例中心", href: "cases/" },
     "case-detail": { key: "cases", group: "案例", current: "制造企业本地知识库", href: "cases/" },
+    "case-mes-copilot": { key: "cases", group: "案例", current: "MES辅助查询 Copilot", href: "cases/" },
+    "case-pharma-contract": { key: "cases", group: "案例", current: "医药估算合同生成", href: "cases/" },
+    "case-it-operations-agent": { key: "cases", group: "案例", current: "IT运维智能体平台", href: "cases/" },
+    "case-smart-warehouse": { key: "cases", group: "案例", current: "智能仓储与无纸化", href: "cases/" },
+    "case-agv-kitting": { key: "cases", group: "案例", current: "AGV与配膳管理", href: "cases/" },
+    "case-outsystems": { key: "cases", group: "案例", current: "OutSystems业务平台", href: "cases/" },
+    "case-sap-managed": { key: "cases", group: "案例", current: "SAP长期运维", href: "cases/" },
+    "case-bi-analytics": { key: "cases", group: "案例", current: "BI经营分析", href: "cases/" },
     insights: { key: "insights", group: "洞察", current: "洞察与新闻", href: "insights/" },
     about: { key: "about", group: "关于我们", current: "公司介绍", href: "about/" },
     "ai-transformation": { key: "about", group: "关于我们", current: "AI时代的苏州大宇宙", href: "about/" },
@@ -66,24 +76,20 @@
     {
       id: "capabilities",
       label: "能力与服务",
-      href: "capabilities/",
       items: [
-        ["01", "能力总览", "capabilities/"],
-        ["02", "AI应用与智能体", "capabilities/ai/"],
-        ["03", "数字工程与系统开发", "capabilities/digital-engineering/"],
-        ["04", "智能制造与机器人", "capabilities/smart-factory-robotics/"],
-        ["05", "云与智能运维", "capabilities/cloud-operations/"]
+        ["01", "AI应用与智能体", "capabilities/ai/"],
+        ["02", "数字工程与系统开发", "capabilities/digital-engineering/"],
+        ["03", "智能制造与机器人", "capabilities/smart-factory-robotics/"],
+        ["04", "云与智能运维", "capabilities/cloud-operations/"]
       ]
     },
     {
       id: "industries",
       label: "应用领域",
-      href: "industries/",
       items: [
-        ["01", "领域总览", "industries/"],
-        ["02", "制造与物流", "industries/manufacturing-logistics/"],
-        ["03", "企业运营与专业业务", "industries/enterprise-operations/"],
-        ["04", "IT与基础设施", "industries/it-infrastructure/"]
+        ["01", "制造与物流", "industries/manufacturing-logistics/"],
+        ["02", "企业运营与专业服务", "industries/enterprise-operations/"],
+        ["03", "IT与基础设施", "industries/it-infrastructure/"]
       ]
     },
     { id: "cases", label: "案例", href: "cases/" },
@@ -91,7 +97,6 @@
     {
       id: "about",
       label: "关于我们",
-      href: "about/",
       items: [
         ["01", "关于苏州大宇宙", "about/"],
         ["02", "AI时代的苏州大宇宙", "about/ai-transformation/"],
@@ -114,18 +119,22 @@
     const context = pageContexts[pageId];
     if (context) body.dataset.context = context.key;
     const links = navGroups.map((group) => {
+      const dropdownId = `nav-${group.id}-menu`;
       const dropdown = group.items ? `
-        <div class="nav-dropdown">
+        <div class="nav-dropdown" id="${dropdownId}">
           ${group.items.map(([index, label, href]) => `
             <a href="${url(href)}"><small>${index}</small><span>${esc(label)}</span></a>
           `).join("")}
         </div>` : "";
+      const control = group.items
+        ? `<button class="nav-link nav-root ${active === group.id ? "active" : ""}" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="${dropdownId}">
+            ${esc(group.label)}
+            <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor"/></svg>
+          </button>`
+        : `<a class="nav-link ${active === group.id ? "active" : ""}" href="${url(group.href)}">${esc(group.label)}</a>`;
       return `
         <div class="nav-item">
-          <a class="nav-link ${active === group.id ? "active" : ""}" href="${url(group.href)}">
-            ${esc(group.label)}
-            ${group.items ? `<svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor"/></svg>` : ""}
-          </a>
+          ${control}
           ${dropdown}
         </div>`;
     }).join("");
@@ -149,6 +158,26 @@
 
     const toggle = host.querySelector("#menuToggle");
     const navLinks = host.querySelector("#navLinks");
+    const closeRootMenus = (except = null) => {
+      navLinks?.querySelectorAll(".nav-item.expanded").forEach((item) => {
+        if (item === except) return;
+        item.classList.remove("expanded");
+        item.querySelector(".nav-root")?.setAttribute("aria-expanded", "false");
+      });
+    };
+    navLinks?.querySelectorAll(".nav-root").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const item = button.closest(".nav-item");
+        const open = !item.classList.contains("expanded");
+        closeRootMenus(item);
+        item.classList.toggle("expanded", open);
+        button.setAttribute("aria-expanded", String(open));
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (!host.contains(event.target)) closeRootMenus();
+    });
     toggle?.addEventListener("click", () => {
       const open = !navLinks.classList.contains("open");
       navLinks.classList.toggle("open", open);
@@ -156,6 +185,7 @@
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "关闭导航" : "打开导航");
       body.classList.toggle("menu-open", open);
+      if (!open) closeRootMenus();
     });
     navLinks?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
       navLinks.classList.remove("open");
@@ -180,7 +210,7 @@
       </div>
       <div class="footer-links">
         <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a></div>
-        <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
+        <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
         <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("about/ai-transformation/")}">AI时代的苏州大宇宙</a><a href="${url("careers/")}">招贤纳士</a></div>
         <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a><a href="${url("about/quality-security/")}">品质与安全</a></div>
         <div><h3>Contact</h3><a href="${url("contact/")}">联系我们</a><a href="${url("privacy/")}">隐私与法律</a><a href="${url("about/global-network/")}">集团与全球网络</a></div>
@@ -347,6 +377,10 @@
             <div class="field"><label for="email">工作邮箱 *</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
             <div class="field"><label for="phone">联系电话</label><input id="phone" name="phone" autocomplete="tel" /></div>
           </div>
+          <div class="form-row">
+            <div class="field"><label for="department">部门</label><input id="department" name="department" autocomplete="organization-title" /></div>
+            <div class="field"><label for="role">职位</label><input id="role" name="role" /></div>
+          </div>
           <div class="field">
             <label for="type">咨询类型 *</label>
             <select id="type" name="type" required>
@@ -359,7 +393,23 @@
               <option>其他</option>
             </select>
           </div>
+          <div class="field">
+            <label for="stage">当前阶段</label>
+            <select id="stage" name="stage">
+              <option value="">请选择</option>
+              <option>初步咨询</option>
+              <option>PoC / 试点</option>
+              <option>系统建设</option>
+              <option>既有系统升级</option>
+              <option>持续运维</option>
+            </select>
+          </div>
           <div class="field"><label for="message">当前问题或目标 *</label><textarea id="message" name="message" required placeholder="请先做概要说明，不要在演示表单中填写保密信息。"></textarea></div>
+          <div class="field"><label for="attachment">参考资料（可选）</label><input id="attachment" name="attachment" type="file" /></div>
+          <label class="consent-field" for="privacyConsent">
+            <input id="privacyConsent" name="privacyConsent" type="checkbox" required />
+            <span>我已阅读并同意<a href="${url("privacy/")}">隐私与信息使用说明</a>。*</span>
+          </label>
           <button class="pill-cta" type="submit">提交演示咨询 <span class="arrow">↗</span></button>
           <p class="demo-form-note" id="formStatus">演示版表单不会发送或保存数据。正式版需在上线前完成法务、安全和数据流程确认。</p>
         </form>

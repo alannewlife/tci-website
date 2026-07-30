@@ -49,7 +49,7 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["industries", "how-we-work", "cases"]
+    related: ["capabilities-ai", "industry-manufacturing", "cases"]
   },
 
   "capabilities-ai": {
@@ -101,12 +101,12 @@ window.TCI_PAGES = {
         title: "代表案例",
         items: [
           { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["本地部署", "知识库"], href: "cases/manufacturing-knowledge/" },
-          { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", tags: ["制造", "系统内嵌AI"] },
-          { title: "IT运维智能体平台", text: "把知识、工具与任务编排接入运维流程。", image: "cloud.jpg", tags: ["Agent", "AIOps"] }
+          { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", tags: ["制造", "系统内嵌AI"], href: "cases/mes-query-copilot/" },
+          { title: "IT运维智能体平台", text: "把知识、工具与任务编排接入运维流程。", image: "cloud.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" }
         ]
       }
     ],
-    related: ["capabilities-digital", "quality", "case-detail"]
+    related: ["case-mes-copilot", "case-pharma-contract", "quality"]
   },
 
   "capabilities-digital": {
@@ -153,7 +153,7 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["capabilities-ai", "how-we-work", "quality"]
+    related: ["case-outsystems", "case-sap-managed", "case-bi-analytics"]
   },
 
   "capabilities-manufacturing": {
@@ -205,7 +205,7 @@ window.TCI_PAGES = {
         text: "机器人落地不仅是设备导入。我们的角色，是连接任务来源、业务规则、调度、异常处理、系统接口与人员协作。"
       }
     ],
-    related: ["industry-manufacturing", "cases", "global"]
+    related: ["case-smart-warehouse", "case-agv-kitting", "industry-manufacturing"]
   },
 
   "capabilities-cloud": {
@@ -244,13 +244,13 @@ window.TCI_PAGES = {
         index: "03 / Representative cases",
         title: "代表案例",
         items: [
-          { title: "IT运维智能体平台", text: "连接知识、监控与标准运维工具。", image: "data-lattice.jpg", tags: ["AIOps", "Agent"] },
+          { title: "IT运维智能体平台", text: "连接知识、监控与标准运维工具。", image: "data-lattice.jpg", tags: ["AIOps", "Agent"], href: "cases/it-operations-agent-platform/" },
           { title: "大型客户长期运维", text: "网络、服务器与数据库的稳定服务体制。", image: "office-entry.jpg", tags: ["Managed Service", "Security"] },
           { title: "GPU与本地AI环境", text: "兼顾数据边界、性能、成本与持续运维。", image: "data-system.jpg", tags: ["Private AI", "GPU"] }
         ]
       }
     ],
-    related: ["industry-it", "quality", "how-we-work"]
+    related: ["case-it-operations-agent", "case-sap-managed", "quality"]
   },
 
   industries: {
@@ -269,7 +269,7 @@ window.TCI_PAGES = {
         columns: 3,
         items: [
           { title: "制造与物流", text: "生产、仓储、品质、设备、追溯、无纸化、自动化和机器人。", href: "industries/manufacturing-logistics/", tag: "01" },
-          { title: "企业运营与专业业务", text: "知识、文档、客户服务、人事、财务和专业工作流程。", href: "industries/enterprise-operations/", tag: "02" },
+          { title: "企业运营与专业服务", text: "知识、文档、客户服务、人事、财务和专业工作流程。", href: "industries/enterprise-operations/", tag: "02" },
           { title: "IT与基础设施", text: "云、网络、服务器、安全、服务台、AI环境与智能运维。", href: "industries/it-infrastructure/", tag: "03" }
         ]
       },
@@ -333,7 +333,7 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["capabilities-manufacturing", "cases", "how-we-work"]
+    related: ["case-smart-warehouse", "case-agv-kitting", "capabilities-manufacturing"]
   },
 
   "industry-enterprise": {
@@ -372,13 +372,13 @@ window.TCI_PAGES = {
         index: "03 / Representative cases",
         title: "代表案例",
         items: [
-          { title: "医药估算合同生成", text: "多智能体与人工复核协作处理复杂文档。", image: "data-18.jpg", tags: ["Document AI", "Human-in-the-loop"] },
+          { title: "医药估算合同生成", text: "多智能体与人工复核协作处理复杂文档。", image: "data-18.jpg", tags: ["Document AI", "Human-in-the-loop"], href: "cases/pharma-budget-contract-generation/" },
           { title: "招聘履历整理器", text: "从资料整理到岗位判断的智能辅助。", image: "office-team.jpg", tags: ["HR", "Agent"] },
           { title: "预算与经营分析", text: "连接数据、业务规则与管理判断。", image: "data-monitor.jpg", tags: ["BI", "Workflow"] }
         ]
       }
     ],
-    related: ["capabilities-ai", "capabilities-digital", "cases"]
+    related: ["case-pharma-contract", "case-outsystems", "case-bi-analytics"]
   },
 
   "industry-it": {
@@ -417,63 +417,13 @@ window.TCI_PAGES = {
         index: "03 / Representative cases",
         title: "代表案例",
         items: [
-          { title: "IT运维智能体平台", text: "把知识和工具接入运维任务。", image: "data-lattice.jpg", tags: ["Agent", "AIOps"] },
+          { title: "IT运维智能体平台", text: "把知识和工具接入运维任务。", image: "data-lattice.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" },
           { title: "网络与服务器长期运维", text: "以稳定体制支持大型客户持续运营。", image: "office-entry.jpg", tags: ["Managed Service", "Bilingual"] },
           { title: "AI / GPU服务器建设", text: "为本地AI提供可管理的运行环境。", image: "cloud.jpg", tags: ["Private AI", "Infrastructure"] }
         ]
       }
     ],
-    related: ["capabilities-cloud", "quality", "how-we-work"]
-  },
-
-  "how-we-work": {
-    nav: "how-we-work",
-    eyebrow: "How We Work",
-    title: "从业务问题出发，把方案带进真实流程",
-    description: "AI和数字化项目的价值不在于完成一个演示，而在于进入实际工作，并持续观察使用和效果。",
-    heroImage: "encounter-clean.jpg",
-    cta: ["从一次场景研讨开始", "contact/"],
-    lead: "共同理解业务、定义目标、验证方案，连接系统、数据、权限与人员流程。",
-    sections: [
-      {
-        type: "timeline",
-        index: "01 / Five stages",
-        title: "从问题到持续改善",
-        items: [
-          { year: "01", title: "理解与定义", text: "访谈、现场与流程理解、数据和系统盘点、成功标准。" },
-          { year: "02", title: "方案与验证", text: "技术选择、原型、PoC、价值与风险验证。" },
-          { year: "03", title: "建设与集成", text: "应用建设、数据处理、接口、权限与安全。" },
-          { year: "04", title: "上线与采用", text: "生产环境、培训、流程调整、人工复核与组织采用。" },
-          { year: "05", title: "运营与改善", text: "监控、效果评估、知识维护、成本与持续优化。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Joint team",
-        title: "业务与技术共同在场",
-        text: "复杂项目需要客户业务、IT团队、苏州大宇宙的行业与工程人员，以及专项伙伴形成联合团队。每一方都有清晰的角色和责任。",
-        image: "group.png",
-        bullets: ["客户业务负责人：目标、规则与组织采用", "客户IT团队：系统、数据、安全与生产环境", "TCI业务与行业人员：流程、场景与成功标准", "AI、软件、数据与基础设施工程师：方案建设与集成", "伙伴团队：机器人、模型、算法与专项产品"]
-      },
-      {
-        type: "cards",
-        index: "03 / Engagement models",
-        title: "按项目阶段选择合作方式",
-        columns: 4,
-        items: [
-          { title: "场景研讨 / 评估", text: "尚不清楚应从哪里开始，先共同梳理优先级。" },
-          { title: "PoC / 试点", text: "用有限范围验证价值、风险与技术可行性。" },
-          { title: "项目建设", text: "明确目标、范围、里程碑与上线责任。" },
-          { title: "长期运营 / ODC", text: "持续开发、运维、改善与能力沉淀。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Delivery principle",
-        text: "让方案不仅能够上线，也能够真正进入工作流程。"
-      }
-    ],
-    related: ["capabilities", "cases", "contact"]
+    related: ["case-it-operations-agent", "case-sap-managed", "capabilities-cloud"]
   },
 
   cases: {
@@ -493,14 +443,14 @@ window.TCI_PAGES = {
         title: "首批代表案例",
         items: [
           { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["制造与物流", "AI应用"], href: "cases/manufacturing-knowledge/" },
-          { title: "MES辅助查询 Copilot", text: "用自然语言查询和分析MES数据。", image: "data-monitor.jpg", tags: ["制造与物流", "AI应用"] },
-          { title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", tags: ["企业运营", "AI应用"] },
-          { title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", tags: ["IT与基础设施", "云与运维"] },
-          { title: "智能仓储与无纸化", text: "连接WMS、ERP、PDA、RFID与现场作业。", image: "city-rail.jpg", tags: ["制造与物流", "数字工程"] },
-          { title: "AGV与配膳管理", text: "通过系统、校验与调度改善现场搬运。", image: "city-c.jpg", tags: ["制造与物流", "机器人"] },
-          { title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "office-team.jpg", tags: ["企业运营", "数字工程"] },
-          { title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", tags: ["IT与基础设施", "数字工程"] },
-          { title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["企业运营", "数据分析"] }
+          { title: "MES辅助查询 Copilot", text: "用自然语言查询和分析MES数据。", image: "data-monitor.jpg", tags: ["制造与物流", "AI应用"], href: "cases/mes-query-copilot/" },
+          { title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", tags: ["企业运营", "AI应用"], href: "cases/pharma-budget-contract-generation/" },
+          { title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", tags: ["IT与基础设施", "云与运维"], href: "cases/it-operations-agent-platform/" },
+          { title: "智能仓储与无纸化", text: "连接WMS、ERP、PDA、RFID与现场作业。", image: "city-rail.jpg", tags: ["制造与物流", "数字工程"], href: "cases/smart-warehouse-paperless/" },
+          { title: "AGV与配膳管理", text: "通过系统、校验与调度改善现场搬运。", image: "city-c.jpg", tags: ["制造与物流", "机器人"], href: "cases/agv-kitting-management/" },
+          { title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "office-team.jpg", tags: ["企业运营", "数字工程"], href: "cases/outsystems-business-platform/" },
+          { title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", tags: ["IT与基础设施", "数字工程"], href: "cases/sap-long-term-managed-services/" },
+          { title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["企业运营", "数据分析"], href: "cases/bi-management-analytics/" }
         ]
       },
       {
@@ -509,7 +459,7 @@ window.TCI_PAGES = {
         text: "演示版中的案例名称与结果口径用于说明信息结构；正式发布前需完成客户授权、数字核实与保密审查。"
       }
     ],
-    related: ["case-detail", "capabilities", "industries"]
+    related: ["case-mes-copilot", "case-smart-warehouse", "case-it-operations-agent"]
   },
 
   "case-detail": {
@@ -560,6 +510,406 @@ window.TCI_PAGES = {
       }
     ],
     related: ["capabilities-ai", "industry-manufacturing", "cases"]
+  },
+
+  "case-mes-copilot": {
+    nav: "cases",
+    eyebrow: "Case / MES Copilot",
+    title: "让MES数据查询，进入自然语言工作流",
+    description: "围绕MES数据结构、业务规则与授权查询，构建可理解问题、检索依据并返回结果的辅助查询入口。",
+    heroImage: "data-monitor.jpg",
+    cta: ["讨论相似的制造数据场景", "contact/"],
+    lead: "不是绕过MES，而是让人员用更自然的方式进入已有数据与规则。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "制造现场 / MES数据查询与分析辅助。" },
+          { title: "原有课题", text: "字段与查询方式专业，业务人员获取信息依赖熟练用户。" },
+          { title: "解决方式", text: "数据结构整理、RAG规则检索、MCP编排与授权查询。" },
+          { title: "内容状态", text: "案例初稿；项目阶段、用户规模与量化结果发布前确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / The challenge",
+        title: "让问题表达与MES数据结构对齐",
+        text: "业务人员关心的是进度、异常和设备状态，而MES保存的是表、字段、编码和规则。项目首先需要把自然语言问题转换为可控的数据查询，并保留权限与业务口径。",
+        image: "data-system.jpg",
+        bullets: ["整理MES对象、字段关系与业务术语", "检索规则、口径和历史问题", "按授权范围编排查询工具", "返回结果、依据与必要的解释", "保留日志、异常与人工确认"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Implementation",
+        title: "从数据盘点到可验证查询",
+        items: [
+          { year: "01", title: "问题与数据盘点", text: "确认高频问题、用户角色、数据来源和权限边界。" },
+          { year: "02", title: "术语与规则整理", text: "建立业务语言、MES字段和计算口径之间的对应关系。" },
+          { year: "03", title: "RAG与工具编排", text: "组合知识检索、参数生成和授权查询能力。" },
+          { year: "04", title: "界面与系统连接", text: "把辅助查询入口嵌入可使用的业务界面。" },
+          { year: "05", title: "评测与改善", text: "持续检查查询正确性、使用效果和人工介入情况。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "页面只呈现已有资料能够支持的技术构成；效率、用户数与生产运行情况待项目负责人确认。"
+      }
+    ],
+    related: ["capabilities-ai", "capabilities-manufacturing", "industry-manufacturing"]
+  },
+
+  "case-pharma-contract": {
+    nav: "cases",
+    eyebrow: "Case / Document AI",
+    title: "让复杂估算与合同草稿，进入可复核流程",
+    description: "通过多智能体处理研究资料、预算与合同内容，在关键节点保留专业人员复核与最终责任。",
+    heroImage: "data-18.jpg",
+    cta: ["讨论复杂文档业务", "contact/"],
+    lead: "AI承担资料理解、整理与初稿，专业人员负责规则、判断和批准。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "医药专业服务 / 估算与合同文档生成。" },
+          { title: "原有课题", text: "资料复杂、规则多、跨文档核对耗时，且必须保持合规。" },
+          { title: "解决方式", text: "多智能体分工、结构化抽取、草稿生成和Human-in-the-Loop。" },
+          { title: "内容状态", text: "案例初稿；效率、准确率和合规口径发布前统一确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Human + AI",
+        title: "把复杂任务拆成可检查的步骤",
+        text: "项目没有让一个模型一次生成最终合同，而是把资料解析、条件抽取、预算组织、合同草稿和校验拆分为不同任务，在关键节点交由专业人员复核。",
+        image: "precise-data.jpg",
+        bullets: ["读取并整理研究资料与业务条件", "抽取关键字段、限制与缺失信息", "生成预算和合同结构化草稿", "对照规则进行一致性检查", "专业人员复核、修订与批准"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Workflow",
+        title: "从资料输入到人工批准",
+        items: [
+          { year: "01", title: "资料接收与分类", text: "识别文档类型、版本和必要输入。" },
+          { year: "02", title: "信息抽取与校验", text: "提取关键条件并标记缺失、冲突和不确定内容。" },
+          { year: "03", title: "多智能体协作", text: "分别处理估算、条款、生成和检查任务。" },
+          { year: "04", title: "人工复核", text: "专业人员确认业务判断、合规要求和最终文本。" },
+          { year: "05", title: "反馈与模板改善", text: "把修订结果反馈到规则、Prompt和知识资产中。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "现有资料中的90%、150%与450小时来自不同口径，未完成核实前不在页面组合为确定性成果。"
+      }
+    ],
+    related: ["capabilities-ai", "industry-enterprise", "quality"]
+  },
+
+  "case-it-operations-agent": {
+    nav: "cases",
+    eyebrow: "Case / AIOps Agent",
+    title: "把知识、监控与工具，接入统一运维入口",
+    description: "以智能体平台连接运维知识、监控信息和标准工具，辅助人员理解任务、获得建议并执行可控操作。",
+    heroImage: "data-lattice.jpg",
+    cta: ["讨论智能运维场景", "contact/"],
+    lead: "让重复任务更快完成，同时保留权限、审批、回滚和关键操作责任。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "IT基础设施 / 运维知识与标准任务。" },
+          { title: "原有课题", text: "入口分散、知识依赖专家、告警与重复操作占用时间。" },
+          { title: "解决方式", text: "统一入口、知识检索、任务编排、监控与工具连接。" },
+          { title: "内容状态", text: "案例初稿；生产状态、任务量和成功率发布前确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Platform",
+        title: "先理解任务，再调用被授权的工具",
+        text: "智能体根据人员请求和监控信息检索知识，生成处理建议，并在权限允许的范围内调用标准工具。高风险操作继续经过人工确认和审批。",
+        image: "cloud.jpg",
+        bullets: ["统一接收咨询、告警与标准任务", "检索SOP、历史工单和环境知识", "分析日志与运行状态", "编排脚本、API和运维工具", "记录审批、执行、结果与回滚"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Operating loop",
+        title: "形成可运营的任务闭环",
+        items: [
+          { year: "01", title: "任务分级", text: "定义可建议、可自动执行和必须人工处理的任务。" },
+          { year: "02", title: "知识与工具接入", text: "连接文档、工单、监控、脚本和系统接口。" },
+          { year: "03", title: "权限与审批", text: "按用户、环境和操作风险设置执行边界。" },
+          { year: "04", title: "执行与回滚", text: "记录参数、过程、结果和异常处理。" },
+          { year: "05", title: "评测与运营", text: "持续观察任务成功率、人工介入和知识更新。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "候选效率指标只作为内部评估线索；生产化状态、安全机制和运行数据确认后再对外使用。"
+      }
+    ],
+    related: ["capabilities-cloud", "industry-it", "quality"]
+  },
+
+  "case-smart-warehouse": {
+    nav: "cases",
+    eyebrow: "Case / Smart Warehouse",
+    title: "连接WMS、ERP与现场作业，形成可追溯闭环",
+    description: "以WMS为业务核心，连接ERP、PDA、条码与现场流程，减少纸质操作并提升库存与作业信息的一致性。",
+    heroImage: "city-rail.jpg",
+    cta: ["讨论仓储与无纸化场景", "contact/"],
+    lead: "让入库、出库、盘点和追溯，不再依赖分散表格与人工传递。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "制造与物流 / 仓储管理与现场无纸化。" },
+          { title: "原有课题", text: "纸质作业、重复录入、账实差异与追溯困难。" },
+          { title: "解决方式", text: "WMS、ERP联动、PDA、条码与标准现场流程。" },
+          { title: "内容状态", text: "A/B级素材；ROI、工时和回收期归属仍需核实。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Connected floor",
+        title: "让系统数据与仓库动作同步",
+        text: "项目把ERP中的业务计划与WMS作业连接起来，再通过PDA和条码把任务送到现场、把执行结果及时带回系统。",
+        image: "precise-city.jpg",
+        bullets: ["ERP与WMS间的计划、库存和实绩联动", "收货、上架、拣配、出库与盘点流程", "PDA和条码支持现场确认", "批次、库位与操作履历追溯", "异常、差异与补正形成闭环"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Implementation",
+        title: "从流程标准化到现场闭环",
+        items: [
+          { year: "01", title: "现状与差异盘点", text: "梳理账、物、单据和人员操作之间的差异。" },
+          { year: "02", title: "流程与主数据设计", text: "统一物料、库位、批次和作业规则。" },
+          { year: "03", title: "系统与终端建设", text: "连接ERP、WMS、PDA与条码设备。" },
+          { year: "04", title: "现场导入", text: "培训人员、验证异常流程并逐步替代纸质作业。" },
+          { year: "05", title: "指标与持续改善", text: "观察库存一致性、操作时间和追溯效果。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "现有资料包含ROI、工时和回收期候选数据，正式展示前需确认这些数字属于同一项目并取得客户授权。"
+      }
+    ],
+    related: ["capabilities-manufacturing", "industry-manufacturing", "case-agv-kitting"]
+  },
+
+  "case-agv-kitting": {
+    nav: "cases",
+    eyebrow: "Case / AGV & Kitting",
+    title: "让计划、配膳、校验与搬运形成系统闭环",
+    description: "通过计划数据、配膳管理、多层校验和AGV调度连接物料准备与现场搬运，降低错配和重复确认。",
+    heroImage: "city-c.jpg",
+    cta: ["讨论AGV与现场集成", "contact/"],
+    lead: "机器人落地不仅是设备导入，更需要业务规则、系统与异常处理共同工作。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "制造现场 / 配膳、校验与夜间搬运。" },
+          { title: "原有课题", text: "物料准备依赖人工确认，错配风险与搬运负担并存。" },
+          { title: "解决方式", text: "计划联动、配膳管理、四层校验、调度与AGV执行。" },
+          { title: "内容状态", text: "案例初稿；公司承担范围、上线状态与运行指标待确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / System + Robot",
+        title: "从任务来源一直连接到现场执行",
+        text: "上位系统生成物料需求，配膳系统组织任务并进行多层校验，调度系统再把确认后的搬运任务交给AGV执行，同时处理异常和人工介入。",
+        image: "city-wide.jpg",
+        bullets: ["计划与物料需求形成任务来源", "配膳、容器、工位和时间窗口管理", "多层校验减少错料与错送", "调度系统连接AGV执行端", "异常、暂停、恢复与人工接管"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Operation flow",
+        title: "让物料流动可计划、可校验、可追踪",
+        items: [
+          { year: "01", title: "任务生成", text: "从生产计划和物料需求生成配膳任务。" },
+          { year: "02", title: "备料与校验", text: "按工位、批次和容器完成准备与多层确认。" },
+          { year: "03", title: "调度与搬运", text: "根据优先级、路线和现场状态分配AGV。" },
+          { year: "04", title: "到达与交接", text: "确认工位、物料和任务状态。" },
+          { year: "05", title: "异常闭环", text: "处理阻塞、缺料、设备异常和人工接管。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "50工位夜间搬运场景与其他室外AGV运行数据属于不同材料，页面不把两组数据合并。"
+      }
+    ],
+    related: ["capabilities-manufacturing", "industry-manufacturing", "case-smart-warehouse"]
+  },
+
+  "case-outsystems": {
+    nav: "cases",
+    eyebrow: "Case / Low-code Platform",
+    title: "把分散的Excel预算流程，整合为统一业务平台",
+    description: "以OutSystems建设预算与预实管理平台，统一数据、流程和权限，并支持后续业务持续演进。",
+    heroImage: "office-team.jpg",
+    cta: ["讨论低代码与业务系统", "contact/"],
+    lead: "低代码的价值不只是开发更快，而是让分散流程形成可运营的系统。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "企业运营 / 预算与预实管理。" },
+          { title: "原有课题", text: "Excel分散、版本不一、汇总复杂，难以及时掌握经营变化。" },
+          { title: "解决方式", text: "OutSystems、统一数据、流程权限和管理界面。" },
+          { title: "内容状态", text: "B级素材；用户规模、流程范围与量化结果待确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Business platform",
+        title: "统一数据，也统一业务动作",
+        text: "项目不仅把Excel搬到网页，而是重新梳理预算编制、调整、审批、实绩导入和差异确认，让每个角色在同一套流程和数据口径中工作。",
+        image: "office-exact-clean.jpg",
+        bullets: ["预算编制、版本和期间管理", "审批、权限与角色控制", "实绩数据导入与预实比较", "提醒、查询和管理视图", "低代码平台上的持续迭代"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Delivery",
+        title: "从分散表格到持续演进平台",
+        items: [
+          { year: "01", title: "流程与表格盘点", text: "识别参与角色、版本、公式和审批路径。" },
+          { year: "02", title: "数据与权限设计", text: "统一数据模型、角色和业务规则。" },
+          { year: "03", title: "低代码快速建设", text: "分阶段完成核心页面、流程和接口。" },
+          { year: "04", title: "导入与验证", text: "迁移必要数据并与业务用户共同验证。" },
+          { year: "05", title: "运营与扩展", text: "根据使用反馈持续改进流程和分析能力。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "现有资料可支持技术栈、项目期间和业务变化；用户规模与量化成效需在发布前补充。"
+      }
+    ],
+    related: ["capabilities-digital", "industry-enterprise", "case-bi-analytics"]
+  },
+
+  "case-sap-managed": {
+    nav: "cases",
+    eyebrow: "Case / SAP Managed Service",
+    title: "以稳定团队支撑多据点SAP长期运行与改善",
+    description: "连接中国、日本及海外据点团队，围绕SAP模块、外围系统和日常运维形成持续服务与改善机制。",
+    heroImage: "office-entry.jpg",
+    cta: ["讨论核心系统长期运维", "contact/"],
+    lead: "长期运维不是保持不变，而是在稳定运行的基础上持续理解并改善业务。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "企业核心系统 / SAP长期运维。" },
+          { title: "原有课题", text: "跨区域、跨语言、多模块和外围系统需要稳定协作。" },
+          { title: "解决方式", text: "固定团队、双语沟通、工单、变更和持续改善。" },
+          { title: "内容状态", text: "A/B级素材；当前合同、公开年限、SLA与工单数据待确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Managed service",
+        title: "把业务理解留在长期服务团队中",
+        text: "团队持续处理咨询、故障、变更和外围系统联动，在跨据点沟通中沉淀业务知识，使问题解决不只依赖个别人员。",
+        image: "team-exact-clean.jpg",
+        bullets: ["中日双语咨询与需求沟通", "SAP模块与外围系统支援", "工单、问题、变更与发布管理", "知识、文档和标准操作沉淀", "跨据点协作与持续改善提案"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Service cycle",
+        title: "稳定运行与持续改善并行",
+        items: [
+          { year: "01", title: "受理与分级", text: "确认影响范围、优先级和责任团队。" },
+          { year: "02", title: "分析与处理", text: "结合系统、业务和历史知识定位问题。" },
+          { year: "03", title: "测试与变更", text: "对修复和改善进行评审、测试与发布控制。" },
+          { year: "04", title: "知识沉淀", text: "更新文档、FAQ、操作手册和交接内容。" },
+          { year: "05", title: "改善提案", text: "从重复问题和业务变化中识别优化机会。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "资料可支持团队体制、服务模块、据点和长期改善故事；对外年限及当前合同状态需再次核实。"
+      }
+    ],
+    related: ["capabilities-digital", "capabilities-cloud", "industry-it"]
+  },
+
+  "case-bi-analytics": {
+    nav: "cases",
+    eyebrow: "Case / BI Analytics",
+    title: "统一经营数据口径，让月度分析更及时可靠",
+    description: "连接销售、物流和财务数据，减少人工汇总与重复核对，为经营判断提供一致的分析视图。",
+    heroImage: "data-14.jpg",
+    cta: ["讨论数据与经营分析", "contact/"],
+    lead: "报表自动化只是第一步，更重要的是让不同部门围绕同一套数据理解业务。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Project snapshot",
+        title: "案例概览",
+        columns: 4,
+        items: [
+          { title: "业务场景", text: "企业运营 / 月度经营分析。" },
+          { title: "原有课题", text: "数据来源分散、口径不一、人工汇总和核对耗时。" },
+          { title: "解决方式", text: "数据整合、口径统一、BI视图与月度报告自动化。" },
+          { title: "内容状态", text: "B级素材；制作时间前后对比、用户与报表规模待确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / One view",
+        title: "从数据准备走向经营判断",
+        text: "项目将销售、物流和财务等数据按统一规则整合，自动形成经营视图和月度报告，让人员把更多时间用于分析差异与讨论行动。",
+        image: "data-clean.jpg",
+        bullets: ["连接多个业务数据来源", "统一指标定义、期间和组织口径", "自动更新经营分析视图", "支持月度报告和差异分析", "保留数据追溯与异常核对"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Data to decision",
+        title: "让数据从汇总走向行动",
+        items: [
+          { year: "01", title: "指标与口径确认", text: "明确经营问题、指标定义和责任部门。" },
+          { year: "02", title: "数据连接与清理", text: "整合来源并处理缺失、重复和格式差异。" },
+          { year: "03", title: "模型与视图建设", text: "建立可复用的数据模型和分析页面。" },
+          { year: "04", title: "报告自动化", text: "按月生成必要视图并保留核对机制。" },
+          { year: "05", title: "使用与改善", text: "根据管理讨论持续调整指标和呈现方式。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "现有资料支持月度报告制作缩短和人工错误减少的定性结论；具体时长与使用规模待确认。"
+      }
+    ],
+    related: ["capabilities-digital", "industry-enterprise", "case-outsystems"]
   },
 
   about: {
@@ -814,7 +1164,7 @@ window.TCI_PAGES = {
         type: "contact"
       }
     ],
-    related: ["capabilities", "industries", "how-we-work"]
+    related: ["capabilities-ai", "industry-manufacturing", "cases"]
   },
 
   privacy: {
