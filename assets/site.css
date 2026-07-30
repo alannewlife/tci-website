@@ -1185,7 +1185,13 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
 
 .data-card .index { color: var(--muted); font-size: 10px; letter-spacing: .13em; }
 .data-card h3 { margin: auto 0 12px; font-size: 25px; font-weight: 500; line-height: 1.25; }
-.data-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.82; }
+.data-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.82;
+  text-wrap: balance;
+}
 .data-card ul { margin: 14px 0 0; padding: 0; list-style: none; }
 .data-card li {
   padding: 8px 0;
