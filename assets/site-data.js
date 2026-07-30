@@ -916,7 +916,7 @@ window.TCI_PAGES = {
     nav: "about",
     eyebrow: "About TCI Suzhou",
     title: "扎根中国，连接日本与全球的数字工程伙伴",
-    description: "苏州大宇宙成立于2008年，是transcosmos集团在华东地区的重要IT服务据点。",
+    description: "苏州大宇宙成立于2008年，是transcosmos集团在华东地区的IT服务据点。",
     heroImage: "team-exact-clean.jpg",
     cta: ["了解我们的进化", "#history"],
     lead: "从软件开发和基础设施服务起步，持续深入制造、物流和企业运营，并正把AI融入人员、流程与客户解决方案。",
