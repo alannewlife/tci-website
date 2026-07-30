@@ -309,14 +309,6 @@ img, video { display: block; max-width: 100%; }
   background: rgba(5, 5, 5, .86);
 }
 
-.page-context-line {
-  width: 28px;
-  height: 2px;
-  flex: 0 0 auto;
-  border-radius: 99px;
-  background: var(--page-accent);
-}
-
 .page-context a,
 .page-context strong {
   overflow: hidden;
@@ -1642,7 +1634,6 @@ body[data-page] .quote-block {
     max-width: calc(100vw - 34px);
     min-height: 32px;
   }
-  .page-context-line { width: 20px; }
   .page-context a,
   .page-context strong { font-size: 9px; }
   .brand,

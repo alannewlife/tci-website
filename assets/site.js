@@ -142,7 +142,6 @@
       </nav>
       ${context ? `
         <nav class="page-context" aria-label="当前位置">
-          <span class="page-context-line" aria-hidden="true"></span>
           <a href="${url(context.href)}">${esc(context.group)}</a>
           <span class="page-context-separator" aria-hidden="true">/</span>
           <strong aria-current="page">${esc(context.current)}</strong>
