@@ -11,7 +11,8 @@
     .replaceAll('"', "&quot;");
 
   const url = (path = "") => {
-    if (!path || path.startsWith("#") || path.startsWith("http") || path.startsWith("mailto:") || path.startsWith("tel:")) return path;
+    if (!path) return root || "./";
+    if (path.startsWith("#") || path.startsWith("http") || path.startsWith("mailto:") || path.startsWith("tel:")) return path;
     return `${root}${path}`;
   };
 
@@ -63,7 +64,6 @@
       ]
     },
     { id: "cases", label: "案例", href: "cases/" },
-    { id: "how-we-work", label: "合作方式", href: "how-we-work/" },
     { id: "insights", label: "洞察", href: "insights/" },
     {
       id: "about",
@@ -255,8 +255,9 @@
         <p>${esc(item.text)}</p>
         <div class="case-tags">${(item.tags || []).map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>
       </div>`;
-    const href = item.href ? url(item.href) : url("contact/");
-    return `<a class="case-card reveal" href="${href}" data-tags="${esc((item.tags || []).join("|"))}">${content}</a>`;
+    return item.href
+      ? `<a class="case-card reveal" href="${url(item.href)}" data-tags="${esc((item.tags || []).join("|"))}">${content}</a>`
+      : `<article class="case-card case-card-static reveal" data-tags="${esc((item.tags || []).join("|"))}">${content}</article>`;
   }
 
   function renderCases(section) {
