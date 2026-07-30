@@ -1525,6 +1525,11 @@ body[data-page] .quote-block {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .gsap-motion .reveal {
+    transition: none;
+    will-change: transform, opacity;
+  }
+
   .reveal {
     transition: transform .9s var(--ease), filter .9s var(--ease);
   }

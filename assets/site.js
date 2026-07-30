@@ -515,6 +515,66 @@
 
   function initReveals() {
     const items = [...document.querySelectorAll(".reveal")];
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!pageId && window.gsap && window.ScrollTrigger && !reduceMotion) {
+      const { gsap, ScrollTrigger } = window;
+      gsap.registerPlugin(ScrollTrigger);
+      document.documentElement.classList.add("gsap-motion");
+
+      const motionMedia = gsap.matchMedia();
+      motionMedia.add({
+        isDesktop: "(min-width: 721px)",
+        isMobile: "(max-width: 720px)"
+      }, (context) => {
+        const { isDesktop, isMobile } = context.conditions;
+        const scrub = isMobile ? 0.34 : 0.58;
+
+        items.forEach((item, index) => {
+          const isText = item.classList.contains("section-head");
+          gsap.fromTo(item, {
+            autoAlpha: 0,
+            x: isText && isDesktop ? -36 : 0,
+            y: isText ? (isMobile ? 30 : 54) : (isMobile ? 48 : 82),
+            scale: isText ? 0.99 : (isMobile ? 0.975 : 0.955),
+            transformOrigin: "50% 100%",
+            force3D: true
+          }, {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            ease: "none",
+            immediateRender: true,
+            scrollTrigger: {
+              trigger: item,
+              start: "clamp(top 94%)",
+              end: "clamp(top 57%)",
+              scrub,
+              invalidateOnRefresh: true,
+              refreshPriority: index
+            }
+          });
+        });
+
+        const refreshMotion = () => ScrollTrigger.refresh();
+        if (document.fonts?.ready) document.fonts.ready.then(refreshMotion);
+        if (document.readyState === "complete") refreshMotion();
+        else window.addEventListener("load", refreshMotion, { once: true });
+
+        return () => {
+          document.documentElement.classList.remove("gsap-motion");
+          gsap.set(items, { clearProps: "opacity,visibility,transform" });
+        };
+      });
+      return;
+    }
+
+    if (reduceMotion) {
+      items.forEach((item) => item.classList.add("revealed"));
+      return;
+    }
+
     if (!("IntersectionObserver" in window)) {
       items.forEach((item) => item.classList.add("revealed"));
       return;
