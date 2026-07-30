@@ -927,7 +927,7 @@ window.TCI_PAGES = {
         title: "公司概况",
         columns: 3,
         items: [
-          { title: "苏州大宇宙信息创造有限公司", text: "成立于2008年10月，transcosmos集团在华东地区的重要IT服务据点。" },
+          { title: "苏州大宇宙信息创造有限公司", text: "成立于2008年10月，transcosmos集团在华东地区的IT服务据点。" },
           { title: "苏州 · 上海 · 常州", text: "三个协同据点，贴近长三角制造业、日系客户与跨区域项目。" },
           { title: "约265人", text: "演示版沿用2026年6月规划数据，正式发布前需再次核实。" },
           { title: "People & Technology", text: "以人的专业判断、AI能力与工程技术创造持续业务价值。" },
