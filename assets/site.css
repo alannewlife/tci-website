@@ -1217,6 +1217,26 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
   border-radius: 6px;
 }
 
+.split-media.visual-document {
+  background: #f0efe9;
+}
+
+.split-media.visual-document::after {
+  background: linear-gradient(180deg, rgba(8, 9, 8, .02), rgba(8, 9, 8, .08));
+  pointer-events: none;
+}
+
+.split-media.visual-document img {
+  object-fit: contain;
+  padding: clamp(18px, 3vw, 42px);
+  filter: none;
+}
+
+.split-media.visual-document:hover img {
+  transform: none;
+  filter: none;
+}
+
 .split-copy {
   display: flex;
   flex-direction: column;
