@@ -200,12 +200,22 @@ window.TCI_PAGES = {
         ]
       },
       {
+        type: "cases",
+        index: "04 / Manufacturing solutions",
+        title: "制造现场解决方案",
+        items: [
+          { kind: "解决方案", title: "APS智能生产计划", text: "连接订单、产能、物料与工序约束。", image: "case-aps-poster.webp", imagePosition: "50% 16%", tags: ["APS", "计划"], href: "cases/aps-production-planning/" },
+          { kind: "解决方案", title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", tags: ["MES", "IoT"], href: "cases/iot-mes-platform/" },
+          { kind: "项目实践", title: "AGV智能搬运与现场协同", text: "连接设备、调度、现场流程与实施服务。", image: "case-agv-poster.webp", imagePosition: "50% 14%", tags: ["AGV", "机器人"], href: "cases/agv-kitting-management/" }
+        ]
+      },
+      {
         type: "quote",
         label: "Our role in robotics",
         text: "机器人落地不仅是设备导入。我们的角色，是连接任务来源、业务规则、调度、异常处理、系统接口与人员协作。"
       }
     ],
-    related: ["case-smart-warehouse", "case-agv-kitting", "industry-manufacturing"]
+    related: ["case-aps-planning", "case-iot-mes", "case-agv-kitting"]
   },
 
   "capabilities-cloud": {
@@ -242,15 +252,15 @@ window.TCI_PAGES = {
       {
         type: "cases",
         index: "03 / Representative cases",
-        title: "代表案例",
+        title: "相关实践与解决方案",
         items: [
-          { title: "IT运维智能体平台", text: "连接知识、监控与标准运维工具。", image: "data-lattice.jpg", tags: ["AIOps", "Agent"], href: "cases/it-operations-agent-platform/" },
-          { title: "大型客户长期运维", text: "网络、服务器与数据库的稳定服务体制。", image: "office-entry.jpg", tags: ["Managed Service", "Security"] },
-          { title: "GPU与本地AI环境", text: "兼顾数据边界、性能、成本与持续运维。", image: "data-system.jpg", tags: ["Private AI", "GPU"] }
+          { kind: "解决方案", title: "基础设施现代化与云迁移", text: "从脱VMware、超融合迁移到企业上云。", image: "case-vmware-poster.webp", imagePosition: "50% 10%", tags: ["Migration", "Cloud"], href: "cases/infrastructure-modernization/" },
+          { kind: "AI实践", title: "IT运维智能体平台", text: "连接知识、监控与标准运维工具。", image: "data-lattice.jpg", tags: ["AIOps", "Agent"], href: "cases/it-operations-agent-platform/" },
+          { kind: "项目实践", title: "SAP长期运维", text: "以稳定团队支撑核心系统持续运行与改善。", image: "office-entry.jpg", tags: ["Managed Service", "Bilingual"], href: "cases/sap-long-term-managed-services/" }
         ]
       }
     ],
-    related: ["case-it-operations-agent", "case-sap-managed", "quality"]
+    related: ["case-infrastructure-modernization", "case-it-operations-agent", "case-sap-managed"]
   },
 
   industries: {
@@ -333,7 +343,7 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-smart-warehouse", "case-agv-kitting", "capabilities-manufacturing"]
+    related: ["case-aps-planning", "case-iot-mes", "case-agv-kitting"]
   },
 
   "industry-enterprise": {
@@ -415,51 +425,204 @@ window.TCI_PAGES = {
       {
         type: "cases",
         index: "03 / Representative cases",
-        title: "代表案例",
+        title: "相关实践与解决方案",
         items: [
-          { title: "IT运维智能体平台", text: "把知识和工具接入运维任务。", image: "data-lattice.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" },
-          { title: "网络与服务器长期运维", text: "以稳定体制支持大型客户持续运营。", image: "office-entry.jpg", tags: ["Managed Service", "Bilingual"] },
-          { title: "AI / GPU服务器建设", text: "为本地AI提供可管理的运行环境。", image: "cloud.jpg", tags: ["Private AI", "Infrastructure"] }
+          { kind: "解决方案", title: "基础设施现代化与云迁移", text: "规划兼顾连续性、成本与自主可控的演进路径。", image: "case-cloud-poster.webp", imagePosition: "50% 10%", tags: ["Migration", "Cloud"], href: "cases/infrastructure-modernization/" },
+          { kind: "AI实践", title: "IT运维智能体平台", text: "把知识和工具接入运维任务。", image: "data-lattice.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" },
+          { kind: "项目实践", title: "SAP长期运维", text: "以稳定团队支持核心系统持续运营。", image: "office-entry.jpg", tags: ["Managed Service", "Bilingual"], href: "cases/sap-long-term-managed-services/" }
         ]
       }
     ],
-    related: ["case-it-operations-agent", "case-sap-managed", "capabilities-cloud"]
+    related: ["case-infrastructure-modernization", "case-it-operations-agent", "case-sap-managed"]
   },
 
   cases: {
     nav: "cases",
-    eyebrow: "Case Stories",
-    title: "从真实业务问题，到可验证的改善",
-    description: "每一个案例都围绕客户问题、解决方式、系统连接、人机协作和实际结果展开。",
+    eyebrow: "Cases & Solutions",
+    title: "从业务问题，到可执行的解决路径",
+    description: "以项目实践、AI应用和解决方案三个视角，说明我们如何理解业务问题、连接系统并把能力带入真实流程。",
     heroImage: "hero-cases-from-film.jpg",
     cta: ["查找相近经验", "#case-list"],
-    lead: "先讲清楚客户的问题与改变，再说明技术如何进入流程。",
+    lead: "区分已形成项目叙事的实践与可复用解决方案，不把能力介绍包装成未经确认的客户成果。",
     sections: [
       {
         id: "case-list",
         type: "cases",
         filter: true,
         index: "01 / Case library",
-        title: "首批代表案例",
+        title: "代表实践与解决方案",
         items: [
-          { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["制造与物流", "AI应用"], href: "cases/manufacturing-knowledge/" },
-          { title: "MES辅助查询 Copilot", text: "用自然语言查询和分析MES数据。", image: "data-monitor.jpg", tags: ["制造与物流", "AI应用"], href: "cases/mes-query-copilot/" },
-          { title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", tags: ["企业运营", "AI应用"], href: "cases/pharma-budget-contract-generation/" },
-          { title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", tags: ["IT与基础设施", "云与运维"], href: "cases/it-operations-agent-platform/" },
-          { title: "智能仓储与无纸化", text: "连接WMS、ERP、PDA、RFID与现场作业。", image: "city-rail.jpg", tags: ["制造与物流", "数字工程"], href: "cases/smart-warehouse-paperless/" },
-          { title: "AGV与配膳管理", text: "通过系统、校验与调度改善现场搬运。", image: "city-c.jpg", tags: ["制造与物流", "机器人"], href: "cases/agv-kitting-management/" },
-          { title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "office-team.jpg", tags: ["企业运营", "数字工程"], href: "cases/outsystems-business-platform/" },
-          { title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", tags: ["IT与基础设施", "数字工程"], href: "cases/sap-long-term-managed-services/" },
-          { title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["企业运营", "数据分析"], href: "cases/bi-management-analytics/" }
+          { kind: "解决方案", title: "APS智能生产计划", text: "连接排程、交期、库存和现场反馈，让计划更快响应变化。", image: "case-aps-poster.webp", imagePosition: "50% 16%", tags: ["制造与物流", "生产计划"], href: "cases/aps-production-planning/" },
+          { kind: "解决方案", title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析，并连接ERP、WMS和设备。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", tags: ["制造与物流", "数字工程"], href: "cases/iot-mes-platform/" },
+          { kind: "解决方案", title: "基础设施现代化与云迁移", text: "从脱VMware、超融合迁移到企业上云和持续运营。", image: "case-vmware-poster.webp", imagePosition: "50% 10%", tags: ["IT与基础设施", "云与运维"], href: "cases/infrastructure-modernization/" },
+          { kind: "AI实践", title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["制造与物流", "AI应用"], href: "cases/manufacturing-knowledge/" },
+          { kind: "AI实践", title: "MES辅助查询 Copilot", text: "用自然语言查询和分析MES数据。", image: "data-monitor.jpg", tags: ["制造与物流", "AI应用"], href: "cases/mes-query-copilot/" },
+          { kind: "AI实践", title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", tags: ["企业运营", "AI应用"], href: "cases/pharma-budget-contract-generation/" },
+          { kind: "AI实践", title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", tags: ["IT与基础设施", "云与运维"], href: "cases/it-operations-agent-platform/" },
+          { kind: "项目实践", title: "智能仓储与无纸化", text: "连接WMS、ERP、PDA、RFID与现场作业。", image: "city-rail.jpg", tags: ["制造与物流", "数字工程"], href: "cases/smart-warehouse-paperless/" },
+          { kind: "项目实践", title: "AGV智能搬运与现场协同", text: "以设备、调度、校验和实施服务连接现场搬运。", image: "case-agv-poster.webp", imagePosition: "50% 14%", tags: ["制造与物流", "机器人"], href: "cases/agv-kitting-management/" },
+          { kind: "项目实践", title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "case-outsystems-poster.webp", imagePosition: "50% 20%", tags: ["企业运营", "数字工程"], href: "cases/outsystems-business-platform/" },
+          { kind: "项目实践", title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", tags: ["IT与基础设施", "数字工程"], href: "cases/sap-long-term-managed-services/" },
+          { kind: "项目实践", title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["企业运营", "数据分析"], href: "cases/bi-management-analytics/" }
         ]
       },
       {
         type: "quote",
         label: "Demo note",
-        text: "演示版中的案例名称与结果口径用于说明信息结构；正式发布前需完成客户授权、数字核实与保密审查。"
+        text: "“解决方案”依据现有业务资料整理，“AI实践”和“项目实践”依据既有规划文档展开；正式发布前仍需完成客户授权、数字核实与保密审查。"
       }
     ],
     related: ["case-mes-copilot", "case-smart-warehouse", "case-it-operations-agent"]
+  },
+
+  "case-infrastructure-modernization": {
+    nav: "cases",
+    eyebrow: "Solution / Infrastructure Modernization",
+    title: "从既有虚拟化环境，平滑走向新的基础设施",
+    description: "围绕脱VMware、虚拟化与超融合迁移、企业上云和持续运营，规划兼顾业务连续性、成本与自主可控的演进路径。",
+    heroImage: "cloud.jpg",
+    cta: ["讨论基础设施演进", "contact/"],
+    lead: "不是简单替换一个平台，而是在业务不中断的前提下重组计算、存储、备份与运营方式。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Solution snapshot",
+        title: "解决方案概览",
+        columns: 4,
+        items: [
+          { title: "进入场景", text: "许可证与扩容成本上升、厂商绑定或现有平台需要更新。" },
+          { title: "改造范围", text: "计算、存储、网络、备份、业务系统及其高可用机制。" },
+          { title: "迁移方式", text: "根据环境选择V2V、P2V、在线迁移或分批切换。" },
+          { title: "内容边界", text: "当前为解决方案说明；停机窗口、兼容性与服务级别需按项目确认。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Platform transition",
+        title: "先完成环境对标，再确定迁移路径",
+        text: "从vSphere、ESXi、vCenter、vSAN及备份环境出发，盘点业务系统依赖、容量、高可用与恢复要求，再选择目标虚拟化或超融合平台。",
+        image: "case-vmware-poster.webp",
+        imageFit: "contain",
+        bullets: ["梳理计算、存储、网络和备份关系", "验证目标平台的功能与兼容性", "设计分批迁移、验证和回退方案", "在迁移后继续观察容量、性能与恢复能力"]
+      },
+      {
+        type: "split",
+        index: "03 / Cloud migration",
+        title: "把上云拆成可检查的五个阶段",
+        text: "企业上云不从资源采购开始，而是先确认业务优先级、安全与合规边界。通过测试环境验证、正式迁移、切换上线和持续优化控制风险。",
+        image: "case-cloud-poster.webp",
+        imageFit: "contain",
+        bullets: ["迁移准备：资源、优先级、网络与权限", "测试验证：数据同步、兼容性与业务验证", "正式迁移：数据库、文件与中间件", "切换上线：窗口、增量同步和回退", "持续运营：性能、成本、备份与告警"]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "资料中的可用性、部署速度与弹性指标属于方案能力表达，不作为未经项目验证的确定性成果。"
+      }
+    ],
+    related: ["capabilities-cloud", "industry-it", "case-it-operations-agent"]
+  },
+
+  "case-aps-planning": {
+    nav: "cases",
+    eyebrow: "Solution / APS Planning",
+    title: "让生产计划更快响应交期、库存与现场变化",
+    description: "以APS连接订单、产能、物料与工序约束，辅助计划人员完成自动排程、插单响应、进度可视化和现场反馈。",
+    heroImage: "precise-city.jpg",
+    cta: ["讨论生产计划课题", "contact/"],
+    lead: "计划系统的价值不只是生成一张排程表，而是让变化可以被重新计算、解释并传递到现场。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Planning challenges",
+        title: "从制造现场的四类课题进入",
+        columns: 4,
+        items: [
+          { title: "人工排产耗时", text: "复杂工序、设备与人员约束依赖经验反复调整。" },
+          { title: "交期回复不准", text: "订单变化后难以及时评估可承诺日期与影响范围。" },
+          { title: "库存与在制积压", text: "计划、物料与现场实绩不同步，造成等待和过量准备。" },
+          { title: "紧急插单响应慢", text: "缺少快速重排与可视化比较，调整容易影响其他订单。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Planning engine",
+        title: "把建模、优化、执行与监控连接起来",
+        text: "以FLEXSCHE APS为资料中的代表方案，通过柔性建模表达制造约束，以优化能力生成候选计划，再将计划反馈给现场并持续监控执行状态。",
+        image: "case-aps-poster.webp",
+        imageFit: "contain",
+        bullets: ["FLEXSCHE GP：建立工序、资源与约束模型", "Optimizer：针对交期、负荷与库存进行优化", "CarryOut：连接计划发布与现场反馈", "Webviewer：远程查看甘特图、负荷与进度"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Introduction path",
+        title: "从数据准备到持续排程",
+        items: [
+          { year: "01", title: "课题与指标确认", text: "明确交期、库存、设备负荷和插单响应等优先目标。" },
+          { year: "02", title: "主数据与约束建模", text: "整理产品、工艺、设备、日历、换型和物料关系。" },
+          { year: "03", title: "排程规则验证", text: "以典型订单验证结果，并与计划人员的判断对照。" },
+          { year: "04", title: "ERP与现场连接", text: "接收订单和库存信息，向现场传递计划并回收实绩。" },
+          { year: "05", title: "运行与改善", text: "持续调整约束、权重、异常处理和使用方式。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "Evidence boundary",
+        text: "“秒级排程”“精准交期”等表达需要结合数据规模、约束复杂度和项目验收结果确认，演示页不把它们写成统一承诺。"
+      }
+    ],
+    related: ["capabilities-manufacturing", "industry-manufacturing", "case-iot-mes"]
+  },
+
+  "case-iot-mes": {
+    nav: "cases",
+    eyebrow: "Solution / IoT MES",
+    title: "连接计划、执行、追溯与分析的制造数字底座",
+    description: "以MES为制造执行核心，覆盖人员、设备、作业、物料和品质管理，并与ERP、WMS、CAD及设备IoT接口协同。",
+    heroImage: "data-system.jpg",
+    cta: ["讨论MES与现场集成", "contact/"],
+    lead: "先让制造过程中的任务、状态和实绩形成闭环，再在统一数据基础上引入分析、AI与自动化。",
+    sections: [
+      {
+        type: "cards",
+        index: "01 / Solution snapshot",
+        title: "覆盖制造执行的关键对象",
+        columns: 4,
+        items: [
+          { title: "计划与生产", text: "接收计划与订单，管理工序、进度、实绩和异常。" },
+          { title: "设备与作业", text: "连接设备状态、作业指示、人员操作与现场终端。" },
+          { title: "物料与库存", text: "协同出入货、批次、在制品、外部仓库和供应商。" },
+          { title: "品质与追溯", text: "记录检验、异常、履历与关键制造条件。" }
+        ]
+      },
+      {
+        type: "split",
+        index: "02 / Integrated architecture",
+        title: "让MES处于上下游系统与现场之间",
+        text: "上游连接ERP中的计划与订单，横向连接WMS、CAD等业务系统，下游预留设备IoT接口，使信息流与制造动作保持一致。",
+        image: "case-iot-mes-poster.webp",
+        imageFit: "contain",
+        bullets: ["ERP：计划、订单、主数据与业务实绩", "WMS与外部仓库：库存、收发与批次", "CAD及工程数据：产品和工艺信息", "IoT与设备：状态、参数、告警和生产信号", "人员终端：任务、确认、异常与现场反馈"]
+      },
+      {
+        type: "timeline",
+        index: "03 / Closed loop",
+        title: "从计划到分析形成闭环",
+        items: [
+          { year: "01", title: "计划进入", text: "从ERP或生产管理系统接收订单、计划和必要主数据。" },
+          { year: "02", title: "任务执行", text: "向人员、工位和设备下达作业，并记录实际过程。" },
+          { year: "03", title: "质量与追溯", text: "关联批次、设备、人员、检验和异常履历。" },
+          { year: "04", title: "实绩回传", text: "将进度、产量、库存和异常状态同步给上下游系统。" },
+          { year: "05", title: "分析与改善", text: "围绕交期、质量、设备和效率持续发现改善点。" }
+        ]
+      },
+      {
+        type: "quote",
+        label: "MES + AI",
+        text: "MES负责稳定记录和执行制造流程；MES Copilot则在已有数据与规则之上提供更自然的查询和辅助分析，两者不是同一个页面。"
+      }
+    ],
+    related: ["capabilities-manufacturing", "industry-manufacturing", "case-mes-copilot"]
   },
 
   "case-detail": {
@@ -714,37 +877,38 @@ window.TCI_PAGES = {
 
   "case-agv-kitting": {
     nav: "cases",
-    eyebrow: "Case / AGV & Kitting",
-    title: "让计划、配膳、校验与搬运形成系统闭环",
-    description: "通过计划数据、配膳管理、多层校验和AGV调度连接物料准备与现场搬运，降低错配和重复确认。",
+    eyebrow: "Solution & Practice / AGV",
+    title: "让AGV设备、调度系统与现场流程协同工作",
+    description: "从稳定设备、调度与可视化管理到实施运维服务，并以配膳和夜间搬运为代表场景连接生产计划与现场执行。",
     heroImage: "city-c.jpg",
     cta: ["讨论AGV与现场集成", "contact/"],
-    lead: "机器人落地不仅是设备导入，更需要业务规则、系统与异常处理共同工作。",
+    lead: "AGV落地不是单独采购一台设备，而是让任务来源、调度、校验、异常和人员协作形成闭环。",
     sections: [
       {
         type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
+        index: "01 / Solution snapshot",
+        title: "设备、系统与服务共同构成方案",
         columns: 4,
         items: [
-          { title: "业务场景", text: "制造现场 / 配膳、校验与夜间搬运。" },
-          { title: "原有课题", text: "物料准备依赖人工确认，错配风险与搬运负担并存。" },
-          { title: "解决方式", text: "计划联动、配膳管理、四层校验、调度与AGV执行。" },
-          { title: "内容状态", text: "案例初稿；公司承担范围、上线状态与运行指标待确认。" }
+          { title: "设备", text: "根据载荷、路线、环境和安全要求选择AGV或AMR设备。" },
+          { title: "系统", text: "通过调度、地图、任务、状态和可视化管理连接多车运行。" },
+          { title: "服务", text: "覆盖现场评估、实施、系统集成、培训与持续运维。" },
+          { title: "适用场景", text: "机械制造、立体仓库、电商分拣及医药物流等现场。" }
         ]
       },
       {
         type: "split",
-        index: "02 / System + Robot",
-        title: "从任务来源一直连接到现场执行",
-        text: "上位系统生成物料需求，配膳系统组织任务并进行多层校验，调度系统再把确认后的搬运任务交给AGV执行，同时处理异常和人工介入。",
-        image: "city-wide.jpg",
-        bullets: ["计划与物料需求形成任务来源", "配膳、容器、工位和时间窗口管理", "多层校验减少错料与错送", "调度系统连接AGV执行端", "异常、暂停、恢复与人工接管"]
+        index: "02 / Equipment + System + Service",
+        title: "从单机搬运走向集群协同",
+        text: "现场价值来自设备可靠性、调度系统与实施服务的共同作用。系统接收业务任务，协调车辆、路线和优先级，并把状态与异常反馈给人员和上位系统。",
+        image: "case-agv-poster.webp",
+        imageFit: "contain",
+        bullets: ["设备：载荷、续航、导航与安全能力", "系统：任务、地图、交通管制和集群调度", "集成：MES、WMS、ERP及现场接口", "服务：评估、实施、培训和运行支援", "异常：暂停、恢复、绕行与人工接管"]
       },
       {
         type: "timeline",
         index: "03 / Operation flow",
-        title: "让物料流动可计划、可校验、可追踪",
+        title: "代表场景：配膳、校验与夜间搬运",
         items: [
           { year: "01", title: "任务生成", text: "从生产计划和物料需求生成配膳任务。" },
           { year: "02", title: "备料与校验", text: "按工位、批次和容器完成准备与多层确认。" },
@@ -785,7 +949,16 @@ window.TCI_PAGES = {
       },
       {
         type: "split",
-        index: "02 / Business platform",
+        index: "02 / Delivery foundation",
+        title: "以专业团队支撑低代码长期演进",
+        text: "新整理资料补充了苏州大宇宙在OutSystems领域的团队、认证、定制开发和长期运维能力。具体能力数字存在不同统计时点，页面暂以定性表达为主。",
+        image: "case-outsystems-poster.webp",
+        imageFit: "contain",
+        bullets: ["专业认证与项目经验", "面向业务场景的定制开发", "离岸与国内协同服务", "从建设到运维的一站式支援", "质量、安全与持续改善机制"]
+      },
+      {
+        type: "split",
+        index: "03 / Business platform",
         title: "统一数据，也统一业务动作",
         text: "项目不仅把Excel搬到网页，而是重新梳理预算编制、调整、审批、实绩导入和差异确认，让每个角色在同一套流程和数据口径中工作。",
         image: "office-exact-clean.jpg",
@@ -793,7 +966,7 @@ window.TCI_PAGES = {
       },
       {
         type: "timeline",
-        index: "03 / Delivery",
+        index: "04 / Delivery",
         title: "从分散表格到持续演进平台",
         items: [
           { year: "01", title: "流程与表格盘点", text: "识别参与角色、版本、公式和审批路径。" },
@@ -806,7 +979,7 @@ window.TCI_PAGES = {
       {
         type: "quote",
         label: "Evidence boundary",
-        text: "现有资料可支持技术栈、项目期间和业务变化；用户规模与量化成效需在发布前补充。"
+        text: "现有资料可支持技术栈、项目期间和业务变化；800+与2000+人月来自不同资料口径，用户规模、统计时点与量化成效需在发布前统一确认。"
       }
     ],
     related: ["capabilities-digital", "industry-enterprise", "case-bi-analytics"]

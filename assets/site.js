@@ -34,6 +34,9 @@
     "case-outsystems": "cases/outsystems-business-platform/",
     "case-sap-managed": "cases/sap-long-term-managed-services/",
     "case-bi-analytics": "cases/bi-management-analytics/",
+    "case-infrastructure-modernization": "cases/infrastructure-modernization/",
+    "case-aps-planning": "cases/aps-production-planning/",
+    "case-iot-mes": "cases/iot-mes-platform/",
     about: "about/",
     "ai-transformation": "about/ai-transformation/",
     quality: "about/quality-security/",
@@ -58,10 +61,13 @@
     "case-pharma-contract": { key: "cases", group: "案例", current: "医药估算合同生成", href: "cases/" },
     "case-it-operations-agent": { key: "cases", group: "案例", current: "IT运维智能体平台", href: "cases/" },
     "case-smart-warehouse": { key: "cases", group: "案例", current: "智能仓储与无纸化", href: "cases/" },
-    "case-agv-kitting": { key: "cases", group: "案例", current: "AGV与配膳管理", href: "cases/" },
+    "case-agv-kitting": { key: "cases", group: "案例", current: "AGV智能搬运与现场协同", href: "cases/" },
     "case-outsystems": { key: "cases", group: "案例", current: "OutSystems业务平台", href: "cases/" },
     "case-sap-managed": { key: "cases", group: "案例", current: "SAP长期运维", href: "cases/" },
     "case-bi-analytics": { key: "cases", group: "案例", current: "BI经营分析", href: "cases/" },
+    "case-infrastructure-modernization": { key: "cases", group: "案例", current: "基础设施现代化与云迁移", href: "cases/" },
+    "case-aps-planning": { key: "cases", group: "案例", current: "APS智能生产计划", href: "cases/" },
+    "case-iot-mes": { key: "cases", group: "案例", current: "IoT统合型制造执行系统", href: "cases/" },
     insights: { key: "insights", group: "洞察", current: "洞察与新闻", href: "insights/" },
     about: { key: "about", group: "关于我们", current: "公司介绍", href: "about/" },
     "ai-transformation": { key: "about", group: "关于我们", current: "AI时代的苏州大宇宙", href: "about/" },
@@ -280,9 +286,10 @@
   }
 
   function renderSplit(section, index) {
+    const mediaClass = section.imageFit === "contain" ? " visual-document" : "";
     return `
       <div class="split-layout ${index % 2 ? "reverse" : ""}">
-        <div class="split-media reveal">
+        <div class="split-media${mediaClass} reveal">
           <img src="${url(`assets/${section.image}`)}" alt="" />
         </div>
         <div class="split-copy reveal">
@@ -308,21 +315,23 @@
   }
 
   function caseCard(item, index) {
+    const kind = item.kind || "案例";
+    const filterTags = [kind, ...(item.tags || [])];
     const content = `
-      <img src="${url(`assets/${item.image}`)}" alt="" />
+      <img src="${url(`assets/${item.image}`)}" alt=""${item.imagePosition ? ` style="object-position:${esc(item.imagePosition)}"` : ""} />
       <div class="case-card-copy">
-        <small>Case ${String(index + 1).padStart(2, "0")}</small>
+        <small>${esc(kind)} · ${String(index + 1).padStart(2, "0")}</small>
         <strong class="cn-serif">${esc(item.title)}</strong>
         <p>${esc(item.text)}</p>
         <div class="case-tags">${(item.tags || []).map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>
       </div>`;
     return item.href
-      ? `<a class="case-card reveal" href="${url(item.href)}" data-tags="${esc((item.tags || []).join("|"))}">${content}</a>`
-      : `<article class="case-card case-card-static reveal" data-tags="${esc((item.tags || []).join("|"))}">${content}</article>`;
+      ? `<a class="case-card reveal" href="${url(item.href)}" data-tags="${esc(filterTags.join("|"))}">${content}</a>`
+      : `<article class="case-card case-card-static reveal" data-tags="${esc(filterTags.join("|"))}">${content}</article>`;
   }
 
   function renderCases(section) {
-    const tags = [...new Set(section.items.flatMap((item) => item.tags || []))];
+    const tags = [...new Set(section.items.flatMap((item) => [item.kind || "案例", ...(item.tags || [])]))];
     const filter = section.filter ? `
       <div class="filter-bar" aria-label="案例筛选">
         <button class="filter-btn active" type="button" data-filter="all">全部</button>
