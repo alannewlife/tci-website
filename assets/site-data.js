@@ -1135,20 +1135,6 @@ window.TCI_PAGES = {
           { title: "园区企业荣誉", text: "获得苏南国家自主创新示范区瞪羚企业、苏州工业园区瞪羚企业等称号。" },
           { title: "技术伙伴", text: "2019年成为UiPath Partner，2020年成为OutSystems Partner。" }
         ]
-      },
-      {
-        type: "cards",
-        index: "05 / Locations",
-        title: "公司基础信息",
-        columns: 3,
-        items: [
-          { title: "公司名称", text: "苏州大宇宙信息创造有限公司" },
-          { title: "成立与出资", text: "成立于2008年10月｜注册资本1,600万元｜大宇宙信息创造（中国）有限公司100%出资" },
-          { title: "所在地", text: "邮编215123｜江苏省苏州工业园区集贤街68号大宇宙大楼" },
-          { title: "电话与传真", text: "TEL：+86-512-8666-5570｜FAX：+86-512-8666-5571" },
-          { title: "电子邮箱", text: "suzhou@trans-cosmos.com.cn" },
-          { title: "区域据点", text: "苏州总公司｜常州分公司｜上海分公司" }
-        ]
       }
     ],
     related: []

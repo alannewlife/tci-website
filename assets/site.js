@@ -331,9 +331,9 @@
           <h2 class="cn-serif">先告诉我们，您正在面对什么问题。</h2>
           <p>无论您正在寻找AI应用方向、计划升级业务系统、改善工厂与物流现场，还是希望探讨机器人与联合方案，都可以先从概要开始。</p>
           <div class="location-list">
-            <div><strong>苏州</strong><span>苏州工业园区 · 总公司</span></div>
-            <div><strong>上海</strong><span>上海分公司 · 业务协同据点</span></div>
-            <div><strong>常州</strong><span>常州分公司 · 制造客户支援据点</span></div>
+            <div><strong>所在地</strong><span>江苏省苏州工业园区集贤街68号大宇宙大楼</span></div>
+            <div><strong>电话</strong><span><a href="tel:+8651286665570">+86-512-8666-5570</a></span></div>
+            <div><strong>电子邮箱</strong><span><a href="mailto:suzhou@trans-cosmos.com.cn">suzhou@trans-cosmos.com.cn</a></span></div>
           </div>
         </div>
         <form class="demo-form reveal" id="demoContactForm">
