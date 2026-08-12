@@ -39,12 +39,7 @@
     "case-iot-mes": { key: "cases", group: "案例", current: "IoT统合型制造执行系统", href: "cases/" },
     insights: { key: "insights", group: "洞察", current: "洞察与新闻", href: "insights/" },
     about: { key: "about", group: "关于我们", current: "公司介绍", href: "about/" },
-    "ai-transformation": { key: "about", group: "关于我们", current: "AI时代的苏州大宇宙", href: "about/" },
-    quality: { key: "about", group: "关于我们", current: "品质与安全", href: "about/" },
-    global: { key: "about", group: "关于我们", current: "集团与全球网络", href: "about/" },
-    careers: { key: "about", group: "关于我们", current: "招贤纳士", href: "about/" },
-    contact: { key: "contact", group: "联系", current: "联系我们", href: "contact/" },
-    privacy: { key: "legal", group: "网站信息", current: "隐私与法律", href: "privacy/" }
+    contact: { key: "contact", group: "联系", current: "联系我们", href: "contact/" }
   };
 
   const navGroups = [
@@ -177,7 +172,7 @@
         <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a><a href="${url("capabilities/cloud-operations/")}">云与智能运维</a></div>
         <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
         <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("contact/")}">联系我们</a></div>
-        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a><a href="${url("privacy/")}">隐私与法律</a></div>
+        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a></div>
         <div><h3>友情链接</h3><a href="https://www.trans-cosmos.com.cn/" target="_blank" rel="noopener noreferrer">大宇宙信息创造（中国）有限公司</a><a href="https://www.trans-cosmos.co.jp/" target="_blank" rel="noopener noreferrer">transcosmos inc.</a><a href="http://www.tci-cn.co.jp/" target="_blank" rel="noopener noreferrer">大宇宙ジャパン株式会社</a><a href="http://www.tci-jn.com/" target="_blank" rel="noopener noreferrer">济南大宇宙信息创造有限公司</a></div>
       </div>
       <div class="footer-bottom">
@@ -374,47 +369,15 @@
           </div>
           <div class="field"><label for="message">当前问题或目标 *</label><textarea id="message" name="message" required placeholder="请先做概要说明，不要在演示表单中填写保密信息。"></textarea></div>
           <div class="field"><label for="attachment">参考资料（可选）</label><input id="attachment" name="attachment" type="file" /></div>
-          <label class="consent-field" for="privacyConsent">
-            <input id="privacyConsent" name="privacyConsent" type="checkbox" required />
-            <span>我已阅读并同意<a href="${url("privacy/")}">隐私与信息使用说明</a>。*</span>
-          </label>
           <button class="pill-cta" type="submit">提交演示咨询 <span class="arrow">↗</span></button>
           <p class="demo-form-note" id="formStatus">演示版表单不会发送或保存数据。正式版需在上线前完成法务、安全和数据流程确认。</p>
         </form>
       </div>`;
   }
 
-  function renderLegal() {
-    const nav = [
-      ["privacy-scope", "个人信息保护政策"],
-      ["terms", "网站使用条款"],
-      ["cookies", "Cookie说明"],
-      ["legal-info", "法定信息"]
-    ];
-    return `
-      <div class="legal-layout">
-        <nav class="legal-nav" aria-label="法律信息目录">
-          ${nav.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("")}
-        </nav>
-        <div class="legal-copy">
-          <section id="privacy-scope">
-            <span class="demo-badge">STRUCTURE DEMO</span>
-            <h2 class="cn-serif">个人信息保护政策</h2>
-            <p>本页为演示版结构，不构成正式法律文本。正式版本应由法务或总务根据实际表单、分析工具、服务器位置和数据流编写并审批。</p>
-            <h3>1. 收集的信息</h3><p>联系表单中的姓名、公司、工作邮箱、联系电话、咨询类型和咨询概要，以及为保障网站安全所需的基础访问日志。</p>
-            <h3>2. 使用目的</h3><p>用于响应咨询、安排对应业务与技术团队、改善网站体验，并在取得适当同意后提供相关业务信息。</p>
-            <h3>3. 保存、共享与跨境</h3><p>正式版需明确保存期限、处理主体、第三方服务、集团内共享与可能发生的跨境处理，并提供用户权利的行使方式。</p>
-          </section>
-          <section id="terms"><h2 class="cn-serif">网站使用条款</h2><p>正式版应说明网站内容版权、链接、禁止行为、责任限制、内容变更与适用法律。案例、数字、客户名称和Logo仅在取得授权后公开。</p></section>
-          <section id="cookies"><h2 class="cn-serif">Cookie说明</h2><p>根据正式网站实际使用的分析、性能与偏好工具，说明Cookie的类型、目的、保存时间与用户选择。不使用的工具不应出现在文本中。</p></section>
-          <section id="legal-info"><h2 class="cn-serif">法定信息</h2><p>正式上线前补充并核实公司主体、注册地址、ICP备案、公安备案、版权、正式联系窗口与隐私事务负责人。</p></section>
-        </div>
-      </div>`;
-  }
-
   function renderSection(section, index) {
     const id = section.id || `section-${index + 1}`;
-    const lightSectionTypes = new Set(["cards", "timeline", "cases", "articles", "contact", "legal"]);
+    const lightSectionTypes = new Set(["cards", "timeline", "cases", "articles", "contact"]);
     const tone = section.tone || (lightSectionTypes.has(section.type) ? "light" : "dark");
     let inner = "";
     if (section.type === "cards") inner = renderCards(section);
@@ -424,7 +387,6 @@
     if (section.type === "articles") inner = renderArticles(section);
     if (section.type === "quote") inner = renderQuote(section);
     if (section.type === "contact") inner = renderContact();
-    if (section.type === "legal") inner = renderLegal();
     return `<section class="content-section section-${esc(section.type)} tone-${tone}" id="${id}"><div class="page-shell">${inner}</div></section>`;
   }
 

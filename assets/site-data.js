@@ -1,57 +1,4 @@
 window.TCI_PAGES = {
-  capabilities: {
-    nav: "capabilities",
-    eyebrow: "Capabilities & Services",
-    title: "把AI、软件与现场能力组合起来",
-    description: "企业真正需要的往往不是一个孤立工具，而是能够进入现有业务和系统的组合方案。我们提供从咨询、建设、集成到持续运营的服务。",
-    heroImage: "hero-decision-chamber.png",
-    cta: ["查看四大能力", "#capability-map"],
-    lead: "从一个业务问题出发，组合<em>恰好需要</em>的技术与工程能力。",
-    sections: [
-      {
-        id: "capability-map",
-        type: "cards",
-        index: "01 / Four capabilities",
-        title: "四大能力，共同进入真实业务",
-        intro: "AI贯穿所有能力，但每一次合作都从客户的问题、流程和既有环境开始。",
-        columns: 4,
-        items: [
-          { title: "AI应用与智能体", text: "企业知识、文档理解、智能体工作流、系统内嵌AI、模型平台与安全治理。", href: "capabilities/ai/", tag: "AI" },
-          { title: "数字工程与系统开发", text: "定制系统、低代码、SAP/ERP、数据平台、AI增强开发与长期运维。", href: "capabilities/digital-engineering/", tag: "DE" },
-          { title: "智能制造与机器人", text: "MES、WMS、IoT、AI视觉、AGV/AMR、机器人连接与现场运营。", href: "capabilities/smart-factory-robotics/", tag: "MX" },
-          { title: "云与智能运维", text: "云、网络、服务器、GPU、安全、服务台、AIOps与运维智能体。", href: "capabilities/cloud-operations/", tag: "CO" }
-        ]
-      },
-      {
-        type: "timeline",
-        index: "02 / Service lifecycle",
-        title: "服务贯穿四个阶段",
-        intro: "不是交付一个工具，而是让能力在生产环境中稳定运行。",
-        items: [
-          { year: "01", title: "发现", text: "梳理业务问题、流程、数据、既有系统与预期效果，判断场景优先级。" },
-          { year: "02", title: "建设", text: "选择模型、平台和技术，完成应用、系统或基础设施的设计与开发。" },
-          { year: "03", title: "连接", text: "对接业务系统、数据、权限、设备和人员流程，让方案进入实际工作。" },
-          { year: "04", title: "运营", text: "培训、监控、维护、复盘并持续优化使用效果、成本与风险。" }
-        ]
-      },
-      {
-        type: "cards",
-        index: "03 / Start from the problem",
-        title: "按客户问题进入",
-        columns: 3,
-        items: [
-          { title: "不知道AI从哪里开始", text: "从场景发现、价值判断和轻量PoC开始，形成可验证的第一步。" },
-          { title: "系统难以适应新业务", text: "通过业务分析、现代化改造与AI增强工程，让系统持续演进。" },
-          { title: "工厂数据与现场割裂", text: "连接ERP、MES、WMS、设备和作业流程，逐步走向智能化。" },
-          { title: "IT运维压力持续增加", text: "整合知识、日志、监控和工具，建立稳定、安全、可运营的底座。" },
-          { title: "试点做完却无法上线", text: "把权限、数据、人工复核、系统集成和长期运营纳入项目范围。" },
-          { title: "需要跨中日团队协作", text: "依托双语沟通、日系客户经验和集团网络推进跨区域项目。" }
-        ]
-      }
-    ],
-    related: ["capabilities-ai", "industry-manufacturing", "cases"]
-  },
-
   "capabilities-ai": {
     nav: "capabilities",
     eyebrow: "AI Applications & Agents",
@@ -97,7 +44,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-mes-copilot", "case-pharma-contract", "quality"]
   },
 
   "capabilities-digital": {
@@ -145,7 +91,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-outsystems", "case-sap-managed", "case-bi-analytics"]
   },
 
   "capabilities-manufacturing": {
@@ -193,7 +138,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-aps-planning", "case-iot-mes", "case-agv-kitting"]
   },
 
   "capabilities-cloud": {
@@ -241,44 +185,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-infrastructure-modernization", "case-it-operations-agent", "case-sap-managed"]
-  },
-
-  industries: {
-    nav: "industries",
-    eyebrow: "Industries & Scenarios",
-    title: "从业务问题出发，而不是从技术清单出发",
-    description: "围绕制造与物流、企业运营、IT与基础设施三类领域，组合行业知识、软件工程、数据、AI和持续运营能力。",
-    heroImage: "story-city.jpg",
-    cta: ["描述您的问题", "contact/"],
-    lead: "不同企业面对的课题并不相同，我们从一个具体流程、系统或现场问题开始。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Three fields",
-        title: "三大应用领域",
-        columns: 3,
-        items: [
-          { title: "制造与物流", text: "生产、仓储、品质、设备、追溯、无纸化、自动化和机器人。", href: "industries/manufacturing-logistics/", tag: "01" },
-          { title: "企业运营与专业服务", text: "知识、文档、客户服务、人事、财务和专业工作流程。", href: "industries/enterprise-operations/", tag: "02" },
-          { title: "IT与基础设施", text: "云、网络、服务器、安全、服务台、AI环境与智能运维。", href: "industries/it-infrastructure/", tag: "03" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Cross-domain capabilities",
-        title: "跨领域能力",
-        text: "行业不同，但把新技术带入业务所需的工程要素高度相通。我们把业务理解、AI与数据、软件系统、基础设施和持续运营组合起来。",
-        image: "precise-options.jpg",
-        bullets: ["业务流程梳理与场景发现", "AI、知识与数据应用", "软件开发和系统集成", "基础设施、安全与治理", "培训、运维与持续改善"]
-      },
-      {
-        type: "quote",
-        label: "Start with one problem",
-        text: "没有完全对应的行业，也不意味着无法合作。可以从一个具体流程、系统或现场问题开始。"
-      }
-    ],
-    related: ["capabilities", "cases", "contact"]
   },
 
   "industry-manufacturing": {
@@ -326,7 +232,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-aps-planning", "case-iot-mes", "case-agv-kitting"]
   },
 
   "industry-enterprise": {
@@ -374,7 +279,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-pharma-contract", "case-outsystems", "case-bi-analytics"]
   },
 
   "industry-it": {
@@ -422,7 +326,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["case-infrastructure-modernization", "case-it-operations-agent", "case-sap-managed"]
   },
 
   cases: {
@@ -461,7 +364,6 @@ window.TCI_PAGES = {
         text: "“解决方案”依据现有业务资料整理，“AI实践”和“项目实践”依据既有规划文档展开；正式发布前仍需完成客户授权、数字核实与保密审查。"
       }
     ],
-    related: ["case-mes-copilot", "case-smart-warehouse", "case-it-operations-agent"]
   },
 
   "case-infrastructure-modernization": {
@@ -509,7 +411,6 @@ window.TCI_PAGES = {
         text: "资料中的可用性、部署速度与弹性指标属于方案能力表达，不作为未经项目验证的确定性成果。"
       }
     ],
-    related: ["capabilities-cloud", "industry-it", "case-it-operations-agent"]
   },
 
   "case-aps-planning": {
@@ -560,7 +461,6 @@ window.TCI_PAGES = {
         text: "“秒级排程”“精准交期”等表达需要结合数据规模、约束复杂度和项目验收结果确认，演示页不把它们写成统一承诺。"
       }
     ],
-    related: ["capabilities-manufacturing", "industry-manufacturing", "case-iot-mes"]
   },
 
   "case-iot-mes": {
@@ -611,7 +511,6 @@ window.TCI_PAGES = {
         text: "MES负责稳定记录和执行制造流程；MES Copilot则在已有数据与规则之上提供更自然的查询和辅助分析，两者不是同一个页面。"
       }
     ],
-    related: ["capabilities-manufacturing", "industry-manufacturing", "case-mes-copilot"]
   },
 
   "case-detail": {
@@ -661,7 +560,6 @@ window.TCI_PAGES = {
         text: "AI负责快速检索与组织答案，专业人员负责关键判断、例外处理和最终责任。"
       }
     ],
-    related: ["capabilities-ai", "industry-manufacturing", "cases"]
   },
 
   "case-mes-copilot": {
@@ -711,7 +609,6 @@ window.TCI_PAGES = {
         text: "页面只呈现已有资料能够支持的技术构成；效率、用户数与生产运行情况待项目负责人确认。"
       }
     ],
-    related: ["capabilities-ai", "capabilities-manufacturing", "industry-manufacturing"]
   },
 
   "case-pharma-contract": {
@@ -761,7 +658,6 @@ window.TCI_PAGES = {
         text: "现有资料中的90%、150%与450小时来自不同口径，未完成核实前不在页面组合为确定性成果。"
       }
     ],
-    related: ["capabilities-ai", "industry-enterprise", "quality"]
   },
 
   "case-it-operations-agent": {
@@ -811,7 +707,6 @@ window.TCI_PAGES = {
         text: "候选效率指标只作为内部评估线索；生产化状态、安全机制和运行数据确认后再对外使用。"
       }
     ],
-    related: ["capabilities-cloud", "industry-it", "quality"]
   },
 
   "case-smart-warehouse": {
@@ -861,7 +756,6 @@ window.TCI_PAGES = {
         text: "现有资料包含ROI、工时和回收期候选数据，正式展示前需确认这些数字属于同一项目并取得客户授权。"
       }
     ],
-    related: ["capabilities-manufacturing", "industry-manufacturing", "case-agv-kitting"]
   },
 
   "case-agv-kitting": {
@@ -912,7 +806,6 @@ window.TCI_PAGES = {
         text: "50工位夜间搬运场景与其他室外AGV运行数据属于不同材料，页面不把两组数据合并。"
       }
     ],
-    related: ["capabilities-manufacturing", "industry-manufacturing", "case-smart-warehouse"]
   },
 
   "case-outsystems": {
@@ -971,7 +864,6 @@ window.TCI_PAGES = {
         text: "现有资料可支持技术栈、项目期间和业务变化；800+与2000+人月来自不同资料口径，用户规模、统计时点与量化成效需在发布前统一确认。"
       }
     ],
-    related: ["capabilities-digital", "industry-enterprise", "case-bi-analytics"]
   },
 
   "case-sap-managed": {
@@ -1021,7 +913,6 @@ window.TCI_PAGES = {
         text: "资料可支持团队体制、服务模块、据点和长期改善故事；对外年限及当前合同状态需再次核实。"
       }
     ],
-    related: ["capabilities-digital", "capabilities-cloud", "industry-it"]
   },
 
   "case-bi-analytics": {
@@ -1071,7 +962,6 @@ window.TCI_PAGES = {
         text: "现有资料支持月度报告制作缩短和人工错误减少的定性结论；具体时长与使用规模待确认。"
       }
     ],
-    related: ["capabilities-digital", "industry-enterprise", "case-outsystems"]
   },
 
   about: {
@@ -1137,128 +1027,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: []
-  },
-
-  "ai-transformation": {
-    nav: "about",
-    eyebrow: "AI Transformation",
-    title: "我们不仅为客户导入AI，也用AI重新塑造自己",
-    description: "通过AI卓越中心统筹工具平台、人才培养、使用治理、场景实践和资产沉淀。",
-    heroImage: "precise-team.jpg",
-    cta: ["了解客户AI服务", "capabilities/ai/"],
-    lead: "每一次内部实践都转化为可复用的方法、模板、案例和服务能力。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Five pillars",
-        title: "五项建设",
-        columns: 3,
-        items: [
-          { title: "工具与平台", text: "企业级AI工具、模型、知识库、智能体平台与运行环境。" },
-          { title: "人才与认知", text: "未来塾、培训、开发者能力和AI骨干网络。" },
-          { title: "规则与治理", text: "模型使用、客户数据、代码、账号、权限、日志和人工确认。" },
-          { title: "场景实践", text: "研发、测试、运维、营业、管理与客户解决方案。" },
-          { title: "资产与复用", text: "案例、Prompt、Agent、知识模板、组件与PoC方法。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Learning loop",
-        title: "从内部实践到客户价值",
-        text: "内部实践让团队理解AI在真实流程中的限制、成本和治理要求；客户项目则推动行业知识、系统集成和运营能力沉淀。两者形成持续进化的循环。",
-        image: "team-2255.jpg",
-        bullets: ["内部效率与AI增强开发", "行业场景与客户PoC", "治理、评测与运营经验", "方法、模板与组件沉淀", "人才成长与跨团队复用"]
-      },
-      {
-        type: "quote",
-        label: "AI + Professional",
-        text: "让AI承担信息整理、检索、分析与初稿，让专业人员专注判断、复核、沟通与最终责任。"
-      }
-    ],
-    related: ["capabilities-ai", "about", "quality"]
-  },
-
-  quality: {
-    nav: "about",
-    eyebrow: "Quality & Security",
-    title: "以工程品质和安全治理，支撑持续创新",
-    description: "AI和数字化项目越深入业务，越需要明确的过程、权限、数据边界和责任机制。",
-    heroImage: "precise-labyrinth.jpg",
-    cta: ["讨论安全与治理要求", "contact/"],
-    lead: "创新建立在可控、可审计和可持续的工程基础之上。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Engineering quality",
-        title: "品质管理",
-        columns: 4,
-        items: [
-          { title: "流程与PDCA", text: "流程标准化、质量指标、复盘与持续改善。" },
-          { title: "项目评审与PMO", text: "统筹里程碑、风险、缺陷、变更与项目健康度。" },
-          { title: "测试与自动化", text: "从需求到运维的测试设计、执行与质量责任。" },
-          { title: "知识与资产", text: "知识库、模板、组件和生产率评估。" }
-        ]
-      },
-      {
-        type: "cards",
-        index: "02 / Information security",
-        title: "信息安全",
-        columns: 3,
-        items: [
-          { title: "环境与网络隔离", text: "开发与办公网络、客户工位、外网与介质控制。" },
-          { title: "权限与审计", text: "账号、密码、访问、出入、打印、监控和日志。" },
-          { title: "客户数据保护", text: "保密协议、资料边界、云与基础设施安全支援。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "03 / AI governance",
-        title: "AI治理进入每一个关键环节",
-        text: "从模型和工具选择，到数据输入、权限、调用、人工确认与持续评测，我们让AI使用能够被说明、被追踪、被控制。",
-        image: "data-system.jpg",
-        bullets: ["模型使用：适用范围、企业账号与审批", "数据边界：客户资料、代码、密钥与机密信息", "人工确认：复核、审批、例外与最终责任", "权限审计：API Key、Token、日志、费用和记录", "持续评测：成功率、介入率、时间、成本与风险"]
-      }
-    ],
-    related: ["capabilities-cloud", "ai-transformation", "contact"]
-  },
-
-  global: {
-    nav: "about",
-    eyebrow: "Global Network",
-    title: "连接中国创新、日本客户与全球业务",
-    description: "依托transcosmos集团和中国服务网络，为跨区域、跨语言与跨系统项目提供协作基础。",
-    heroImage: "city-clean.jpg",
-    cta: ["探讨伙伴合作", "contact/"],
-    lead: "扎根长三角，以集团网络连接客户、技术与伙伴。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Network layers",
-        title: "四个网络层次",
-        columns: 4,
-        items: [
-          { title: "苏州与长三角", text: "苏州总公司、上海与常州分公司，贴近制造与日系客户。" },
-          { title: "中国网络", text: "与大宇宙中国及各地服务据点协同。" },
-          { title: "日本与集团", text: "连接日本总部、客户和transcosmos全球业务资源。" },
-          { title: "技术与伙伴", text: "连接云、模型、低代码、IoT、算法、机器人与设备伙伴。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Partner model",
-        title: "把不同优势组合成客户价值",
-        text: "面向AI与机器人时代，我们持续连接模型、云、算法、设备和机器人伙伴，围绕真实客户场景形成联合能力。",
-        image: "city-options.jpg",
-        bullets: ["联合发现客户场景并开展PoC", "技术能力与行业、客户渠道组合", "共同开发面向日本或全球客户的方案", "共同承担系统集成、实施与持续运营"]
-      },
-      {
-        type: "quote",
-        label: "Expression boundary",
-        text: "只公开已经确认的集团据点、合作伙伴和联合项目；正在拓展的合作保持清晰边界。"
-      }
-    ],
-    related: ["about", "capabilities-manufacturing", "contact"]
   },
 
   insights: {
@@ -1288,48 +1056,6 @@ window.TCI_PAGES = {
         ]
       }
     ],
-    related: ["capabilities-ai", "capabilities-manufacturing", "ai-transformation"]
-  },
-
-  careers: {
-    nav: "about",
-    eyebrow: "Careers",
-    title: "加入AI时代的数字工程团队",
-    description: "AI正在进入开发、测试、运维、制造系统、业务咨询和项目交付。与跨领域团队共同解决真实客户问题。",
-    heroImage: "team-clean.jpg",
-    cta: ["查看工作领域", "#career-fields"],
-    lead: "在真实业务与工程现场，成长为能够连接业务、AI与技术的复合型人才。",
-    sections: [
-      {
-        id: "career-fields",
-        type: "cards",
-        index: "01 / Work fields",
-        title: "工作领域",
-        columns: 3,
-        items: [
-          { title: "AI应用与智能体", text: "知识库、文档智能、Agent、模型平台与业务集成。" },
-          { title: "软件开发与低代码", text: "定制系统、OutSystems、SAP外围与系统现代化。" },
-          { title: "制造IT与机器人集成", text: "MES、WMS、IoT、AGV/AMR与现场系统。" },
-          { title: "云、基础设施与安全", text: "网络、服务器、云、GPU、服务台和智能运维。" },
-          { title: "业务分析与项目管理", text: "场景发现、需求、PMO、交付与持续改善。" },
-          { title: "中日跨境协作", text: "面向日系客户和集团项目的双语业务与工程沟通。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Growth",
-        title: "成长支持",
-        text: "通过内部学习、外部认证、跨事业部项目和知识资产复用，帮助人才从单一技术角色走向复合型工程与业务能力。",
-        image: "team-2245.jpg",
-        bullets: ["未来塾与AI内部分享", "外部培训和技术认证", "跨事业部项目与行业实践", "知识、模板和组件复用", "从开发、业务到交付的复合成长"]
-      },
-      {
-        type: "quote",
-        label: "Demo note",
-        text: "演示版展示雇主品牌与职位信息结构；正式职位、地点、出差要求和申请入口需由招聘团队统一维护。"
-      }
-    ],
-    related: ["about", "ai-transformation", "contact"]
   },
 
   contact: {
@@ -1346,23 +1072,6 @@ window.TCI_PAGES = {
         type: "contact"
       }
     ],
-    related: ["capabilities-ai", "industry-manufacturing", "cases"]
   },
 
-  privacy: {
-    nav: "privacy",
-    eyebrow: "Privacy & Legal",
-    title: "清晰说明信息如何被收集、使用与保护",
-    description: "演示版法律信息页面，用于说明正式网站上线所需的结构与内容范围。",
-    heroImage: "office-clean.jpg",
-    cta: ["查看页面结构", "#privacy-content"],
-    lead: "联系表单只收集完成咨询所需的最少信息。",
-    sections: [
-      {
-        id: "privacy-content",
-        type: "legal"
-      }
-    ],
-    related: ["contact", "quality", "about"]
-  }
 };
