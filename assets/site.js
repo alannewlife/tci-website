@@ -174,11 +174,11 @@
         <a class="pill-cta" href="${url("contact/")}">开始一次对话 <span class="arrow">↗</span></a>
       </div>
       <div class="footer-links">
-        <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a></div>
+        <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a><a href="${url("capabilities/cloud-operations/")}">云与智能运维</a></div>
         <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
-        <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("careers/")}">招贤纳士</a></div>
-        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a></div>
-        <div><h3>Contact</h3><a href="${url("contact/")}">联系我们</a><a href="${url("privacy/")}">隐私与法律</a></div>
+        <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("contact/")}">联系我们</a></div>
+        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a><a href="${url("privacy/")}">隐私与法律</a></div>
+        <div><h3>友情链接</h3><a href="https://www.trans-cosmos.com.cn/" target="_blank" rel="noopener noreferrer">大宇宙信息创造（中国）有限公司</a><a href="https://www.trans-cosmos.co.jp/" target="_blank" rel="noopener noreferrer">transcosmos inc.</a><a href="http://www.tci-cn.co.jp/" target="_blank" rel="noopener noreferrer">大宇宙ジャパン株式会社</a><a href="http://www.tci-jn.com/" target="_blank" rel="noopener noreferrer">济南大宇宙信息创造有限公司</a></div>
       </div>
       <div class="footer-bottom">
         <span>苏州大宇宙信息创造有限公司 · 苏州 / 上海 / 常州</span>
