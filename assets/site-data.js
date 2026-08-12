@@ -1337,7 +1337,7 @@ window.TCI_PAGES = {
     eyebrow: "Contact",
     title: "从一个具体问题或场景开始",
     description: "不需要准备完整需求。先告诉我们当前的问题和目标，我们将安排合适的业务与技术人员与您沟通。",
-    heroImage: "selected-contact.jpg",
+    heroImage: "office-exact-clean.jpg",
     cta: ["填写演示表单", "#contact-form"],
     lead: "无论是AI应用、业务系统、制造现场、云运维，还是机器人与伙伴合作，都可以先从一次对话开始。",
     sections: [
