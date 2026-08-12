@@ -63,8 +63,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Typical scenarios",
-        title: "从高频、可验证的场景开始",
+        index: "01 / Nine capabilities",
+        title: "九类AI与智能能力范围",
         columns: 3,
         items: [
           { title: "企业知识与智能问答", text: "统一检索制度、SOP、品质与设备知识，提供可溯源回答。" },
@@ -72,33 +72,24 @@ window.TCI_PAGES = {
           { title: "业务流程智能体", text: "把判断拆解为可执行步骤，连接系统、工具、审批与人员协作。" },
           { title: "系统内嵌AI", text: "在MES、CRM、ERP、门户和专业业务系统中加入自然语言与智能辅助。" },
           { title: "AI增强研发与运维", text: "辅助需求、设计、编码、测试、日志分析、知识检索和标准任务。" },
-          { title: "培训与采用支援", text: "从认知培训到岗位场景设计，帮助团队形成安全、稳定的使用方式。" }
+          { title: "数据分析与洞察", text: "通过自然语言查询、解释业务数据并生成可核查的建议。" },
+          { title: "模型与应用部署", text: "根据安全、时延和成本要求选择云端、本地或混合部署。" },
+          { title: "AI平台与治理", text: "统一管理模型、知识、权限、日志与使用边界。" },
+          { title: "评测与持续运营", text: "以业务指标评估效果，通过反馈持续改进。" }
         ]
       },
       {
         type: "split",
-        index: "02 / Agent architecture",
-        title: "上下文 + 模型 + 工具",
+        index: "02 / Key perspective",
+        title: "重点认知：上下文 + 模型 + 工具",
         text: "上下文让AI知道“我是谁、知道什么、现在发生什么”；模型负责理解、判断和规划；工具把判断变成搜索、读写文件、运行代码和调用系统等行动。三者形成闭环，AI才能从对话进入业务执行。",
         image: "data-lattice.jpg",
         bullets: ["Context：角色、知识、权限、历史与实时状态", "Model：理解、生成、推理与任务规划", "Tools：API、数据库、文件、软件系统与设备", "Human：复核、审批、例外判断与最终责任"]
       },
       {
-        type: "timeline",
-        index: "03 / Service path",
-        title: "从场景发现到持续运营",
-        items: [
-          { year: "01", title: "场景发现与评估", text: "访谈、流程梳理、价值与风险判断。" },
-          { year: "02", title: "模型与部署选择", text: "商业模型、开源模型、本地、云或混合方式。" },
-          { year: "03", title: "平台与知识建设", text: "模型网关、知识库、权限、日志和工具连接。" },
-          { year: "04", title: "智能体与应用开发", text: "工作流、Skill、MCP、定制界面与业务集成。" },
-          { year: "05", title: "培训与运营", text: "效果评估、成本监控、知识维护和持续优化。" }
-        ]
-      },
-      {
         type: "cases",
-        index: "04 / Representative cases",
-        title: "代表案例",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
           { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["本地部署", "知识库"], href: "cases/manufacturing-knowledge/" },
           { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", tags: ["制造", "系统内嵌AI"], href: "cases/mes-query-copilot/" },
@@ -120,8 +111,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Service scope",
-        title: "覆盖业务系统的完整生命周期",
+        index: "01 / Nine capabilities",
+        title: "九类数字系统开发能力范围",
         columns: 3,
         items: [
           { title: "业务系统与定制开发", text: "面向制造、销售、客户服务、财务、人事和专业业务的定制系统。" },
@@ -129,27 +120,28 @@ window.TCI_PAGES = {
           { title: "SAP / ERP与外围联动", text: "SAP运维、数据与接口、外围系统建设和业务流程改善。" },
           { title: "数据、BI与经营分析", text: "数据集成、报表、经营分析、预测与智能辅助。" },
           { title: "系统现代化", text: "旧系统迁移、重构、云化、接口化和技术债治理。" },
-          { title: "ODC与长期运维", text: "稳定团队、双语协作、质量管理、维护和持续改善。" }
+          { title: "ODC与长期运维", text: "稳定团队、双语协作、质量管理、维护和持续改善。" },
+          { title: "云原生与DevOps", text: "让环境、发布、监控和回滚更稳定可控。" },
+          { title: "质量与安全工程", text: "把评审、测试、权限和审计纳入开发过程。" },
+          { title: "AI增强应用", text: "将模型能力嵌入既有系统与日常业务流程。" }
         ]
       },
       {
         type: "split",
-        index: "02 / AI-enhanced engineering",
-        title: "AI增强的不只是编码速度",
+        index: "02 / Key perspective",
+        title: "重点认知：AI增强的不只是编码速度",
         text: "AI进入需求、设计、开发、测试和运维，但每一个关键结果仍由专业人员确认。我们把效率提升与工程治理放在同一套流程中。",
         image: "engineer.webp",
         bullets: ["需求：整理访谈、文档与影响范围", "设计：辅助架构、接口与数据模型", "开发：生成、解释、重构、迁移与评审", "测试：用例生成、缺陷分析与自动化", "运维：知识检索、日志分析与变更辅助"]
       },
       {
-        type: "cards",
-        index: "03 / Why TCI",
-        title: "长期工程积累，面向AI时代继续进化",
-        columns: 4,
+        type: "cases",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
-          { title: "日系业务理解", text: "中日双语沟通，理解日企管理、品质与长期合作方式。" },
-          { title: "自有交付团队", text: "稳定的开发与项目团队，支持从建设到保守的一体化协作。" },
-          { title: "跨领域组合", text: "软件、AI、云、基础设施与制造现场能力协同。" },
-          { title: "品质与持续运营", text: "CMMI3、PMO、评审、测试与长期运维机制。" }
+          { kind: "项目实践", title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "case-outsystems-poster.webp", imagePosition: "50% 20%", tags: ["Low-code", "Engineering"], href: "cases/outsystems-business-platform/" },
+          { kind: "项目实践", title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", tags: ["SAP", "Managed Service"], href: "cases/sap-long-term-managed-services/" },
+          { kind: "项目实践", title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["BI", "Data"], href: "cases/bi-management-analytics/" }
         ]
       }
     ],
@@ -167,8 +159,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Digital foundation",
-        title: "制造现场的数字化基础",
+        index: "01 / Nine capabilities",
+        title: "九类制造与物流能力范围",
         columns: 3,
         items: [
           { title: "生产执行与计划", text: "MES、生产管理、APS、工程BOM、实绩与进度管理。" },
@@ -176,43 +168,29 @@ window.TCI_PAGES = {
           { title: "IoT与设备连接", text: "设备数据采集、状态监控、能源、保全与异常通知。" },
           { title: "品质与追溯", text: "检查、履历、批次、异常和质量数据的闭环管理。" },
           { title: "无纸化与现场应用", text: "电子作业、移动终端、看板与实时信息共享。" },
-          { title: "系统整合", text: "连接ERP、MES、WMS、调度、设备与机器人执行端。" }
+          { title: "系统整合", text: "连接ERP、MES、WMS、调度、设备与机器人执行端。" },
+          { title: "APS与生产计划", text: "在产能、物料和交期约束下辅助排程与调整。" },
+          { title: "制造数据分析", text: "围绕效率、质量、设备和成本形成统一指标。" },
+          { title: "现场知识与AI", text: "让工艺、设备与质量经验可检索、可辅助判断。" }
         ]
       },
       {
         type: "split",
-        index: "02 / AI on the floor",
-        title: "AI进入制造现场",
+        index: "02 / Key perspective",
+        title: "重点认知：先理解现场，再引入AI与自动化",
         text: "AI不替代现场系统，而是在知识、数据与任务之间形成新的交互方式。它可以帮助人员更快理解问题、获得建议，并把标准任务交给系统执行。",
         image: "precise-data.jpg",
         bullets: ["工厂知识库：SOP、设备手册、品质与经验复用", "MES Copilot：自然语言查询生产与设备数据", "AI视觉：外观检测、动作合规与缺陷识别", "预测性维护：结合传感数据识别异常趋势", "现场智能体：连接知识、数据和业务工具"]
       },
       {
-        type: "timeline",
-        index: "03 / Evolution path",
-        title: "现场智能化路线",
-        items: [
-          { year: "01", title: "可视化", text: "数据采集、看板、追溯、库存与进度。" },
-          { year: "02", title: "连接化", text: "ERP、MES、WMS、IoT与设备接口。" },
-          { year: "03", title: "智能辅助", text: "知识库、Copilot、AI视觉与异常预测。" },
-          { year: "04", title: "自动执行", text: "AGV/AMR、调度、标准任务与系统联动。" },
-          { year: "05", title: "Physical AI", text: "机器人在完整业务流程中的感知、协作与执行。" }
-        ]
-      },
-      {
         type: "cases",
-        index: "04 / Manufacturing solutions",
-        title: "制造现场解决方案",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
           { kind: "解决方案", title: "APS智能生产计划", text: "连接订单、产能、物料与工序约束。", image: "case-aps-poster.webp", imagePosition: "50% 16%", tags: ["APS", "计划"], href: "cases/aps-production-planning/" },
           { kind: "解决方案", title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", tags: ["MES", "IoT"], href: "cases/iot-mes-platform/" },
           { kind: "项目实践", title: "AGV智能搬运与现场协同", text: "连接设备、调度、现场流程与实施服务。", image: "case-agv-poster.webp", imagePosition: "50% 14%", tags: ["AGV", "机器人"], href: "cases/agv-kitting-management/" }
         ]
-      },
-      {
-        type: "quote",
-        label: "Our role in robotics",
-        text: "机器人落地不仅是设备导入。我们的角色，是连接任务来源、业务规则、调度、异常处理、系统接口与人员协作。"
       }
     ],
     related: ["case-aps-planning", "case-iot-mes", "case-agv-kitting"]
@@ -229,8 +207,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Service scope",
-        title: "从建设到长期运营",
+        index: "01 / Nine capabilities",
+        title: "九类云与IT运维能力范围",
         columns: 3,
         items: [
           { title: "云与混合基础设施", text: "AWS、阿里云及混合环境的设计、构建、迁移和运营。" },
@@ -238,21 +216,24 @@ window.TCI_PAGES = {
           { title: "AI基础设施", text: "GPU、模型运行环境、企业AI平台、容量与成本管理。" },
           { title: "监控与安全运营", text: "告警、日志、门禁、账号、权限、审计和安全支援。" },
           { title: "服务台与现场支援", text: "中日双语服务台、离岸支援、标准作业和升级机制。" },
-          { title: "运维智能体", text: "知识检索、日志分析、任务编排和标准操作自动化。" }
+          { title: "运维智能体", text: "知识检索、日志分析、任务编排和标准操作自动化。" },
+          { title: "备份与业务连续性", text: "围绕恢复目标规划备份、容灾和演练。" },
+          { title: "IT知识与SOP", text: "沉淀操作标准、故障经验和环境信息。" },
+          { title: "服务运营治理", text: "用服务台、SLA、变更和复盘机制持续改善。" }
         ]
       },
       {
         type: "split",
-        index: "02 / AIOps",
-        title: "从被动维护到智能运维",
+        index: "02 / Key perspective",
+        title: "重点认知：建设、运维与持续改善必须一体化",
         text: "传统运维关注“发生故障后如何处理”；智能运维进一步整合日志、告警、知识和工具，辅助识别原因、生成建议并执行标准化任务。人工仍负责权限、审批、风险判断和关键操作。",
         image: "data-monitor.jpg",
         bullets: ["减少重复检索与标准操作", "把专家经验沉淀为可复用知识", "统一账号、日志、成本与调用记录", "保留审批、人工介入和关键操作责任"]
       },
       {
         type: "cases",
-        index: "03 / Representative cases",
-        title: "相关实践与解决方案",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
           { kind: "解决方案", title: "基础设施现代化与云迁移", text: "从脱VMware、超融合迁移到企业上云。", image: "case-vmware-poster.webp", imagePosition: "50% 10%", tags: ["Migration", "Cloud"], href: "cases/infrastructure-modernization/" },
           { kind: "AI实践", title: "IT运维智能体平台", text: "连接知识、监控与标准运维工具。", image: "data-lattice.jpg", tags: ["AIOps", "Agent"], href: "cases/it-operations-agent-platform/" },
@@ -311,8 +292,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Common challenges",
-        title: "客户常见课题",
+        index: "01 / Nine challenges",
+        title: "九类常见课题",
         columns: 3,
         items: [
           { title: "纸质与手工记录多", text: "容易出错，难以实时共享，信息汇总耗时。" },
@@ -320,26 +301,28 @@ window.TCI_PAGES = {
           { title: "现场状态不可视", text: "生产、设备与品质状态缺少实时可视化。" },
           { title: "知识依赖少数人员", text: "经验分散在人员、文件和历史项目中。" },
           { title: "重复作业依赖人工", text: "设备停机、搬运、检查与录入占用大量时间。" },
-          { title: "系统与流程割裂", text: "多系统并存，数据重复录入，异常处理难以闭环。" }
+          { title: "系统与流程割裂", text: "多系统并存，数据重复录入，异常处理难以闭环。" },
+          { title: "计划难以及时调整", text: "订单、产能、物料和现场变化无法快速联动。" },
+          { title: "质量追溯速度慢", text: "问题发生后难以快速定位批次、工序和影响范围。" },
+          { title: "设备与机器人孤立", text: "自动化设备缺少统一任务来源、调度和异常协同。" }
         ]
       },
       {
         type: "split",
-        index: "02 / Scenarios",
-        title: "场景与解决方案",
+        index: "02 / Key perspective",
+        title: "重点认知：先建立可追溯的数字闭环",
         text: "从生产执行、仓储物流到品质、设备与现场知识，我们按实际场景组合系统、数据、AI和自动化能力。",
         image: "precise-city.jpg",
         bullets: ["生产执行与计划：MES、APS、BOM、WIP与负荷分析", "仓储与物流：WMS、ERP、PDA、RFID、AGV/AMR", "品质与追溯：检查、批次、异常、履历与AI视觉", "设备与保全：IoT、监控、点检与预测性维护", "知识与人员：SOP、手册、培训、知识库与Copilot"]
       },
       {
-        type: "timeline",
-        index: "03 / Step by step",
-        title: "分阶段推进",
+        type: "cases",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
-          { year: "01", title: "数字化基础", text: "消除纸质、统一数据、建立追溯。" },
-          { year: "02", title: "可视化与分析", text: "实时掌握进度、库存、品质和设备。" },
-          { year: "03", title: "AI辅助", text: "知识检索、自然语言查询、异常预测和决策支持。" },
-          { year: "04", title: "自动化与机器人", text: "连接任务、系统、设备与现场执行。" }
+          { kind: "解决方案", title: "APS智能生产计划", text: "连接排程、交期、库存和现场反馈。", image: "case-aps-poster.webp", imagePosition: "50% 16%", tags: ["APS", "计划"], href: "cases/aps-production-planning/" },
+          { kind: "解决方案", title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", tags: ["MES", "IoT"], href: "cases/iot-mes-platform/" },
+          { kind: "项目实践", title: "AGV智能搬运与现场协同", text: "连接设备、调度、现场流程与实施服务。", image: "case-agv-poster.webp", imagePosition: "50% 14%", tags: ["AGV", "机器人"], href: "cases/agv-kitting-management/" }
         ]
       }
     ],
@@ -357,34 +340,37 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Typical scenarios",
-        title: "典型场景",
+        index: "01 / Nine challenges",
+        title: "九类常见课题",
         columns: 3,
         items: [
-          { title: "知识管理", text: "制度、产品、项目、客户和专业知识的统一检索与问答。" },
-          { title: "复杂文档业务", text: "资料提取、比较、翻译、草稿生成、校验与审批。" },
-          { title: "客户服务", text: "CRM、联络中心、FAQ、回复辅助和服务质量分析。" },
-          { title: "人事与招聘", text: "履历整理、岗位匹配、面试准备和员工服务。" },
-          { title: "财务与经营管理", text: "预算、预实、合同、报表与经营分析。" },
-          { title: "业务流程自动化", text: "低代码、RPA、Agent与既有系统协同。" }
+          { title: "知识分散难复用", text: "制度、项目和专业经验分散，检索与传承成本高。" },
+          { title: "复杂文档耗时", text: "提取、比较、翻译、草拟和校验依赖大量人工。" },
+          { title: "客户服务口径不一", text: "信息来源分散，回复速度和一致性难以稳定。" },
+          { title: "人事流程重复", text: "履历整理、岗位匹配和员工问答占用专业人员时间。" },
+          { title: "经营数据滞后", text: "预算、实绩和业务数据汇总慢，难以及时判断。" },
+          { title: "业务流程割裂", text: "系统、表格、邮件和人工交接之间存在断点。" },
+          { title: "系统变化速度慢", text: "既有系统难以快速适应新业务和新的管理要求。" },
+          { title: "数据口径不一致", text: "部门间定义、来源与版本不同，影响分析与协作。" },
+          { title: "AI结果缺少治理", text: "权限、引用、复核、日志和责任边界尚未建立。" }
         ]
       },
       {
         type: "split",
-        index: "02 / Human + AI",
-        title: "人与AI如何分工",
+        index: "02 / Key perspective",
+        title: "重点认知：人与AI如何分工",
         text: "AI适合承担资料检索、信息提取、分类、草稿生成和标准任务；专业人员负责规则设定、复杂判断、例外处理、审批和最终责任。",
         image: "group.png",
         bullets: ["AI：检索、整理、提取、分类与生成", "人员：规则、判断、沟通、审批与责任", "系统：权限、数据、流程、日志与操作界面", "运营：评测、反馈、知识更新与持续改善"]
       },
       {
         type: "cases",
-        index: "03 / Representative cases",
-        title: "代表案例",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
-          { title: "医药估算合同生成", text: "多智能体与人工复核协作处理复杂文档。", image: "data-18.jpg", tags: ["Document AI", "Human-in-the-loop"], href: "cases/pharma-budget-contract-generation/" },
-          { title: "招聘履历整理器", text: "从资料整理到岗位判断的智能辅助。", image: "office-team.jpg", tags: ["HR", "Agent"] },
-          { title: "预算与经营分析", text: "连接数据、业务规则与管理判断。", image: "data-monitor.jpg", tags: ["BI", "Workflow"] }
+          { kind: "AI实践", title: "医药估算合同生成", text: "多智能体与人工复核协作处理复杂文档。", image: "data-18.jpg", tags: ["Document AI", "Human-in-the-loop"], href: "cases/pharma-budget-contract-generation/" },
+          { kind: "项目实践", title: "OutSystems业务平台", text: "以低代码快速建设并持续演进业务系统。", image: "case-outsystems-poster.webp", imagePosition: "50% 20%", tags: ["Low-code", "Workflow"], href: "cases/outsystems-business-platform/" },
+          { kind: "项目实践", title: "BI经营分析", text: "连接销售、物流与财务数据，辅助经营判断。", image: "data-14.jpg", tags: ["BI", "Data"], href: "cases/bi-management-analytics/" }
         ]
       }
     ],
@@ -402,8 +388,8 @@ window.TCI_PAGES = {
     sections: [
       {
         type: "cards",
-        index: "01 / Common challenges",
-        title: "典型课题",
+        index: "01 / Nine challenges",
+        title: "九类常见课题",
         columns: 3,
         items: [
           { title: "告警与日志数量巨大", text: "排查依赖少数专家，响应速度和质量波动。" },
@@ -411,21 +397,24 @@ window.TCI_PAGES = {
           { title: "标准操作重复", text: "大量工作仍需人工检索、判断和执行。" },
           { title: "AI环境难以管理", text: "GPU、模型、权限、账号和成本缺少统一治理。" },
           { title: "跨区域服务复杂", text: "跨语言、跨时区与现场支持需要稳定体制。" },
-          { title: "安全要求持续提高", text: "数据、密钥、日志、审批和审计需要形成闭环。" }
+          { title: "安全要求持续提高", text: "数据、密钥、日志、审批和审计需要形成闭环。" },
+          { title: "旧环境成本与绑定", text: "既有平台扩容、许可与维护成本持续上升。" },
+          { title: "多环境管理复杂", text: "本地、云和分支环境并存，配置与责任边界不清。" },
+          { title: "变更与回退风险", text: "发布、迁移和故障恢复缺少稳定流程与演练。" }
         ]
       },
       {
         type: "split",
-        index: "02 / Combined solution",
-        title: "建设、运营与智能化一体",
+        index: "02 / Key perspective",
+        title: "重点认知：建设、运营与智能化一体",
         text: "从基础设施建设开始，建立监控、安全、服务台与长期运营体制，再逐步把知识、日志和标准任务接入智能体。",
         image: "data-system.jpg",
         bullets: ["基础设施建设：网络、服务器、数据库、云与混合环境", "运营与服务台：监控、工单、SLA、双语支援", "AI基础设施：GPU、模型平台、账号与成本", "智能运维：知识、日志、工具与任务编排", "安全治理：权限、密钥、审计、复核与责任"]
       },
       {
         type: "cases",
-        index: "03 / Representative cases",
-        title: "相关实践与解决方案",
+        index: "03 / Cases & solutions",
+        title: "案例和解决方案",
         items: [
           { kind: "解决方案", title: "基础设施现代化与云迁移", text: "规划兼顾连续性、成本与自主可控的演进路径。", image: "case-cloud-poster.webp", imagePosition: "50% 10%", tags: ["Migration", "Cloud"], href: "cases/infrastructure-modernization/" },
           { kind: "AI实践", title: "IT运维智能体平台", text: "把知识和工具接入运维任务。", image: "data-lattice.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" },
@@ -1088,11 +1077,11 @@ window.TCI_PAGES = {
   about: {
     nav: "about",
     eyebrow: "About TCI Suzhou",
-    title: "扎根中国，连接日本与全球的数字工程伙伴",
-    description: "苏州大宇宙成立于2008年，是transcosmos集团在华东地区的IT服务据点。",
+    title: "扎根长三角的数字工程与IT服务团队",
+    description: "苏州大宇宙成立于2008年，为制造业与日系企业提供业务系统、制造数字化、基础设施、AI应用和长期运维服务。",
     heroImage: "team-exact-clean.jpg",
-    cta: ["了解我们的进化", "#history"],
-    lead: "从软件开发和基础设施服务起步，持续深入制造、物流和企业运营，并正把AI融入人员、流程与客户解决方案。",
+    cta: ["联系我们", "contact/"],
+    lead: "我们从客户的业务流程和现有系统出发，由稳定团队负责分析、开发、实施、运维与持续改善。",
     sections: [
       {
         type: "cards",
@@ -1102,33 +1091,50 @@ window.TCI_PAGES = {
         items: [
           { title: "苏州大宇宙信息创造有限公司", text: "成立于2008年10月，transcosmos集团在华东地区的IT服务据点。" },
           { title: "苏州 · 上海 · 常州", text: "三个协同据点，贴近长三角制造业、日系客户与跨区域项目。" },
-          { title: "约265人", text: "演示版沿用2026年6月规划数据，正式发布前需再次核实。" },
-          { title: "People & Technology", text: "以人的专业判断、AI能力与工程技术创造持续业务价值。" },
+          { title: "transcosmos集团网络", text: "在需要时连接中国、日本及集团相关团队，支撑跨区域协作。" },
+          { title: "长期交付", text: "以自有团队持续支持系统建设、保守运维和业务改善。" },
           { title: "ISO27001", text: "以信息安全管理体系支撑客户资料与生产环境的安全要求。" },
           { title: "CMMI3", text: "以成熟的软件工程、项目管理和质量机制支撑长期交付。" }
         ]
       },
       {
-        id: "history",
-        type: "timeline",
-        index: "02 / Our evolution",
-        title: "从数字化基础走向AI与Physical AI",
+        type: "cards",
+        index: "02 / What we do",
+        title: "我们实际提供的服务",
+        columns: 3,
         items: [
-          { year: "2008起", title: "软件开发与IT基础服务", text: "建立自有开发、基础设施与日系客户支援能力。" },
-          { year: "2009起", title: "工厂与办公室业务系统", text: "深入制造与企业运营的真实工作流程。" },
-          { year: "2015起", title: "制造可视化、IoT与设备连接", text: "让现场数据进入系统、管理与持续改善。" },
-          { year: "2021起", title: "无纸化、自动化与AGV实践", text: "连接数字系统与现场执行。" },
-          { year: "2024起", title: "生成式AI与智能体", text: "推动AI增强开发、业务与运维。" },
-          { year: "面向未来", title: "机器人与Physical AI", text: "连接软件系统、现场数据、设备与全球伙伴。" }
+          { title: "业务系统与数字工程", text: "定制开发、低代码、SAP外围、数据分析和系统现代化。" },
+          { title: "制造与物流数字化", text: "MES、WMS、APS、IoT、无纸化、追溯及现场系统集成。" },
+          { title: "云与IT基础设施", text: "云、网络、服务器、数据库、安全、服务台和长期运维。" },
+          { title: "AI应用与智能体", text: "知识库、文档处理、业务Copilot、智能体和既有系统嵌入。" },
+          { title: "自动化与机器人协同", text: "连接任务、调度、设备、现场流程和异常处理机制。" },
+          { title: "中日双语协作", text: "支持跨语言需求沟通、项目推进、保守运维与集团协同。" }
         ]
       },
       {
-        type: "quote",
-        label: "People & Technology, evolved",
-        text: "AI不会取代专业责任，而会改变人们理解信息、做出判断和完成工作的方式。"
+        type: "split",
+        index: "03 / Delivery method",
+        title: "把建设、上线和长期运营放在同一套交付里",
+        text: "企业系统很少从零开始。我们先确认业务目标、现有流程、系统接口、数据与责任边界，再由固定团队推进设计、开发、测试、迁移和上线后的持续支持。",
+        image: "team-2255.jpg",
+        bullets: ["从业务问题和现场流程开始，而不是从技术清单开始", "在关键节点安排评审、测试、变更和风险确认", "把接口、权限、数据迁移和异常处理纳入实施范围", "上线后保留服务窗口、知识沉淀和持续改善机制"]
+      },
+      {
+        type: "cards",
+        index: "04 / Quality & responsibility",
+        title: "品质、安全与AI使用边界",
+        columns: 3,
+        items: [
+          { title: "工程品质", text: "通过项目计划、评审、测试、缺陷和变更管理控制交付质量。" },
+          { title: "信息安全", text: "围绕账号、权限、环境、资料、日志和审计落实安全要求。" },
+          { title: "AI数据边界", text: "根据客户要求确定模型、部署方式、可输入数据和工具权限。" },
+          { title: "人工复核", text: "关键判断、审批、例外处理和最终责任继续由专业人员承担。" },
+          { title: "可追踪运营", text: "保留必要的调用、操作和变更记录，便于检查与复盘。" },
+          { title: "持续改善", text: "用实际效果、使用反馈和运营成本持续调整系统与流程。" }
+        ]
       }
     ],
-    related: ["ai-transformation", "quality", "global"]
+    related: []
   },
 
   "ai-transformation": {

@@ -16,37 +16,6 @@
     return `${root}${path}`;
   };
 
-  const pageHref = {
-    "capabilities-ai": "capabilities/ai/",
-    "capabilities-digital": "capabilities/digital-engineering/",
-    "capabilities-manufacturing": "capabilities/smart-factory-robotics/",
-    "capabilities-cloud": "capabilities/cloud-operations/",
-    "industry-manufacturing": "industries/manufacturing-logistics/",
-    "industry-enterprise": "industries/enterprise-operations/",
-    "industry-it": "industries/it-infrastructure/",
-    cases: "cases/",
-    "case-detail": "cases/manufacturing-knowledge/",
-    "case-mes-copilot": "cases/mes-query-copilot/",
-    "case-pharma-contract": "cases/pharma-budget-contract-generation/",
-    "case-it-operations-agent": "cases/it-operations-agent-platform/",
-    "case-smart-warehouse": "cases/smart-warehouse-paperless/",
-    "case-agv-kitting": "cases/agv-kitting-management/",
-    "case-outsystems": "cases/outsystems-business-platform/",
-    "case-sap-managed": "cases/sap-long-term-managed-services/",
-    "case-bi-analytics": "cases/bi-management-analytics/",
-    "case-infrastructure-modernization": "cases/infrastructure-modernization/",
-    "case-aps-planning": "cases/aps-production-planning/",
-    "case-iot-mes": "cases/iot-mes-platform/",
-    about: "about/",
-    "ai-transformation": "about/ai-transformation/",
-    quality: "about/quality-security/",
-    global: "about/global-network/",
-    insights: "insights/",
-    careers: "careers/",
-    contact: "contact/",
-    privacy: "privacy/"
-  };
-
   const pageContexts = {
     "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "AI应用与智能体", href: "index.html#capabilities" },
     "capabilities-digital": { key: "capabilities", group: "能力与服务", current: "数字工程与系统开发", href: "index.html#capabilities" },
@@ -100,17 +69,7 @@
     },
     { id: "cases", label: "案例", href: "cases/" },
     { id: "insights", label: "洞察", href: "insights/" },
-    {
-      id: "about",
-      label: "关于我们",
-      items: [
-        ["01", "关于苏州大宇宙", "about/"],
-        ["02", "AI时代的苏州大宇宙", "about/ai-transformation/"],
-        ["03", "品质与安全", "about/quality-security/"],
-        ["04", "集团与全球网络", "about/global-network/"],
-        ["05", "招贤纳士", "careers/"]
-      ]
-    }
+    { id: "about", label: "关于我们", href: "about/" }
   ];
 
   function activeNavId() {
@@ -217,9 +176,9 @@
       <div class="footer-links">
         <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a></div>
         <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
-        <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("about/ai-transformation/")}">AI时代的苏州大宇宙</a><a href="${url("careers/")}">招贤纳士</a></div>
-        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a><a href="${url("about/quality-security/")}">品质与安全</a></div>
-        <div><h3>Contact</h3><a href="${url("contact/")}">联系我们</a><a href="${url("privacy/")}">隐私与法律</a><a href="${url("about/global-network/")}">集团与全球网络</a></div>
+        <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("careers/")}">招贤纳士</a></div>
+        <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a></div>
+        <div><h3>Contact</h3><a href="${url("contact/")}">联系我们</a><a href="${url("privacy/")}">隐私与法律</a></div>
       </div>
       <div class="footer-bottom">
         <span>苏州大宇宙信息创造有限公司 · 苏州 / 上海 / 常州</span>
@@ -469,32 +428,6 @@
     return `<section class="content-section section-${esc(section.type)} tone-${tone}" id="${id}"><div class="page-shell">${inner}</div></section>`;
   }
 
-  function renderRelated(page) {
-    if (!page.related?.length) return "";
-    return `
-      <section class="related-section">
-        <div class="page-shell">
-          <div class="section-head">
-            <div class="section-index">Continue exploring</div>
-            <h2 class="section-title cn-serif">继续了解</h2>
-          </div>
-          <div class="related-grid">
-            ${page.related.slice(0, 3).map((id, index) => {
-              const related = pages[id];
-              if (!related) return "";
-              return `
-                <a class="related-card" href="${url(pageHref[id] || "")}">
-                  <span>0${index + 1}</span>
-                  <h3>${esc(related.title)}</h3>
-                  <p>${esc(related.description)}</p>
-                  <span class="text-link">进入页面 <span>→</span></span>
-                </a>`;
-            }).join("")}
-          </div>
-        </div>
-      </section>`;
-  }
-
   function renderPage() {
     const page = pages[pageId];
     const host = document.querySelector("#pageMain");
@@ -504,8 +437,7 @@
     if (meta) meta.setAttribute("content", page.description);
     host.innerHTML = `
       ${renderHero(page)}
-      ${(page.sections || []).map(renderSection).join("")}
-      ${renderRelated(page)}`;
+      ${(page.sections || []).map(renderSection).join("")}`;
   }
 
   function initHomeHero() {
