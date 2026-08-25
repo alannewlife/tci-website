@@ -103,7 +103,8 @@
     host.innerHTML = `
       <nav class="site-nav" aria-label="主导航">
         <a class="brand" href="${url("")}" aria-label="苏州大宇宙首页">
-          <img src="${url("assets/transcosmos-logo-reverse.png")}" alt="transcosmos" />
+          <img class="brand-logo" src="${url("assets/transcosmos-official-reverse.png")}" alt="transcosmos people & technology" />
+          <img class="brand-company-name" src="${url("assets/tci-suzhou-company-reverse.png")}" alt="苏州大宇宙信息创造有限公司" />
         </a>
         <div class="nav-links" id="navLinks">${links}</div>
         <a class="nav-contact" href="${url("contact/")}">联系我们 <i>↗</i></a>
@@ -160,14 +161,6 @@
     if (!host) return;
     host.className = "site-footer";
     host.innerHTML = `
-      <div class="footer-top">
-        <div>
-          <img class="footer-logo" src="${url("assets/transcosmos-logo-ver1.png")}" alt="transcosmos people & technology" />
-          <span class="footer-tag">Digital engineering for the AI era</span>
-          <h2 class="footer-title cn-serif">从一个具体问题开始，<br />让改变真正发生。</h2>
-        </div>
-        <a class="pill-cta" href="${url("contact/")}">开始一次对话 <span class="arrow">↗</span></a>
-      </div>
       <div class="footer-links">
         <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a><a href="${url("capabilities/cloud-operations/")}">云与智能运维</a></div>
         <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
