@@ -169,7 +169,9 @@
         <div><h3>友情链接</h3><a href="https://www.trans-cosmos.com.cn/" target="_blank" rel="noopener noreferrer">大宇宙信息创造（中国）有限公司</a><a href="https://www.trans-cosmos.co.jp/" target="_blank" rel="noopener noreferrer">transcosmos inc.</a><a href="http://www.tci-cn.co.jp/" target="_blank" rel="noopener noreferrer">大宇宙ジャパン株式会社</a><a href="http://www.tci-jn.com/" target="_blank" rel="noopener noreferrer">济南大宇宙信息创造有限公司</a></div>
       </div>
       <div class="footer-bottom">
-        <span>苏州大宇宙信息创造有限公司 · 苏州 / 上海 / 常州</span>
+        <a class="footer-bottom-brand" href="${url("")}" aria-label="返回苏州大宇宙首页">
+          <img src="${url("assets/transcosmos-logo-ver1.png")}" alt="transcosmos people & technology" />
+        </a>
         <span>演示版 · 内容与数据需在正式发布前复核</span>
         <span>© 2026 TCI SUZHOU</span>
       </div>`;
