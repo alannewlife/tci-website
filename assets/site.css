@@ -583,8 +583,6 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
   padding: 118px 0;
 }
 
-.home-intro-section .section-head { margin-bottom: 0; }
-
 .section-head {
   display: grid;
   grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
