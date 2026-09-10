@@ -1194,6 +1194,12 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
 
 .split-layout.media-wide { grid-template-columns: 1.35fr .65fr; }
 .split-layout.media-wide .split-copy { padding: clamp(42px, 4.5vw, 64px); }
+.split-layout.media-wide .split-copy h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(27px, 2.5vw, 38px);
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
 
 .split-media {
   position: relative;
