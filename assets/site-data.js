@@ -11,32 +11,25 @@ window.TCI_PAGES = {
       {
         type: "cards",
         index: "01 / Six services",
-        title: "企业AI应用中心的六类服务",
-        intro: "参考企业AI部署全貌：需求端提出调用，平台层编排应用与工具，网关统一接入模型，数据源在安全边界内供给。",
+        title: "生成式AI的六项服务内容",
+        intro: "从模型接入、平台搭建到培训教育，覆盖企业导入生成式AI全过程的六项服务。",
         columns: 3,
         items: [
-          { tag: "AI Apps / Agents / Workflows", title: "AI应用、Agent与工作流", text: "把业务判断拆解为可执行步骤，编排系统、工具、审批与人员协作，让AI从回答问题走向完成任务。" },
-          { tag: "Skills / MCP Tools / Business Tools", title: "可复用AI能力与业务工具", text: "把检索、抽取、查询、报表等常用能力沉淀为标准工具，供应用与智能体受控调用、跨场景复用。" },
-          { tag: "Auth / Routing / Limit / Audit", title: "AI API网关", text: "统一模型请求入口，集中管理认证、路由、限流与审计，云端模型与本地模型按同一套规则使用。" },
-          { tag: "ERP / MES / Portal / Batch", title: "AI能力需求端", text: "让ERP、MES、门户和批处理作业以受控方式调用AI能力，并把结果写回既有业务流程。" },
-          { tag: "Clients / Coding Agents / Dev Tools", title: "受控客户端与开发工具", text: "为员工与研发团队提供统一的AI客户端与编码智能体，让知识和代码留在企业边界内。" },
-          { tag: "ERP / MES / DB / Files", title: "企业记录系统与数据源（供给端）", text: "在权限与安全边界内连接记录系统、数据库与文件，让企业数据成为可溯源的AI上下文。" }
+          { tag: "Model Integration", title: "模型接入", text: "通过本地安装、外部API接口调用、算力租用等不同方式，为企业导入大模型能力。" },
+          { tag: "Platform Setup", title: "平台搭建", text: "使用第三方AI平台，或根据客户需求量身定制、导入AI智能体开发和使用所需的底座平台。" },
+          { tag: "Agent Development", title: "智能体开发", text: "基于智能体框架和大模型能力，分析客户业务需求，设定并定制开发所需的智能体应用。" },
+          { tag: "Business Integration", title: "业务对接", text: "根据使用场景设计并定制合适的人机交互界面，让最终用户方便有效地操作所需的AI功能。" },
+          { tag: "Knowledge Base Import", title: "知识库导入", text: "辅助客户进行信息收集和治理，选择合适的数据形态导入AI知识库系统，微调优化AI检索应用精度。" },
+          { tag: "Training & Education", title: "培训教育", text: "提供基础AI素养培训教育服务，帮助跨越AI认知和使用的基础门槛，增强业务结合AI的可能。" }
         ]
       },
       {
-        type: "stack",
+        type: "split",
         index: "02 / Key perspective",
         title: "重点认知：AI应用的五层全貌",
         text: "AI应用不是单点工具，而是从算力到现场的五层结构。模型只是其中一层，真正决定落地效果的，是每一层的选型，以及层与层之间的连接与治理。",
-        diagramLabel: "苏州大宇宙AI应用五层架构图",
-        diagramTitle: "AI Application · Five-layer Overview",
-        layers: [
-          { code: "B1 · BC", name: "业务与现场应用层", items: ["办公", "研发", "业务系统", "制造 / 非制造", "基础设施"], group: { num: "05", label: "应用" } },
-          { code: "A-02 · 03 · 04", name: "企业公共能力与治理层", items: ["网关", "身份", "数据 / 知识", "日志", "审计", "成本", "评测"], group: { num: "05", label: "应用" } },
-          { code: "A-02", name: "Agent平台与运行层", items: ["Workflow", "Runtime", "Skill", "MCP", "沙箱", "记忆", "调度"], group: { num: "05", label: "应用" } },
-          { code: "A-01", name: "模型服务层", items: ["前沿模型", "国产模型", "本地模型", "模型 API"], group: { num: "04", label: "模型" } },
-          { code: "A-03", name: "云与算力基础层", items: ["GPU服务器", "网络", "存储", "云"], group: { num: "03", label: "基建" } }
-        ],
+        image: "ai-five-layer-overview.png",
+        imageFit: "contain-dark",
         bullets: [
           "业务与现场应用层：AI不停在演示里，而是进入办公、研发、业务系统与制造现场的日常作业。",
           "企业公共能力与治理层：网关、身份、知识、日志、审计、成本与评测统一治理，能力可管、可控、可复盘。",
