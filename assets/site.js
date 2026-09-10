@@ -237,8 +237,9 @@
 
   function renderSplit(section, index) {
     const mediaClass = section.imageFit === "contain" ? " visual-document" : section.imageFit === "contain-dark" ? " visual-slide" : "";
+    const layoutClass = `${section.wideMedia ? " media-wide" : ""}${index % 2 ? " reverse" : ""}`;
     return `
-      <div class="split-layout ${index % 2 ? "reverse" : ""}">
+      <div class="split-layout${layoutClass}">
         <div class="split-media${mediaClass} reveal">
           <img src="${url(`assets/${section.image}`)}" alt="" />
         </div>

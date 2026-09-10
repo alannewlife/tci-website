@@ -1192,6 +1192,9 @@ body.menu-open .page-context { opacity: 0; pointer-events: none; }
 
 .split-layout.reverse { grid-template-columns: .95fr 1.05fr; }
 
+.split-layout.media-wide { grid-template-columns: 1.35fr .65fr; }
+.split-layout.media-wide .split-copy { padding: clamp(42px, 4.5vw, 64px); }
+
 .split-media {
   position: relative;
   min-height: 560px;
@@ -1830,6 +1833,7 @@ body[data-page] .site-footer {
   .future-grid,
   .split-layout,
   .split-layout.reverse,
+  .split-layout.media-wide,
   .contact-layout { grid-template-columns: 1fr; }
   .domain-card { min-height: 460px; }
   .case-card.featured { grid-column: auto; }
