@@ -222,8 +222,9 @@
       ${sectionHeading(section)}
       <div class="content-grid ${cls}">
         ${section.items.map((item, index) => {
+          const label = item.tag ? `${String(index + 1).padStart(2, "0")} · ${item.tag}` : String(index + 1).padStart(2, "0");
           const content = `
-            <span class="index">${esc(item.tag || String(index + 1).padStart(2, "0"))}</span>
+            <span class="index">${esc(label)}</span>
             <h3>${esc(item.title)}</h3>
             <p>${esc(item.text)}</p>
             ${item.href ? `<span class="text-link">进入页面 <span>→</span></span>` : ""}`;
@@ -247,6 +248,31 @@
           <p>${esc(section.text)}</p>
           ${section.bullets?.length ? `<div class="split-list">${section.bullets.map((item, itemIndex) => `<div><span>${String(itemIndex + 1).padStart(2, "0")}</span>${esc(item)}</div>`).join("")}</div>` : ""}
         </div>
+      </div>`;
+  }
+
+  function renderStack(section) {
+    const layers = (section.layers || []).map((layer) => `
+      <div class="stack-layer">
+        <div class="stack-layer-head">
+          <small>${esc(layer.code)}</small>
+          <strong>${esc(layer.name)}</strong>
+        </div>
+        <div class="stack-layer-items">${(layer.items || []).map((item) => `<span>${esc(item)}</span>`).join("")}</div>
+        ${layer.group ? `<div class="stack-layer-group"><b>${esc(layer.group.num)}</b><span>${esc(layer.group.label)}</span></div>` : ""}
+      </div>`).join("");
+    const copy = `
+      <div class="section-index">${esc(section.index || "")}</div>
+      <h2 class="cn-serif">${esc(section.title)}</h2>
+      <p>${esc(section.text)}</p>
+      ${section.bullets?.length ? `<div class="split-list">${section.bullets.map((item, itemIndex) => `<div><span>${String(itemIndex + 1).padStart(2, "0")}</span>${esc(item)}</div>`).join("")}</div>` : ""}`;
+    return `
+      <div class="stack-layout">
+        <div class="stack-diagram reveal" role="img" aria-label="${esc(section.diagramLabel || "架构图")}">
+          ${section.diagramTitle ? `<small class="stack-diagram-title">${esc(section.diagramTitle)}</small>` : ""}
+          ${layers}
+        </div>
+        <div class="split-copy reveal">${copy}</div>
       </div>`;
   }
 
@@ -377,6 +403,7 @@
     let inner = "";
     if (section.type === "cards") inner = renderCards(section);
     if (section.type === "split") inner = renderSplit(section, index);
+    if (section.type === "stack") inner = renderStack(section);
     if (section.type === "timeline") inner = renderTimeline(section);
     if (section.type === "cases") inner = renderCases(section);
     if (section.type === "articles") inner = renderArticles(section);
