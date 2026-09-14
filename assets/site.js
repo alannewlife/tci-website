@@ -109,13 +109,7 @@
         <div class="nav-links" id="navLinks">${links}</div>
         <a class="nav-contact" href="${url("contact/")}">联系我们 <i>↗</i></a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span></button>
-      </nav>
-      ${context ? `
-        <nav class="page-context" aria-label="当前位置">
-          <a href="${url(context.href)}">${esc(context.group)}</a>
-          <span class="page-context-separator" aria-hidden="true">/</span>
-          <strong aria-current="page">${esc(context.current)}</strong>
-        </nav>` : ""}`;
+      </nav>`;
 
     const toggle = host.querySelector("#menuToggle");
     const navLinks = host.querySelector("#navLinks");
