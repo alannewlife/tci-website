@@ -521,6 +521,7 @@ window.TCI_PAGES = {
   },
 
   "case-detail": {
+    compact: true,
     nav: "cases",
     eyebrow: "Case / Manufacturing Knowledge",
     title: "将分散的制造经验，转化为可检索的企业知识",
@@ -570,6 +571,7 @@ window.TCI_PAGES = {
   },
 
   "case-mes-copilot": {
+    compact: true,
     nav: "cases",
     eyebrow: "Case / MES Copilot",
     title: "让MES数据查询，进入自然语言工作流",
@@ -668,6 +670,7 @@ window.TCI_PAGES = {
   },
 
   "case-it-operations-agent": {
+    compact: true,
     nav: "cases",
     eyebrow: "Case / AIOps Agent",
     title: "把知识、监控与工具，接入统一运维入口",

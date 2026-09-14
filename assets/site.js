@@ -405,6 +405,17 @@
     return `<section class="content-section section-${esc(section.type)} tone-${tone}" id="${id}"><div class="page-shell">${inner}</div></section>`;
   }
 
+  function renderCompactHead(page) {
+    return `
+      <section class="page-compact-head">
+        <div class="page-compact-wrap">
+          <small class="compact-meta">${esc(page.eyebrow)}</small>
+          <h1 class="cn-serif">${esc(page.title)}</h1>
+          <p>${esc(page.description)}</p>
+        </div>
+      </section>`;
+  }
+
   function renderPage() {
     const page = pages[pageId];
     const host = document.querySelector("#pageMain");
@@ -412,9 +423,9 @@
     document.title = `${page.title} — 苏州大宇宙`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", page.description);
-    host.innerHTML = `
-      ${renderHero(page)}
-      ${(page.sections || []).map(renderSection).join("")}`;
+    host.innerHTML = page.compact
+      ? `${renderCompactHead(page)}<div class="compact-body">${(page.sections || []).map(renderSection).join("")}</div>`
+      : `${renderHero(page)}${(page.sections || []).map(renderSection).join("")}`;
   }
 
   function initHomeHero() {
