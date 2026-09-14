@@ -275,7 +275,31 @@
       : `<article class="case-card case-card-static reveal" data-tags="${esc(filterTags.join("|"))}">${content}</article>`;
   }
 
+  function renderCaseList(section) {
+    return `
+      ${sectionHeading(section)}
+      <div class="case-list">
+        ${section.items.map((item, index) => {
+          const kind = item.kind || "案例";
+          const meta = [kind, ...(item.tags || [])].join(" · ");
+          const content = `
+            <span class="case-list-index">${String(index + 1).padStart(2, "0")}</span>
+            <img src="${url(`assets/${item.image}`)}" alt="" loading="lazy"${item.imagePosition ? ` style="object-position:${esc(item.imagePosition)}"` : ""} />
+            <span class="case-list-body">
+              <small>${esc(meta)}</small>
+              <strong class="cn-serif">${esc(item.title)}</strong>
+              <p>${esc(item.text)}</p>
+            </span>
+            <span class="case-list-arrow" aria-hidden="true">→</span>`;
+          return item.href
+            ? `<a class="case-list-item reveal" href="${url(item.href)}">${content}</a>`
+            : `<article class="case-list-item reveal">${content}</article>`;
+        }).join("")}
+      </div>`;
+  }
+
   function renderCases(section) {
+    if (section.layout === "compact") return renderCaseList(section);
     const tags = [...new Set(section.items.flatMap((item) => [item.kind || "案例", ...(item.tags || [])]))];
     const filter = section.filter ? `
       <div class="filter-bar" aria-label="案例筛选">

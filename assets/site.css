@@ -876,6 +876,49 @@ img, video { display: block; max-width: 100%; }
   letter-spacing: .06em;
 }
 
+/* Compact blog-style case list (cases section, layout: compact). */
+.case-list {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.case-list-item {
+  display: grid;
+  grid-template-columns: auto 138px 1fr auto;
+  gap: 26px;
+  align-items: center;
+  padding: 27px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-list-index { color: var(--muted); font-size: 10px; letter-spacing: .13em; }
+
+.case-list-item img {
+  width: 138px;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.case-list-body { display: grid; gap: 6px; }
+.case-list-body small { color: var(--muted); font-size: 10px; letter-spacing: .12em; }
+.case-list-body strong { font-size: 21px; font-weight: 600; line-height: 1.35; }
+.case-list-body p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+.case-list-arrow { color: var(--amber); font-size: 18px; transition: transform .3s var(--ease); }
+a.case-list-item:hover .case-list-arrow { transform: translateX(6px); }
+a.case-list-item:hover .case-list-body strong { color: var(--amber); }
+
+body[data-page] .content-section.tone-light .case-list,
+body[data-page] .content-section.tone-light .case-list-item { border-color: var(--line-light); }
+body[data-page] .content-section.tone-light .case-list-index,
+body[data-page] .content-section.tone-light .case-list-body small,
+body[data-page] .content-section.tone-light .case-list-body p { color: var(--paper-muted); }
+body[data-page] .content-section.tone-light .case-list-body strong { color: var(--paper-ink); }
+body[data-page] .content-section.tone-light a.case-list-item:hover .case-list-body strong { color: var(--page-accent); }
+
 .film-section { padding: 40px 3vw 130px; }
 
 .film-card {
@@ -1789,6 +1832,7 @@ body[data-page] .site-footer {
   .contact-layout { grid-template-columns: 1fr; }
   .domain-card { min-height: 460px; }
   .case-card.featured { grid-column: auto; }
+  .case-list-item { grid-template-columns: auto 110px 1fr auto; gap: 18px; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .process-item:nth-child(2n) { border-right: 0; }
   .process-item:nth-child(3) { border-right: 1px solid rgba(5, 5, 5, .18); }
@@ -1833,6 +1877,9 @@ body[data-page] .site-footer {
   .process-item:nth-child(n + 2) { border-top: 1px solid rgba(5, 5, 5, .18); }
   .process-item h3 { margin-top: 45px; }
   .case-card { min-height: 420px; }
+  .case-list-item { grid-template-columns: 92px 1fr; gap: 14px; padding: 20px 0; }
+  .case-list-index, .case-list-arrow { display: none; }
+  .case-list-body strong { font-size: 17px; }
   .film-section { padding: 20px 8px 90px; }
   .film-card { min-height: 620px; border-radius: 20px; }
   .film-meta { padding: 26px; }
