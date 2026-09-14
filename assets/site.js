@@ -17,7 +17,7 @@
   };
 
   const pageContexts = {
-    "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "AI应用与智能体", href: "index.html#capabilities" },
+    "capabilities-ai": { key: "capabilities", group: "能力与服务", current: "生成式AI与应用", href: "index.html#capabilities" },
     "capabilities-digital": { key: "capabilities", group: "能力与服务", current: "数字工程与系统开发", href: "index.html#capabilities" },
     "capabilities-manufacturing": { key: "capabilities", group: "能力与服务", current: "智能制造与机器人", href: "index.html#capabilities" },
     "capabilities-cloud": { key: "capabilities", group: "能力与服务", current: "云与智能运维", href: "index.html#capabilities" },
@@ -47,7 +47,7 @@
       id: "capabilities",
       label: "能力与服务",
       items: [
-        ["01", "AI应用与智能体", "capabilities/ai/"],
+        ["01", "生成式AI与应用", "capabilities/ai/"],
         ["02", "数字工程与系统开发", "capabilities/digital-engineering/"],
         ["03", "智能制造与机器人", "capabilities/smart-factory-robotics/"],
         ["04", "云与智能运维", "capabilities/cloud-operations/"]
@@ -156,7 +156,7 @@
     host.className = "site-footer";
     host.innerHTML = `
       <div class="footer-links">
-        <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">AI应用与智能体</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a><a href="${url("capabilities/cloud-operations/")}">云与智能运维</a></div>
+        <div><h3>Capabilities</h3><a href="${url("capabilities/ai/")}">生成式AI与应用</a><a href="${url("capabilities/digital-engineering/")}">数字工程</a><a href="${url("capabilities/smart-factory-robotics/")}">智能制造与机器人</a><a href="${url("capabilities/cloud-operations/")}">云与智能运维</a></div>
         <div><h3>Industries</h3><a href="${url("industries/manufacturing-logistics/")}">制造与物流</a><a href="${url("industries/enterprise-operations/")}">企业运营与专业服务</a><a href="${url("industries/it-infrastructure/")}">IT与基础设施</a></div>
         <div><h3>Company</h3><a href="${url("about/")}">关于我们</a><a href="${url("contact/")}">联系我们</a></div>
         <div><h3>Evidence</h3><a href="${url("cases/")}">案例中心</a><a href="${url("insights/")}">洞察与新闻</a></div>
@@ -339,7 +339,7 @@
             <label for="type">咨询类型 *</label>
             <select id="type" name="type" required>
               <option value="">请选择</option>
-              <option>AI应用与智能体</option>
+              <option>生成式AI与应用</option>
               <option>智能制造与机器人</option>
               <option>数字工程与系统开发</option>
               <option>云与智能运维</option>
