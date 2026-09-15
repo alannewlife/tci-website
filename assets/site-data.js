@@ -41,7 +41,6 @@ window.TCI_PAGES = {
       },
       {
         type: "cases",
-        layout: "compact",
         index: "03 / Cases & solutions",
         title: "案例和解决方案",
         items: [
