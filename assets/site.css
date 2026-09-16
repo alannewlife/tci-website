@@ -1914,7 +1914,7 @@ body[data-page] .site-footer {
 
 .page-compact-wrap {
   display: grid;
-  max-width: 860px;
+  max-width: 720px;
   margin-inline: auto;
   justify-items: start;
   gap: 12px;
@@ -2048,3 +2048,25 @@ body[data-page] .compact-body .quote-block blockquote {
 @media (max-width: 560px) {
   .page-compact-head { padding: 120px 20px 18px; }
 }
+
+/* Article body: dark head above, light paper reading area below. */
+.post-body {
+  background: var(--paper);
+}
+
+.post-body-inner {
+  display: grid;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 54px 24px 110px;
+  gap: 24px;
+}
+
+.post-body p {
+  margin: 0;
+  color: var(--paper-text);
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+.post-body img { width: 100%; border-radius: 8px; }

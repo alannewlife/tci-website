@@ -411,9 +411,25 @@
         <div class="page-compact-wrap">
           <small class="compact-meta">${esc(page.eyebrow)}</small>
           <h1 class="cn-serif">${esc(page.title)}</h1>
-          <p>${esc(page.description)}</p>
+          ${page.article ? "" : `<p>${esc(page.description)}</p>`}
         </div>
       </section>`;
+  }
+
+  function renderArticle(page) {
+    const blocks = page.article.blocks
+      || [{ type: "p", text: page.article.paragraphs?.[0] },
+          ...(page.article.image ? [{ type: "img", src: page.article.image }] : []),
+          { type: "p", text: page.article.paragraphs?.[1] }]
+      || [];
+    return `
+      <article class="post-body">
+        <div class="post-body-inner">
+          ${blocks.map((block) => block.type === "img"
+            ? `<img src="${url(`assets/${block.src}`)}" alt="" loading="lazy" />`
+            : `<p>${esc(block.text)}</p>`).join("")}
+        </div>
+      </article>`;
   }
 
   function renderPage() {
@@ -424,7 +440,7 @@
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", page.description);
     host.innerHTML = page.compact
-      ? `${renderCompactHead(page)}<div class="compact-body">${(page.sections || []).map(renderSection).join("")}</div>`
+      ? `${renderCompactHead(page)}${page.article ? renderArticle(page) : `<div class="compact-body">${(page.sections || []).map(renderSection).join("")}</div>`}`
       : `${renderHero(page)}${(page.sections || []).map(renderSection).join("")}`;
   }
 
