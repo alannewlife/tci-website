@@ -389,6 +389,18 @@ window.TCI_PAGES = {
   },
 
   "case-infrastructure-modernization": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "虚拟化平台的许可证与扩容成本持续上升，厂商绑定不断加深，或者平台本身到了需要更新的阶段——基础架构的演进由此提上日程，而业务不中断是所有讨论的前提。" },
+        { type: "img", src: "case-vmware-poster.webp" },
+        { type: "p", text: "第一步是环境对标，而不是先选产品。从vSphere、ESXi、vCenter、vSAN及备份环境的现状出发，盘点业务系统依赖、容量、高可用与恢复要求：梳理计算、存储、网络和备份之间的关系，验证目标平台的功能与兼容性，再设计分批迁移、验证和回退方案。" },
+        { type: "p", text: "迁移方式按环境选择：虚拟机到虚拟机（V2V）、物理机到虚拟机（P2V）、在线迁移或分批切换，每一步都保留验证点，让风险始终可控。" },
+        { type: "img", src: "case-cloud-poster.webp" },
+        { type: "p", text: "企业上云不从资源采购开始，而是先确认业务优先级、安全与合规边界。整个过程拆成五个阶段：迁移准备，确认资源、优先级、网络与权限；测试验证，覆盖数据同步、兼容性与业务验证；正式迁移，处理数据库、文件与中间件；切换上线，约定窗口、增量同步和回退；持续运营，跟进性能、成本、备份与告警。" },
+        { type: "p", text: "这不是简单替换一个平台，而是在业务不中断的前提下，重组计算、存储、备份与运营方式。方案能力中的可用性、部署速度与弹性属于能力表达；具体停机窗口、兼容性与服务级别，需按项目逐一确认。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Solution / Infrastructure Modernization",
     title: "从既有虚拟化环境，平滑走向新的基础设施",
@@ -396,46 +408,20 @@ window.TCI_PAGES = {
     heroImage: "cloud.jpg",
     cta: ["讨论基础设施演进", "contact/"],
     lead: "不是简单替换一个平台，而是在业务不中断的前提下重组计算、存储、备份与运营方式。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Solution snapshot",
-        title: "解决方案概览",
-        columns: 4,
-        items: [
-          { title: "进入场景", text: "许可证与扩容成本上升、厂商绑定或现有平台需要更新。" },
-          { title: "改造范围", text: "计算、存储、网络、备份、业务系统及其高可用机制。" },
-          { title: "迁移方式", text: "根据环境选择V2V、P2V、在线迁移或分批切换。" },
-          { title: "内容边界", text: "当前为解决方案说明；停机窗口、兼容性与服务级别需按项目确认。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Platform transition",
-        title: "先完成环境对标，再确定迁移路径",
-        text: "从vSphere、ESXi、vCenter、vSAN及备份环境出发，盘点业务系统依赖、容量、高可用与恢复要求，再选择目标虚拟化或超融合平台。",
-        image: "case-vmware-poster.webp",
-        imageFit: "contain",
-        bullets: ["梳理计算、存储、网络和备份关系", "验证目标平台的功能与兼容性", "设计分批迁移、验证和回退方案", "在迁移后继续观察容量、性能与恢复能力"]
-      },
-      {
-        type: "split",
-        index: "03 / Cloud migration",
-        title: "把上云拆成可检查的五个阶段",
-        text: "企业上云不从资源采购开始，而是先确认业务优先级、安全与合规边界。通过测试环境验证、正式迁移、切换上线和持续优化控制风险。",
-        image: "case-cloud-poster.webp",
-        imageFit: "contain",
-        bullets: ["迁移准备：资源、优先级、网络与权限", "测试验证：数据同步、兼容性与业务验证", "正式迁移：数据库、文件与中间件", "切换上线：窗口、增量同步和回退", "持续运营：性能、成本、备份与告警"]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "资料中的可用性、部署速度与弹性指标属于方案能力表达，不作为未经项目验证的确定性成果。"
-      }
-    ],
   },
 
   "case-aps-planning": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "制造现场的课题往往从四个方向出现：复杂工序、设备与人员约束让人工排产耗时耗力；订单变化后难以及时给出可承诺交期；计划、物料与现场实绩不同步造成库存与在制积压；紧急插单缺少快速重排手段，一次调整容易牵动其他订单。" },
+        { type: "img", src: "precise-data.jpg" },
+        { type: "p", text: "项目以FLEXSCHE APS为代表方案：用GP柔性建模表达工序、资源与约束；Optimizer针对交期、负荷与库存进行优化；CarryOut连接计划发布与现场反馈；Webviewer让管理者远程查看甘特图、负荷与进度。计划不再是一张静态的排程表，而是可以随变化重新计算的模型。" },
+        { type: "p", text: "实施从课题与指标确认开始——明确交期、库存、设备负荷和插单响应的优先目标；随后完成主数据与约束建模，整理产品、工艺、设备、日历、换型和物料关系；以典型订单验证排程规则，并与计划人员的经验判断对照；再连接ERP与现场，接收订单和库存信息、传递计划并回收实绩；最后进入运行与改善，持续调整约束、权重、异常处理和使用方式。" },
+        { type: "img", src: "case-aps-poster.webp" },
+        { type: "p", text: "计划系统的价值不只是生成一张排程表，而是让变化可以被重新计算、解释并传递到现场。“秒级排程”“精准交期”等表达需要结合数据规模、约束复杂度和项目验收结果确认，页面不把它们写成统一承诺。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Solution / APS Planning",
     title: "让生产计划更快响应交期、库存与现场变化",
@@ -443,49 +429,19 @@ window.TCI_PAGES = {
     heroImage: "precise-city.jpg",
     cta: ["讨论生产计划课题", "contact/"],
     lead: "计划系统的价值不只是生成一张排程表，而是让变化可以被重新计算、解释并传递到现场。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Planning challenges",
-        title: "从制造现场的四类课题进入",
-        columns: 4,
-        items: [
-          { title: "人工排产耗时", text: "复杂工序、设备与人员约束依赖经验反复调整。" },
-          { title: "交期回复不准", text: "订单变化后难以及时评估可承诺日期与影响范围。" },
-          { title: "库存与在制积压", text: "计划、物料与现场实绩不同步，造成等待和过量准备。" },
-          { title: "紧急插单响应慢", text: "缺少快速重排与可视化比较，调整容易影响其他订单。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Planning engine",
-        title: "把建模、优化、执行与监控连接起来",
-        text: "以FLEXSCHE APS为资料中的代表方案，通过柔性建模表达制造约束，以优化能力生成候选计划，再将计划反馈给现场并持续监控执行状态。",
-        image: "case-aps-poster.webp",
-        imageFit: "contain",
-        bullets: ["FLEXSCHE GP：建立工序、资源与约束模型", "Optimizer：针对交期、负荷与库存进行优化", "CarryOut：连接计划发布与现场反馈", "Webviewer：远程查看甘特图、负荷与进度"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Introduction path",
-        title: "从数据准备到持续排程",
-        items: [
-          { year: "01", title: "课题与指标确认", text: "明确交期、库存、设备负荷和插单响应等优先目标。" },
-          { year: "02", title: "主数据与约束建模", text: "整理产品、工艺、设备、日历、换型和物料关系。" },
-          { year: "03", title: "排程规则验证", text: "以典型订单验证结果，并与计划人员的判断对照。" },
-          { year: "04", title: "ERP与现场连接", text: "接收订单和库存信息，向现场传递计划并回收实绩。" },
-          { year: "05", title: "运行与改善", text: "持续调整约束、权重、异常处理和使用方式。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "“秒级排程”“精准交期”等表达需要结合数据规模、约束复杂度和项目验收结果确认，演示页不把它们写成统一承诺。"
-      }
-    ],
   },
 
   "case-iot-mes": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "制造执行的核心对象有四个：计划与生产，接收计划与订单，管理工序、进度、实绩和异常；设备与作业，连接设备状态、作业指示、人员操作与现场终端；物料与库存，协同出入货、批次、在制品、外部仓库和供应商；品质与追溯，记录检验、异常、履历与关键制造条件。" },
+        { type: "p", text: "架构上，MES处在上下游系统与现场之间：上游连接ERP中的计划与订单，横向连接WMS、CAD等业务系统，下游预留设备IoT接口，人员终端承接任务、确认、异常与现场反馈，让信息流与制造动作保持一致。" },
+        { type: "img", src: "case-iot-mes-poster.webp" },
+        { type: "p", text: "运行形成闭环：从ERP或生产管理系统接收订单、计划和必要主数据；向人员、工位和设备下达作业并记录实际过程；关联批次、设备、人员、检验和异常履历；将进度、产量、库存和异常状态同步给上下游系统；最终围绕交期、质量、设备和效率持续发现改善点。" },
+        { type: "p", text: "先让制造过程中的任务、状态和实绩形成闭环，再在统一数据基础上引入分析、AI与自动化。MES负责稳定记录和执行制造流程；MES Copilot则在已有数据与规则之上提供更自然的查询和辅助分析——两者相辅相成，而不是同一个东西。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Solution / IoT MES",
     title: "连接计划、执行、追溯与分析的制造数字底座",
@@ -493,46 +449,6 @@ window.TCI_PAGES = {
     heroImage: "data-system.jpg",
     cta: ["讨论MES与现场集成", "contact/"],
     lead: "先让制造过程中的任务、状态和实绩形成闭环，再在统一数据基础上引入分析、AI与自动化。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Solution snapshot",
-        title: "覆盖制造执行的关键对象",
-        columns: 4,
-        items: [
-          { title: "计划与生产", text: "接收计划与订单，管理工序、进度、实绩和异常。" },
-          { title: "设备与作业", text: "连接设备状态、作业指示、人员操作与现场终端。" },
-          { title: "物料与库存", text: "协同出入货、批次、在制品、外部仓库和供应商。" },
-          { title: "品质与追溯", text: "记录检验、异常、履历与关键制造条件。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Integrated architecture",
-        title: "让MES处于上下游系统与现场之间",
-        text: "上游连接ERP中的计划与订单，横向连接WMS、CAD等业务系统，下游预留设备IoT接口，使信息流与制造动作保持一致。",
-        image: "case-iot-mes-poster.webp",
-        imageFit: "contain",
-        bullets: ["ERP：计划、订单、主数据与业务实绩", "WMS与外部仓库：库存、收发与批次", "CAD及工程数据：产品和工艺信息", "IoT与设备：状态、参数、告警和生产信号", "人员终端：任务、确认、异常与现场反馈"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Closed loop",
-        title: "从计划到分析形成闭环",
-        items: [
-          { year: "01", title: "计划进入", text: "从ERP或生产管理系统接收订单、计划和必要主数据。" },
-          { year: "02", title: "任务执行", text: "向人员、工位和设备下达作业，并记录实际过程。" },
-          { year: "03", title: "质量与追溯", text: "关联批次、设备、人员、检验和异常履历。" },
-          { year: "04", title: "实绩回传", text: "将进度、产量、库存和异常状态同步给上下游系统。" },
-          { year: "05", title: "分析与改善", text: "围绕交期、质量、设备和效率持续发现改善点。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "MES + AI",
-        text: "MES负责稳定记录和执行制造流程；MES Copilot则在已有数据与规则之上提供更自然的查询和辅助分析，两者不是同一个页面。"
-      }
-    ],
   },
 
   "case-detail": {
@@ -658,6 +574,17 @@ window.TCI_PAGES = {
   },
 
   "case-pharma-contract": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "医药专业服务的估算与合同文档，资料复杂、规则多、跨文档核对耗时，且必须保持合规。项目没有让一个模型一次生成最终合同，而是把复杂任务拆成可检查的步骤，在关键节点交由专业人员复核。" },
+        { type: "img", src: "data-18.jpg" },
+        { type: "p", text: "多智能体分工协作：读取并整理研究资料与业务条件，抽取关键字段、限制与缺失信息，生成预算和合同结构化草稿，再对照规则进行一致性检查。流程从资料接收与分类开始，识别文档类型、版本和必要输入；信息抽取与校验环节标记缺失、冲突和不确定内容；估算、条款、生成和检查分别由不同智能体处理；专业人员确认业务判断、合规要求和最终文本；修订结果再反馈到规则、Prompt和知识资产中。" },
+        { type: "img", src: "precise-data.jpg" },
+        { type: "p", text: "Human-in-the-Loop是这套流程的骨架：AI承担资料理解、整理与初稿，专业人员负责规则、判断和批准。严肃业务场景下，人工介入不是保守，而是生产化设计的一部分。" },
+        { type: "p", text: "案例效率与准确率数字来自不同统计口径，发布前需统一确认；页面不把它们组合成确定性成果。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Case / Document AI",
     title: "让复杂估算与合同草稿，进入可复核流程",
@@ -665,45 +592,6 @@ window.TCI_PAGES = {
     heroImage: "data-18.jpg",
     cta: ["讨论复杂文档业务", "contact/"],
     lead: "AI承担资料理解、整理与初稿，专业人员负责规则、判断和批准。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
-        columns: 4,
-        items: [
-          { title: "业务场景", text: "医药专业服务 / 估算与合同文档生成。" },
-          { title: "原有课题", text: "资料复杂、规则多、跨文档核对耗时，且必须保持合规。" },
-          { title: "解决方式", text: "多智能体分工、结构化抽取、草稿生成和Human-in-the-Loop。" },
-          { title: "内容状态", text: "案例初稿；效率、准确率和合规口径发布前统一确认。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Human + AI",
-        title: "把复杂任务拆成可检查的步骤",
-        text: "项目没有让一个模型一次生成最终合同，而是把资料解析、条件抽取、预算组织、合同草稿和校验拆分为不同任务，在关键节点交由专业人员复核。",
-        image: "precise-data.jpg",
-        bullets: ["读取并整理研究资料与业务条件", "抽取关键字段、限制与缺失信息", "生成预算和合同结构化草稿", "对照规则进行一致性检查", "专业人员复核、修订与批准"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Workflow",
-        title: "从资料输入到人工批准",
-        items: [
-          { year: "01", title: "资料接收与分类", text: "识别文档类型、版本和必要输入。" },
-          { year: "02", title: "信息抽取与校验", text: "提取关键条件并标记缺失、冲突和不确定内容。" },
-          { year: "03", title: "多智能体协作", text: "分别处理估算、条款、生成和检查任务。" },
-          { year: "04", title: "人工复核", text: "专业人员确认业务判断、合规要求和最终文本。" },
-          { year: "05", title: "反馈与模板改善", text: "把修订结果反馈到规则、Prompt和知识资产中。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "现有资料中的90%、150%与450小时来自不同口径，未完成核实前不在页面组合为确定性成果。"
-      }
-    ],
   },
 
   "case-it-operations-agent": {
@@ -768,6 +656,17 @@ window.TCI_PAGES = {
   },
 
   "case-smart-warehouse": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "仓储现场的常见课题：纸质作业、重复录入、账实差异与追溯困难。项目以WMS为业务核心，连接ERP、PDA、条码与现场流程，减少纸质操作，让入库、出库、盘点和追溯不再依赖分散表格与人工传递。" },
+        { type: "img", src: "precise-city.jpg" },
+        { type: "p", text: "系统数据与仓库动作同步：ERP与WMS之间联动计划、库存和实绩；收货、上架、拣配、出库与盘点在统一流程中完成；PDA和条码支持现场确认；批次、库位与操作履历全程可追溯；异常、差异与补正形成闭环。" },
+        { type: "p", text: "实施从现状与差异盘点开始，梳理账、物、单据和人员操作之间的差异；然后统一物料、库位、批次和作业规则；连接ERP、WMS、PDA与条码设备；现场导入阶段培训人员、验证异常流程并逐步替代纸质作业；最后围绕库存一致性、操作时间和追溯效果持续改善。" },
+        { type: "img", src: "city-rail.jpg" },
+        { type: "p", text: "现有素材包含ROI、工时和回收期候选数据，正式展示前需确认这些数字属于同一项目并取得客户授权。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Case / Smart Warehouse",
     title: "连接WMS、ERP与现场作业，形成可追溯闭环",
@@ -775,48 +674,20 @@ window.TCI_PAGES = {
     heroImage: "city-rail.jpg",
     cta: ["讨论仓储与无纸化场景", "contact/"],
     lead: "让入库、出库、盘点和追溯，不再依赖分散表格与人工传递。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
-        columns: 4,
-        items: [
-          { title: "业务场景", text: "制造与物流 / 仓储管理与现场无纸化。" },
-          { title: "原有课题", text: "纸质作业、重复录入、账实差异与追溯困难。" },
-          { title: "解决方式", text: "WMS、ERP联动、PDA、条码与标准现场流程。" },
-          { title: "内容状态", text: "A/B级素材；ROI、工时和回收期归属仍需核实。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Connected floor",
-        title: "让系统数据与仓库动作同步",
-        text: "项目把ERP中的业务计划与WMS作业连接起来，再通过PDA和条码把任务送到现场、把执行结果及时带回系统。",
-        image: "precise-city.jpg",
-        bullets: ["ERP与WMS间的计划、库存和实绩联动", "收货、上架、拣配、出库与盘点流程", "PDA和条码支持现场确认", "批次、库位与操作履历追溯", "异常、差异与补正形成闭环"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Implementation",
-        title: "从流程标准化到现场闭环",
-        items: [
-          { year: "01", title: "现状与差异盘点", text: "梳理账、物、单据和人员操作之间的差异。" },
-          { year: "02", title: "流程与主数据设计", text: "统一物料、库位、批次和作业规则。" },
-          { year: "03", title: "系统与终端建设", text: "连接ERP、WMS、PDA与条码设备。" },
-          { year: "04", title: "现场导入", text: "培训人员、验证异常流程并逐步替代纸质作业。" },
-          { year: "05", title: "指标与持续改善", text: "观察库存一致性、操作时间和追溯效果。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "现有资料包含ROI、工时和回收期候选数据，正式展示前需确认这些数字属于同一项目并取得客户授权。"
-      }
-    ],
   },
 
   "case-agv-kitting": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "AGV落地不是单独采购一台设备，而是设备、系统与服务共同构成方案：根据载荷、路线、环境和安全要求选择AGV或AMR设备；通过调度、地图、任务、状态和可视化管理连接多车运行；再以现场评估、实施、系统集成、培训与持续运维的服务覆盖全程。" },
+        { type: "img", src: "case-agv-poster.webp" },
+        { type: "p", text: "从单机搬运走向集群协同：系统接收业务任务，协调车辆、路线和优先级，与MES、WMS、ERP及现场接口集成，并把状态与异常反馈给人员和上位系统——暂停、恢复、绕行与人工接管都有明确规则。" },
+        { type: "p", text: "以配膳场景为例，运行流程形成闭环：从生产计划和物料需求生成配膳任务；按工位、批次和容器完成备料与多层校验；根据优先级、路线和现场状态调度AGV搬运；到达后确认工位、物料和任务状态；阻塞、缺料、设备异常和人工接管进入异常闭环。" },
+        { type: "img", src: "city-c.jpg" },
+        { type: "p", text: "任务来源、调度、校验、异常和人员协作形成闭环，AGV才能真正进入生产节奏。不同场景的运行数据来自不同材料，页面不把它们合并表述。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Solution & Practice / AGV",
     title: "让AGV设备、调度系统与现场流程协同工作",
@@ -824,49 +695,20 @@ window.TCI_PAGES = {
     heroImage: "city-c.jpg",
     cta: ["讨论AGV与现场集成", "contact/"],
     lead: "AGV落地不是单独采购一台设备，而是让任务来源、调度、校验、异常和人员协作形成闭环。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Solution snapshot",
-        title: "设备、系统与服务共同构成方案",
-        columns: 4,
-        items: [
-          { title: "设备", text: "根据载荷、路线、环境和安全要求选择AGV或AMR设备。" },
-          { title: "系统", text: "通过调度、地图、任务、状态和可视化管理连接多车运行。" },
-          { title: "服务", text: "覆盖现场评估、实施、系统集成、培训与持续运维。" },
-          { title: "适用场景", text: "机械制造、立体仓库、电商分拣及医药物流等现场。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Equipment + System + Service",
-        title: "从单机搬运走向集群协同",
-        text: "现场价值来自设备可靠性、调度系统与实施服务的共同作用。系统接收业务任务，协调车辆、路线和优先级，并把状态与异常反馈给人员和上位系统。",
-        image: "case-agv-poster.webp",
-        imageFit: "contain",
-        bullets: ["设备：载荷、续航、导航与安全能力", "系统：任务、地图、交通管制和集群调度", "集成：MES、WMS、ERP及现场接口", "服务：评估、实施、培训和运行支援", "异常：暂停、恢复、绕行与人工接管"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Operation flow",
-        title: "代表场景：配膳、校验与夜间搬运",
-        items: [
-          { year: "01", title: "任务生成", text: "从生产计划和物料需求生成配膳任务。" },
-          { year: "02", title: "备料与校验", text: "按工位、批次和容器完成准备与多层确认。" },
-          { year: "03", title: "调度与搬运", text: "根据优先级、路线和现场状态分配AGV。" },
-          { year: "04", title: "到达与交接", text: "确认工位、物料和任务状态。" },
-          { year: "05", title: "异常闭环", text: "处理阻塞、缺料、设备异常和人工接管。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "50工位夜间搬运场景与其他室外AGV运行数据属于不同材料，页面不把两组数据合并。"
-      }
-    ],
   },
 
   "case-outsystems": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "预算管理散落在各个部门的Excel里：版本不一、汇总复杂，经营变化难以及时掌握。项目以OutSystems建设预算与预实管理平台，把分散流程整合为统一数据、统一流程、统一权限的业务系统。" },
+        { type: "img", src: "case-outsystems-poster.webp" },
+        { type: "p", text: "项目不只是把Excel搬到网页，而是重新梳理预算编制、调整、审批、实绩导入和差异确认，让每个角色在同一套流程和数据口径中工作：预算编制、版本和期间管理；审批、权限与角色控制；实绩数据导入与预实比较；提醒、查询和管理视图；并在低代码平台上持续迭代。" },
+        { type: "img", src: "office-team.jpg" },
+        { type: "p", text: "交付背后是专业团队的支撑：OutSystems领域的认证与项目经验、面向业务场景的定制开发、离岸与国内协同服务、从建设到运维的一站式支援，以及质量、安全与持续改善机制。低代码的价值不只是开发更快，而是让分散流程形成可运营的系统。" },
+        { type: "p", text: "实施路径从流程与表格盘点开始，识别参与角色、版本、公式和审批路径；随后统一数据模型、角色和业务规则；低代码快速建设，分阶段完成核心页面、流程和接口；导入与验证阶段迁移必要数据并与业务用户共同验证；最后根据使用反馈持续改进流程和分析能力。用户规模与量化成效存在不同资料口径，发布前需统一确认。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Case / Low-code Platform",
     title: "把分散的Excel预算流程，整合为统一业务平台",
@@ -874,57 +716,19 @@ window.TCI_PAGES = {
     heroImage: "office-team.jpg",
     cta: ["讨论低代码与业务系统", "contact/"],
     lead: "低代码的价值不只是开发更快，而是让分散流程形成可运营的系统。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
-        columns: 4,
-        items: [
-          { title: "业务场景", text: "企业运营 / 预算与预实管理。" },
-          { title: "原有课题", text: "Excel分散、版本不一、汇总复杂，难以及时掌握经营变化。" },
-          { title: "解决方式", text: "OutSystems、统一数据、流程权限和管理界面。" },
-          { title: "内容状态", text: "B级素材；用户规模、流程范围与量化结果待确认。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Delivery foundation",
-        title: "以专业团队支撑低代码长期演进",
-        text: "新整理资料补充了苏州大宇宙在OutSystems领域的团队、认证、定制开发和长期运维能力。具体能力数字存在不同统计时点，页面暂以定性表达为主。",
-        image: "case-outsystems-poster.webp",
-        imageFit: "contain",
-        bullets: ["专业认证与项目经验", "面向业务场景的定制开发", "离岸与国内协同服务", "从建设到运维的一站式支援", "质量、安全与持续改善机制"]
-      },
-      {
-        type: "split",
-        index: "03 / Business platform",
-        title: "统一数据，也统一业务动作",
-        text: "项目不仅把Excel搬到网页，而是重新梳理预算编制、调整、审批、实绩导入和差异确认，让每个角色在同一套流程和数据口径中工作。",
-        image: "office-exact-clean.jpg",
-        bullets: ["预算编制、版本和期间管理", "审批、权限与角色控制", "实绩数据导入与预实比较", "提醒、查询和管理视图", "低代码平台上的持续迭代"]
-      },
-      {
-        type: "timeline",
-        index: "04 / Delivery",
-        title: "从分散表格到持续演进平台",
-        items: [
-          { year: "01", title: "流程与表格盘点", text: "识别参与角色、版本、公式和审批路径。" },
-          { year: "02", title: "数据与权限设计", text: "统一数据模型、角色和业务规则。" },
-          { year: "03", title: "低代码快速建设", text: "分阶段完成核心页面、流程和接口。" },
-          { year: "04", title: "导入与验证", text: "迁移必要数据并与业务用户共同验证。" },
-          { year: "05", title: "运营与扩展", text: "根据使用反馈持续改进流程和分析能力。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "现有资料可支持技术栈、项目期间和业务变化；800+与2000+人月来自不同资料口径，用户规模、统计时点与量化成效需在发布前统一确认。"
-      }
-    ],
   },
 
   "case-sap-managed": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "企业核心系统的长期运维，难题在于跨区域、跨语言、多模块和外围系统需要稳定协作。项目以固定团队承接SAP及周边系统的持续运行：中日双语咨询与需求沟通、SAP模块与外围系统支援、工单与变更管理、知识沉淀和跨据点协作提案。" },
+        { type: "img", src: "office-entry.jpg" },
+        { type: "p", text: "服务循环让稳定运行与持续改善并行：受理与分级，确认影响范围、优先级和责任团队；分析与处理，结合系统、业务和历史知识定位问题；测试与变更，对修复和改善进行评审、测试与发布控制；知识沉淀，更新文档、FAQ、操作手册和交接内容；改善提案，从重复问题和业务变化中识别优化机会。" },
+        { type: "img", src: "team-exact-clean.jpg" },
+        { type: "p", text: "长期运维不是保持不变，而是在稳定运行的基础上持续理解并改善业务。团队在跨据点沟通中沉淀业务知识，使问题解决不只依赖个别人员。对外服务年限与当前合同状态需再次核实后表述。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Case / SAP Managed Service",
     title: "以稳定团队支撑多据点SAP长期运行与改善",
@@ -932,48 +736,20 @@ window.TCI_PAGES = {
     heroImage: "office-entry.jpg",
     cta: ["讨论核心系统长期运维", "contact/"],
     lead: "长期运维不是保持不变，而是在稳定运行的基础上持续理解并改善业务。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
-        columns: 4,
-        items: [
-          { title: "业务场景", text: "企业核心系统 / SAP长期运维。" },
-          { title: "原有课题", text: "跨区域、跨语言、多模块和外围系统需要稳定协作。" },
-          { title: "解决方式", text: "固定团队、双语沟通、工单、变更和持续改善。" },
-          { title: "内容状态", text: "A/B级素材；当前合同、公开年限、SLA与工单数据待确认。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / Managed service",
-        title: "把业务理解留在长期服务团队中",
-        text: "团队持续处理咨询、故障、变更和外围系统联动，在跨据点沟通中沉淀业务知识，使问题解决不只依赖个别人员。",
-        image: "team-exact-clean.jpg",
-        bullets: ["中日双语咨询与需求沟通", "SAP模块与外围系统支援", "工单、问题、变更与发布管理", "知识、文档和标准操作沉淀", "跨据点协作与持续改善提案"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Service cycle",
-        title: "稳定运行与持续改善并行",
-        items: [
-          { year: "01", title: "受理与分级", text: "确认影响范围、优先级和责任团队。" },
-          { year: "02", title: "分析与处理", text: "结合系统、业务和历史知识定位问题。" },
-          { year: "03", title: "测试与变更", text: "对修复和改善进行评审、测试与发布控制。" },
-          { year: "04", title: "知识沉淀", text: "更新文档、FAQ、操作手册和交接内容。" },
-          { year: "05", title: "改善提案", text: "从重复问题和业务变化中识别优化机会。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "资料可支持团队体制、服务模块、据点和长期改善故事；对外年限及当前合同状态需再次核实。"
-      }
-    ],
   },
 
   "case-bi-analytics": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "经营分析的第一道障碍不是工具，而是数据口径：销售、物流和财务各自记录，来源分散、定义不一，人工汇总和核对耗时且容易出错。" },
+        { type: "img", src: "data-clean.jpg" },
+        { type: "p", text: "项目把多来源数据按统一规则整合，自动形成经营视图和月度报告：统一指标定义、期间和组织口径；支持月度报告和差异分析；保留数据追溯与异常核对。人员由此把更多时间用于分析差异与讨论行动。" },
+        { type: "p", text: "实施从指标与口径确认开始，明确经营问题、指标定义和责任部门；随后连接并清理数据，处理缺失、重复和格式差异；建立可复用的数据模型和分析页面；按月自动生成必要视图并保留核对机制；最后根据管理讨论持续调整指标和呈现方式。" },
+        { type: "img", src: "data-14.jpg" },
+        { type: "p", text: "报表自动化只是第一步，更重要的是让不同部门围绕同一套数据理解业务。现有资料可支持月报制作缩短与人工错误减少的定性结论，具体时长与使用规模待确认。" }
+      ]
+    },
     nav: "cases",
     eyebrow: "Case / BI Analytics",
     title: "统一经营数据口径，让月度分析更及时可靠",
@@ -981,45 +757,6 @@ window.TCI_PAGES = {
     heroImage: "data-14.jpg",
     cta: ["讨论数据与经营分析", "contact/"],
     lead: "报表自动化只是第一步，更重要的是让不同部门围绕同一套数据理解业务。",
-    sections: [
-      {
-        type: "cards",
-        index: "01 / Project snapshot",
-        title: "案例概览",
-        columns: 4,
-        items: [
-          { title: "业务场景", text: "企业运营 / 月度经营分析。" },
-          { title: "原有课题", text: "数据来源分散、口径不一、人工汇总和核对耗时。" },
-          { title: "解决方式", text: "数据整合、口径统一、BI视图与月度报告自动化。" },
-          { title: "内容状态", text: "B级素材；制作时间前后对比、用户与报表规模待确认。" }
-        ]
-      },
-      {
-        type: "split",
-        index: "02 / One view",
-        title: "从数据准备走向经营判断",
-        text: "项目将销售、物流和财务等数据按统一规则整合，自动形成经营视图和月度报告，让人员把更多时间用于分析差异与讨论行动。",
-        image: "data-clean.jpg",
-        bullets: ["连接多个业务数据来源", "统一指标定义、期间和组织口径", "自动更新经营分析视图", "支持月度报告和差异分析", "保留数据追溯与异常核对"]
-      },
-      {
-        type: "timeline",
-        index: "03 / Data to decision",
-        title: "让数据从汇总走向行动",
-        items: [
-          { year: "01", title: "指标与口径确认", text: "明确经营问题、指标定义和责任部门。" },
-          { year: "02", title: "数据连接与清理", text: "整合来源并处理缺失、重复和格式差异。" },
-          { year: "03", title: "模型与视图建设", text: "建立可复用的数据模型和分析页面。" },
-          { year: "04", title: "报告自动化", text: "按月生成必要视图并保留核对机制。" },
-          { year: "05", title: "使用与改善", text: "根据管理讨论持续调整指标和呈现方式。" }
-        ]
-      },
-      {
-        type: "quote",
-        label: "Evidence boundary",
-        text: "现有资料支持月度报告制作缩短和人工错误减少的定性结论；具体时长与使用规模待确认。"
-      }
-    ],
   },
 
   "case-ai-knowledge-base": {
