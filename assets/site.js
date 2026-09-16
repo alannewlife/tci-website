@@ -409,6 +409,7 @@
     return `
       <section class="page-compact-head">
         <div class="page-compact-wrap">
+          <a class="post-back" href="${url("cases/")}"><span aria-hidden="true">←</span><span class="post-back-label">案例中心</span></a>
           <small class="compact-meta">${esc(page.eyebrow)}</small>
           <h1 class="cn-serif">${esc(page.title)}</h1>
           ${page.article ? "" : `<p>${esc(page.description)}</p>`}
@@ -428,6 +429,18 @@
           ${blocks.map((block) => block.type === "img"
             ? `<img src="${url(`assets/${block.src}`)}" alt="" loading="lazy" />`
             : `<p>${esc(block.text)}</p>`).join("")}
+          ${page.related?.length ? `
+          <div class="post-related">
+            <small>相关案例</small>
+            <div class="post-related-grid">
+              ${page.related.map((item) => `
+                <a href="${url(item.href)}">
+                  <img src="${url(`assets/${item.image}`)}" alt="" loading="lazy"${item.imagePosition ? ` style="object-position:${esc(item.imagePosition)}"` : ""} />
+                  <strong>${esc(item.title)}</strong>
+                  <p>${esc(item.text)}</p>
+                </a>`).join("")}
+            </div>
+          </div>` : ""}
         </div>
       </article>`;
   }
@@ -668,6 +681,38 @@
     }).catch(() => undefined);
   }
 
+  function initPostBack() {
+    const link = document.querySelector(".post-back");
+    if (!link) return;
+    let useHistory = false;
+    let label = "案例中心";
+    try {
+      const ref = document.referrer ? new URL(document.referrer) : null;
+      if (ref && ref.origin === location.origin && ref.pathname !== location.pathname) {
+        const names = [
+          [/capabilities\/ai\/?$/, "生成式AI与应用"],
+          [/capabilities\/digital-engineering\/?$/, "数字工程与系统开发"],
+          [/capabilities\/smart-factory-robotics\/?$/, "智能制造与机器人"],
+          [/capabilities\/cloud-operations\/?$/, "云与智能运维"],
+          [/industries\/manufacturing-logistics\/?$/, "制造与物流"],
+          [/industries\/enterprise-operations\/?$/, "企业运营与专业服务"],
+          [/industries\/it-infrastructure\/?$/, "IT与基础设施"],
+          [/cases\/?$/, "案例中心"],
+          [/insights\/?$/, "洞察与新闻"],
+          [/about\/?$/, "关于我们"]
+        ];
+        const hit = names.find(([pattern]) => pattern.test(ref.pathname));
+        label = hit ? hit[1] : "返回上一页";
+        useHistory = true;
+      }
+    } catch (error) { /* referrer 不可解析时保持兜底链接 */ }
+    link.querySelector(".post-back-label").textContent = label;
+    if (useHistory) link.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.back();
+    });
+  }
+
   renderHeader();
   if (pageId) renderPage();
   renderFooter();
@@ -677,5 +722,6 @@
   initForm();
   initReveals();
   initProgress();
+  initPostBack();
   initCalendarTool();
 })();

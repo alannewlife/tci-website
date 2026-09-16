@@ -532,6 +532,11 @@ window.TCI_PAGES = {
         { type: "p", text: "AI负责快速检索与组织答案，专业人员负责关键判断、例外处理和最终责任。" }
       ]
     },
+    related: [
+      { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", href: "cases/mes-query-copilot/" },
+      { title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", href: "cases/pharma-budget-contract-generation/" },
+      { title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", href: "cases/it-operations-agent-platform/" }
+    ],
     nav: "cases",
     eyebrow: "Case / Manufacturing Knowledge",
     title: "将分散的制造经验，转化为可检索的企业知识",
@@ -593,6 +598,11 @@ window.TCI_PAGES = {
         { type: "p", text: "页面只呈现已有资料能够支持的技术构成；效率、用户数与生产运行情况待项目负责人确认。" }
       ]
     },
+    related: [
+      { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", href: "cases/manufacturing-knowledge/" },
+      { title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", href: "cases/iot-mes-platform/" },
+      { title: "APS智能生产计划", text: "连接排程、交期、库存和现场反馈。", image: "case-aps-poster.webp", imagePosition: "50% 16%", href: "cases/aps-production-planning/" }
+    ],
     nav: "cases",
     eyebrow: "Case / MES Copilot",
     title: "让MES数据查询，进入自然语言工作流",
@@ -703,6 +713,11 @@ window.TCI_PAGES = {
         { type: "p", text: "候选效率指标只作为内部评估线索；生产化状态、安全机制和运行数据确认后再对外使用。" }
       ]
     },
+    related: [
+      { title: "基础设施现代化与云迁移", text: "从脱VMware、超融合迁移到企业上云。", image: "case-vmware-poster.webp", imagePosition: "50% 10%", href: "cases/infrastructure-modernization/" },
+      { title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", href: "cases/sap-long-term-managed-services/" },
+      { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", href: "cases/manufacturing-knowledge/" }
+    ],
     nav: "cases",
     eyebrow: "Case / AIOps Agent",
     title: "把知识、监控与工具，接入统一运维入口",
