@@ -3,7 +3,7 @@ window.TCI_PAGES = {
     nav: "capabilities",
     eyebrow: "AI Applications & Agents",
     title: "让AI从回答问题，走向完成任务",
-    description: "将模型、企业知识、业务规则和数字工具组合成可用的AI应用与智能体，并嵌入客户现有系统。",
+    description: "将模型、企业知识、业务规则和数字工具组合成可用的AI应用与智能体，并连接客户现有系统。",
     heroImage: "data-system.jpg",
     cta: ["从一个可验证场景开始", "contact/"],
     lead: "让AI拥有业务所需的<em>上下文、模型与工具</em>，并在可控流程中行动。",
@@ -28,8 +28,7 @@ window.TCI_PAGES = {
         index: "02 / Key perspective",
         title: "AI应用的五层全貌",
         text: "AI应用不是单点工具，而是从算力到现场的五层结构；真正决定落地效果的，是各层的选型与层间的连接治理。",
-        image: "ai-five-layer-overview.png",
-        imageFit: "contain-dark",
+        diagram: "five-layer",
         wideMedia: true,
         bullets: [
           "最上层是业务与现场应用，AI进入办公、研发、业务系统与制造现场的日常作业。",
@@ -40,13 +39,30 @@ window.TCI_PAGES = {
         ]
       },
       {
+        type: "split",
+        index: "03 / Knowledge engineering",
+        title: "知识资产",
+        text: "AI能力建设最重要的一环是信息知识资产的治理，原始的资料和数据，需要通过必要的提炼，才能作为给AI产出价值的养料。",
+        diagram: "knowledge-pipeline",
+        wideMedia: true,
+        flip: true,
+        flush: true,
+        bullets: [
+          "数据源：散落的PDF、PPT、DOC、XLS等业务资料统一归集，作为知识工程的原料。",
+          "原始数据层：通过解析、OCR、清洗，把杂乱文件整理成可处理的数据文件。",
+          "知识编译层：将RAW数据编译为规整的开放知识格式，内容、元数据的关联复合体。",
+          "终端消费层：编译后的知识可以发布到Wiki浏览、RAG检索问答、DB数仓等，供智能体调用。",
+          "一次编译、多端复用：知识资产随使用持续沉淀，新的消费终端可随时接入。"
+        ]
+      },
+      {
         type: "cases",
-        index: "03 / Cases & solutions",
+        index: "04 / Cases & solutions",
         title: "案例和解决方案",
         items: [
-          { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", tags: ["本地部署", "知识库"], href: "cases/manufacturing-knowledge/" },
-          { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", tags: ["制造", "系统内嵌AI"], href: "cases/mes-query-copilot/" },
-          { title: "IT运维智能体平台", text: "把知识、工具与任务编排接入运维流程。", image: "cloud.jpg", tags: ["Agent", "AIOps"], href: "cases/it-operations-agent-platform/" }
+          { kind: "解决方案", title: "企业知识库", text: "把分散的资料与经验，变成可检索、可追溯的答案。", image: "data-24.jpg", tags: ["知识库", "RAG"], href: "cases/ai-knowledge-base/" },
+          { kind: "解决方案", title: "智能体与工作流", text: "以LLM为中枢，把知识、工具与任务编排进业务流程。", image: "data-lattice.jpg", tags: ["Agent", "工作流"], href: "cases/ai-agent-platform/" },
+          { kind: "解决方案", title: "本地大模型部署", text: "从GPU选型到推理服务与企业接入，数据不出企业边界。", image: "cloud.jpg", tags: ["本地部署", "GPU"], href: "cases/local-llm-deployment/" }
         ]
       }
     ],
@@ -532,14 +548,9 @@ window.TCI_PAGES = {
         { type: "p", text: "AI负责快速检索与组织答案，专业人员负责关键判断、例外处理和最终责任。" }
       ]
     },
-    related: [
-      { title: "MES辅助查询 Copilot", text: "用自然语言查询与分析MES数据。", image: "data-monitor.jpg", href: "cases/mes-query-copilot/" },
-      { title: "医药估算合同生成", text: "多智能体与人工复核结合处理复杂文档。", image: "data-18.jpg", href: "cases/pharma-budget-contract-generation/" },
-      { title: "IT运维智能体平台", text: "把知识、工具和任务编排接入运维流程。", image: "data-lattice.jpg", href: "cases/it-operations-agent-platform/" }
-    ],
     nav: "cases",
     eyebrow: "Case / Manufacturing Knowledge",
-    title: "将分散的制造经验，转化为可检索的企业知识",
+    title: "将分散的制造经验转化为可检索的企业知识",
     description: "本地部署模型与企业知识库结合，在保证数据安全的前提下，为品质、制造与设备咨询提供统一入口。",
     heroImage: "data-22.jpg",
     cta: ["讨论相似场景", "contact/"],
@@ -598,11 +609,6 @@ window.TCI_PAGES = {
         { type: "p", text: "页面只呈现已有资料能够支持的技术构成；效率、用户数与生产运行情况待项目负责人确认。" }
       ]
     },
-    related: [
-      { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", href: "cases/manufacturing-knowledge/" },
-      { title: "IoT统合型制造执行系统", text: "覆盖计划、执行、追溯与分析。", image: "case-iot-mes-poster.webp", imagePosition: "50% 12%", href: "cases/iot-mes-platform/" },
-      { title: "APS智能生产计划", text: "连接排程、交期、库存和现场反馈。", image: "case-aps-poster.webp", imagePosition: "50% 16%", href: "cases/aps-production-planning/" }
-    ],
     nav: "cases",
     eyebrow: "Case / MES Copilot",
     title: "让MES数据查询，进入自然语言工作流",
@@ -713,11 +719,6 @@ window.TCI_PAGES = {
         { type: "p", text: "候选效率指标只作为内部评估线索；生产化状态、安全机制和运行数据确认后再对外使用。" }
       ]
     },
-    related: [
-      { title: "基础设施现代化与云迁移", text: "从脱VMware、超融合迁移到企业上云。", image: "case-vmware-poster.webp", imagePosition: "50% 10%", href: "cases/infrastructure-modernization/" },
-      { title: "SAP长期运维", text: "连接中日团队与外围系统，持续支撑核心业务。", image: "office-entry.jpg", href: "cases/sap-long-term-managed-services/" },
-      { title: "制造企业本地知识库", text: "让品质、制造和设备知识可检索、可复用。", image: "data-22.jpg", href: "cases/manufacturing-knowledge/" }
-    ],
     nav: "cases",
     eyebrow: "Case / AIOps Agent",
     title: "把知识、监控与工具，接入统一运维入口",
@@ -1021,6 +1022,77 @@ window.TCI_PAGES = {
     ],
   },
 
+  "case-ai-knowledge-base": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "制度、品质案例、设备资料和制造经验分散在不同文件与人员中：查找耗时，答案口径不一，新人需要较长时间才能熟悉现场知识。对外的应答面临另一个问题：咨询量大、重复提问占比高，多账号、多渠道的回答需要统一口径，人工干预成本居高不下。" },
+        { type: "img", src: "data-24.jpg" },
+        { type: "p", text: "我们以私有大模型与RAG知识库为核心，把分散在文档、系统和人员经验中的知识整理成可检索、可复用的企业资产：内部咨询与对外应答共用同一套知识，答案带来源引用，并配以权限边界与人工确认。" },
+        { type: "p", text: "导入按问题复杂度分层。任何检索问题都可以分成四类——显性事实、隐性事实、可解释性推理和隐性洞察，复杂度、解题难度和成本依次提升，我们对应提供L1～L4的导入服务：先从“是什么”的基础查询做起，再逐步进入关联多数据源的隐性事实和可溯源的深度推理。支撑技术包括RAG、GraphRAG与TreeSearch、思维链提示，以及面向垂直领域的模型微调与OCR预处理。" },
+        { type: "p", text: "知识库不是把文件搬进去，而是一条编译流水线：业务资料（PDF、PPT、Word、Excel）统一归集，经解析、OCR与清洗整理为RAW数据，再编译成开放知识格式（OKF），最终发布为WIKI浏览、RAG问答或DB数仓。一次编译、多端复用，知识资产随使用持续沉淀，新的消费终端可以随时接入。" },
+        { type: "img", src: "data-13.jpg" },
+        { type: "p", text: "实施分五个阶段：场景与资料盘点，确认使用者、问题类型、文档范围和安全边界；知识加工与PoC，清理、切分、标注资料并验证检索与回答质量；环境与权限，接入账号、权限和日志；界面与流程集成，提供统一入口、来源引用、反馈与知识维护机制；评测与运营，持续评估准确性、使用情况、成本和知识新鲜度。" },
+        { type: "p", text: "制造企业本地知识库与抖音评论自动回复是这条路线的两个实践方向：前者以Qwen与Xinference全本地部署，为品质与制造知识提供统一入口；后者以评论回复知识库配合自动回复工作流与人工审核，降低人工干预成本。文中效率数字为内部评估口径，对外使用前确认。" },
+        { type: "p", text: "AI负责快速检索与组织答案，专业人员负责关键判断、例外处理和最终责任。" }
+      ]
+    },
+    nav: "cases",
+    eyebrow: "Solution / Knowledge Base",
+    title: "把企业知识，变成可检索、可追溯的答案",
+    description: "以私有大模型与RAG知识库为核心，把分散的资料与经验整理成可检索、可追溯的企业资产，服务内部咨询与客服应答。",
+    heroImage: "data-24.jpg",
+    cta: ["评估你的知识库场景", "contact/"],
+    lead: "知识库的价值不在于“能聊”，而在于答案的口径、来源与权限都可控。",
+  },
+
+  "case-ai-agent-platform": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "重复的文档整理与资料过滤、跨系统的数据查询、依赖专家经验的运维任务——这些工作有清晰的输入和明确的规则，适合拆解为智能体可执行的任务链。要补的不是又一个聊天窗口，而是把知识、工具与流程连起来的执行能力。" },
+        { type: "img", src: "data-lattice.jpg" },
+        { type: "p", text: "智能体以LLM为智能中枢，通过提示词工程、上下文工程与编排工程三层能力构建运行体系，并结合本地知识库（RAG）、长期记忆（Memory）、技能（Skill）、MCP、CLI以及业务工具，实现信息获取、上下文管理、任务编排与业务流执行。智能体的角色、规则与记忆，可以SOUL.md、Memory.md等文件形式配置化定义，便于版本化与复用。" },
+        { type: "p", text: "智能体不是一种东西。平台编排型（如Dify）以中心化平台统一编排知识、工具、权限与审计，品质成本可控、边界明确；本地运行时型（如Codex、Workbuddy）直接操作文件、应用、终端与设备，自由度最高，治理要求也最高；云端托管运行时（如Agent Core）提供多空间托管与隔离执行。载体不同，能力边界与治理方式也不同——能力上限越高，治理难度越高。" },
+        { type: "img", src: "data-20.jpg" },
+        { type: "p", text: "实施路径分四步：先通过合适的渠道接入模型——本地安装、云端接入或算力租赁；再创建AI中间层，提供提示词、知识库、工作流与工具集等工程组件；然后结合业务搭建智能体；最后通过接口把能力嵌入业务系统，从聊天交互到定制化的操作界面，让最终用户方便有效地操作AI功能。" },
+        { type: "p", text: "实践案例覆盖多个方向：IT运维智能体平台以统一入口承接应用部署、参数设置与SQL查询的自动化；医药估算合同生成把复杂文档流程拆解为多个智能体步骤，并以Human-in-the-Loop保留人工复核；MES辅助查询Copilot让MES数据进入自然语言工作流；招聘履历整理器与文件资料翻译辅助处理批量文档与中日语料对齐。同样的架构，可适配不同的标准化任务与文件处理场景。" },
+        { type: "p", text: "严肃业务场景下，人工介入仍然是必要的。按用户、场景和操作风险划分“可建议、可自动执行、必须人工确认”的边界，执行中记录参数、过程、结果与异常处理。智能体负责检索、组织与执行授权内的动作；关键判断、例外处理和最终责任，仍然在人这边。文中效率数字为内部评估口径，生产化状态确认后对外使用。" }
+      ]
+    },
+    nav: "cases",
+    eyebrow: "Solution / AI Agents & Workflows",
+    title: "让智能体进入业务流程，而不只是对话",
+    description: "以LLM为智能中枢，组合知识库、长期记忆、技能与业务工具，把重复任务和跨系统流程交给可控的智能体完成。",
+    heroImage: "data-lattice.jpg",
+    cta: ["从一个可验证场景开始", "contact/"],
+    lead: "能被自动执行的，永远在授权边界之内；关键判断，仍然在人。",
+  },
+
+  "case-local-llm-deployment": {
+    compact: true,
+    article: {
+      blocks: [
+        { type: "p", text: "一些数据不能进入外部公共环境，一些行业对数据留存与合规有明确要求，云端按Token计费的成本随用量增长变得难以控制——把模型部署到企业自己的服务器上，由此成为一个现实的选项。" },
+        { type: "img", src: "cloud.jpg" },
+        { type: "p", text: "先想清楚控制边界：“本地”描述的是部署控制权，不等于开源、免费、更安全或更便宜。云端托管由厂商负责底层服务与扩容，企业重点管理区域、留存与合规；本地自托管由企业持有权重，也承担GPU、Runtime、容量与生命周期。先确认要的是控制权，再谈硬件与成本；实践中按数据分级划线——敏感场景走本地，通用任务按需上云。" },
+        { type: "p", text: "本地部署不是装一个模型，而是四层结构。基础层回答模型装在哪里、怎样供电散热与运维：Linux、驱动、CUDA、存储、网络与BMC；推理层以vLLM等推理服务把模型权重转成OpenAI-compatible API；平台层以企业AI应用中心承载Apps、Agents与Skills/MCP工具，AI网关负责认证、路由与限流；集成层让ERP、MES、Portal与批处理经网关接入AI能力。身份、权限、策略、监控与审计，横切全部四层。" },
+        { type: "p", text: "硬件按预算与目标负载分三档：24GB级开发/PoC（如GeForce RTX 5090 D v2，工作站整机约4–5万元），48GB级成熟生产（如NVIDIA L40S，2×GPU整机约30–35万元起），84GB级高显存生产（如RTX PRO 6000D Blackwell Server，约30–40万元起）。显存可行只是起点：实际显存=权重+KV Cache+运行时工作区+安全余量；CPU与内存、存储、供电散热、PCIe拓扑、运维与备件等整机条件，共同决定生产可靠性。型号与价格为2026年8月参考快照，以项目评估与采购为准。" },
+        { type: "img", src: "data-system.jpg" },
+        { type: "p", text: "模型文件、推理栈与标准Endpoint，才构成最小的本地LLM服务；企业多用户场景通常以vLLM作为第一条技术基线。用户数不能直接换算成GPU数——容量按到达率、并发、上下文长度与SLO测算，部署验收看六项核心指标：峰值显存与KV Cache余量、p95 TTFT、p95 TPOT、SLO Goodput、最大可持续负载，以及成功率、超时与OOM。装上只是开始，达标才算服务；测试条件必须固定，结果才可以比较。" },
+        { type: "p", text: "本地大模型是内部服务边界，不是裸端点。业务系统与受控客户端经企业AI应用中心统一接入，AI网关治理模型请求，数据源经MCP/Connector提供受控数据与业务动作；服务身份、对象级授权、密钥管理与日志最小化，构成共同的治理边界。" },
+        { type: "p", text: "制造企业本地知识库（Qwen与Xinference全本地部署，数据不出企业边界）正是这条路线的落地；MES辅助查询Copilot则是“本地整理与编排、云端推理”的混合参考。云端与本地不是二选一——按数据分级与场景要求，组合出可控且划算的模型策略。" }
+      ]
+    },
+    nav: "cases",
+    eyebrow: "Solution / Local LLM Deployment",
+    title: "从一张GPU，到企业可用的本地大模型服务",
+    description: "从模型、显存与GPU选型，到推理服务、容量验收与企业接入——数据不出企业边界的本地大模型部署路线。",
+    heroImage: "cloud.jpg",
+    cta: ["讨论本地部署选型", "contact/"],
+    lead: "本地部署不是“装一个模型”，而是交付一个可运营的内部服务。",
+  },
+
   about: {
     nav: "about",
     eyebrow: "About TCI Suzhou",
@@ -1132,3 +1204,22 @@ window.TCI_PAGES = {
   },
 
 };
+
+// 案例详情页上一篇/下一篇的顺序，增删案例或调整顺序改这里即可。
+window.TCI_CASE_ORDER = [
+  ["case-infrastructure-modernization", "cases/infrastructure-modernization/"],
+  ["case-aps-planning", "cases/aps-production-planning/"],
+  ["case-iot-mes", "cases/iot-mes-platform/"],
+  ["case-detail", "cases/manufacturing-knowledge/"],
+  ["case-ai-knowledge-base", "cases/ai-knowledge-base/"],
+  ["case-ai-agent-platform", "cases/ai-agent-platform/"],
+  ["case-local-llm-deployment", "cases/local-llm-deployment/"],
+  ["case-mes-copilot", "cases/mes-query-copilot/"],
+  ["case-pharma-contract", "cases/pharma-budget-contract-generation/"],
+  ["case-it-operations-agent", "cases/it-operations-agent-platform/"],
+  ["case-smart-warehouse", "cases/smart-warehouse-paperless/"],
+  ["case-agv-kitting", "cases/agv-kitting-management/"],
+  ["case-outsystems", "cases/outsystems-business-platform/"],
+  ["case-sap-managed", "cases/sap-long-term-managed-services/"],
+  ["case-bi-analytics", "cases/bi-management-analytics/"]
+];

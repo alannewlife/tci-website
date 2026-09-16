@@ -37,6 +37,9 @@
     "case-infrastructure-modernization": { key: "cases", group: "案例", current: "基础设施现代化与云迁移", href: "cases/" },
     "case-aps-planning": { key: "cases", group: "案例", current: "APS智能生产计划", href: "cases/" },
     "case-iot-mes": { key: "cases", group: "案例", current: "IoT统合型制造执行系统", href: "cases/" },
+    "case-ai-knowledge-base": { key: "cases", group: "案例", current: "企业知识库", href: "cases/" },
+    "case-ai-agent-platform": { key: "cases", group: "案例", current: "智能体与工作流", href: "cases/" },
+    "case-local-llm-deployment": { key: "cases", group: "案例", current: "本地大模型部署", href: "cases/" },
     insights: { key: "insights", group: "洞察", current: "洞察与新闻", href: "insights/" },
     about: { key: "about", group: "关于我们", current: "公司介绍", href: "about/" },
     contact: { key: "contact", group: "联系", current: "联系我们", href: "contact/" }
@@ -190,7 +193,7 @@
             </div>
             <div class="page-hero-aside">
               <p>${esc(page.description)}</p>
-              ${page.cta ? `<a class="pill-cta" href="${url(page.cta[1])}">${esc(page.cta[0])}<span class="arrow">↗</span></a>` : ""}
+              <div class="hero-rule" aria-hidden="true"></div>
               <div class="page-subnav">${subnav}</div>
             </div>
           </div>
@@ -229,15 +232,97 @@
       </div>`;
   }
 
+  function renderKnowledgePipeline() {
+    const stage = (i, head, headTone, body) => `
+        <div class="kp-stage reveal${headTone ? " is-accent" : ""}" style="--i:${i}">
+          <div class="kp-head">${head}</div>
+          <div class="kp-stage-body">${body}</div>
+        </div>`;
+    return `
+      <div class="kp-flow" role="img" aria-label="企业知识生产链：业务资料经过解析清洗与知识编译，形成可供Wiki、RAG与数据服务复用的知识资产。">
+        ${stage(0, "01 / 数据源", false, `
+          <div class="kp-title-block">
+            <small class="kp-eyebrow">BUSINESS FILES</small>
+            <h3>业务资料</h3>
+          </div>
+          <svg class="kp-doc" viewBox="92 260 154 216" aria-hidden="true">
+            <path d="M92 260 H212 L246 294 V476 H92 Z" />
+            <path d="M212 260 V294 H246" />
+            <path d="M120 324 H214 M120 360 H214 M120 396 H188" />
+            <rect x="120" y="442" width="70" height="12" />
+          </svg>
+          <div class="kp-chips" aria-hidden="true"><span>PDF</span><span>PPT</span><span>DOC</span><span>XLS</span></div>`)}
+        ${stage(1, "02 / 原始数据层", false, `
+          <div class="kp-title-block">
+            <small class="kp-eyebrow">RAW LAYER</small>
+            <h3>RAW</h3>
+          </div>
+          <ul class="kp-ops">
+            <li class="is-lime"><i>+</i><div><strong>解析 / OCR</strong><small>EXTRACT</small></div></li>
+            <li class="is-cream"><i>–</i><div><strong>清洗 / 去重</strong><small>CLEAN</small></div></li>
+            <li class="is-gray"><i>–</i><div><strong>统一命名</strong><small>RENAME</small></div></li>
+          </ul>`)}
+        ${stage(2, "03 / 知识编译层", true, `
+          <div class="kp-title-block">
+            <small class="kp-eyebrow">KNOWLEDGE COMPILER</small>
+            <h3>知识编译</h3>
+          </div>
+          <div class="kp-okf">
+            <strong>OKF</strong>
+            <small>Open Knowledge Format</small>
+            <div class="kp-okf-tiles">
+              <div><b>BODY</b><span>内容</span></div>
+              <div><b>META</b><span>元数据</span></div>
+              <div><b>LINK</b><span>关联</span></div>
+            </div>
+          </div>`)}
+        ${stage(3, "04 / 终端消费层", false, `
+          <div class="kp-title-block">
+            <small class="kp-eyebrow">PUBLISH &amp; CONSUME</small>
+            <h3>多端复用</h3>
+          </div>
+          <ul class="kp-outs">
+            <li class="is-lime"><strong>WIKI</strong><span>网页 / 查阅</span></li>
+            <li><strong>RAG</strong><span>向量 / 问答</span></li>
+            <li class="is-gray"><strong>DB</strong><span>数仓 / 检索</span></li>
+          </ul>`)}
+      </div>`;
+  }
+
+  function renderFiveLayers() {
+    const layer = (i, head, eyebrow, items) => `
+        <div class="fl-layer reveal" style="--i:${i}">
+          <div class="fl-head">${head}</div>
+          <div class="fl-body">
+            <small>${eyebrow}</small>
+            <div class="fl-items">${items.map((item) => `<span>${item}</span>`).join("")}</div>
+          </div>
+        </div>`;
+    return `
+      <div class="fl-flow" role="img" aria-label="AI应用五层架构：从上到下为业务与现场应用、企业公共能力与治理、Agent平台与运行、模型服务、云与算力基础。">
+        ${layer(0, "01 / 业务与现场应用", "OUTCOME", ["办公", "研发", "业务系统", "制造 / 非制造", "基础设施"])}
+        ${layer(1, "02 / 企业公共能力与治理", "GOVERN", ["网关", "身份", "数据 / 知识", "日志", "审计", "成本", "评测"])}
+        ${layer(2, "03 / Agent平台与运行", "REUSE", ["Workflow", "Runtime", "Skill", "MCP", "沙箱", "记忆", "调度"])}
+        ${layer(3, "04 / 模型服务", "MODELS", ["前沿模型", "国产模型", "本地模型", "模型 API"])}
+        ${layer(4, "05 / 云与算力基础", "FOUNDATION", ["GPU 服务器", "网络", "存储", "云"])}
+      </div>`;
+  }
+
   function renderSplit(section, index) {
-    const mediaClass = section.imageFit === "contain" ? " visual-document" : section.imageFit === "contain-dark" ? " visual-slide" : "";
-    const layoutClass = `${section.wideMedia ? " media-wide" : ""}${index % 2 ? " reverse" : ""}`;
+    const mediaClass = section.diagram ? " visual-diagram" : section.imageFit === "contain" ? " visual-document" : section.imageFit === "contain-dark" ? " visual-slide" : "";
+    const layoutClass = `${section.wideMedia ? " media-wide" : ""}${index % 2 ? " reverse" : ""}${section.flip ? " flip" : ""}${section.diagram ? " diagram-flush" : ""}`;
+    const diagrams = { "knowledge-pipeline": renderKnowledgePipeline, "five-layer": renderFiveLayers };
+    const media = section.diagram && diagrams[section.diagram]
+      ? diagrams[section.diagram]()
+      : `<img src="${url(`assets/${section.image}`)}" alt="" />`;
+    const mediaPos = section.flip ? " panel-right" : " panel-left";
+    const copyPos = section.flip ? " panel-left" : " panel-right";
     return `
       <div class="split-layout${layoutClass}">
-        <div class="split-media${mediaClass} reveal">
-          <img src="${url(`assets/${section.image}`)}" alt="" />
+        <div class="split-media${mediaClass}${mediaPos} reveal">
+          ${media}
         </div>
-        <div class="split-copy reveal">
+        <div class="split-copy${copyPos} reveal">
           <div class="section-index">${esc(section.index || "")}</div>
           <h2 class="cn-serif">${esc(section.title)}</h2>
           <p>${esc(section.text)}</p>
@@ -390,10 +475,11 @@
       </div>`;
   }
 
-  function renderSection(section, index) {
+  function renderSection(section, index, siblings) {
     const id = section.id || `section-${index + 1}`;
     const lightSectionTypes = new Set(["cards", "timeline", "cases", "articles", "contact"]);
     const tone = section.tone || (lightSectionTypes.has(section.type) ? "light" : "dark");
+    const flush = `${section.flush ? " flush-after" : ""}${siblings?.[index + 1]?.flush ? " flush-before" : ""}`;
     let inner = "";
     if (section.type === "cards") inner = renderCards(section);
     if (section.type === "split") inner = renderSplit(section, index);
@@ -402,7 +488,7 @@
     if (section.type === "articles") inner = renderArticles(section);
     if (section.type === "quote") inner = renderQuote(section);
     if (section.type === "contact") inner = renderContact();
-    return `<section class="content-section section-${esc(section.type)} tone-${tone}" id="${id}"><div class="page-shell">${inner}</div></section>`;
+    return `<section class="content-section section-${esc(section.type)} tone-${tone}${flush}" id="${id}"><div class="page-shell">${inner}</div></section>`;
   }
 
   function renderCompactHead(page) {
@@ -417,6 +503,26 @@
       </section>`;
   }
 
+  function renderPostNav(currentKey) {
+    const order = window.TCI_CASE_ORDER || [];
+    const index = order.findIndex(([key]) => key === currentKey);
+    if (index === -1) return "";
+    const cell = (dir, entry) => {
+      if (!entry) return "";
+      const [key, href] = entry;
+      const title = pages[key]?.title || "";
+      return `
+        <a class="post-nav-cell ${dir === "prev" ? "is-prev" : "is-next"}" href="${url(href)}">
+          <small>${dir === "prev" ? "← 上一篇" : "下一篇 →"}</small>
+          <strong>${esc(title)}</strong>
+        </a>`;
+    };
+    const inner = cell("prev", order[index - 1]) + cell("next", order[index + 1]);
+    if (!inner) return "";
+    return `
+      <div class="post-nav">${inner}</div>`;
+  }
+
   function renderArticle(page) {
     const blocks = page.article.blocks
       || [{ type: "p", text: page.article.paragraphs?.[0] },
@@ -429,18 +535,7 @@
           ${blocks.map((block) => block.type === "img"
             ? `<img src="${url(`assets/${block.src}`)}" alt="" loading="lazy" />`
             : `<p>${esc(block.text)}</p>`).join("")}
-          ${page.related?.length ? `
-          <div class="post-related">
-            <small>相关案例</small>
-            <div class="post-related-grid">
-              ${page.related.map((item) => `
-                <a href="${url(item.href)}">
-                  <img src="${url(`assets/${item.image}`)}" alt="" loading="lazy"${item.imagePosition ? ` style="object-position:${esc(item.imagePosition)}"` : ""} />
-                  <strong>${esc(item.title)}</strong>
-                  <p>${esc(item.text)}</p>
-                </a>`).join("")}
-            </div>
-          </div>` : ""}
+          ${renderPostNav(pageId)}
         </div>
       </article>`;
   }
@@ -533,6 +628,38 @@
           });
         });
       });
+    });
+  }
+
+  function initPostBack() {
+    const link = document.querySelector(".post-back");
+    if (!link) return;
+    let useHistory = false;
+    let label = "案例中心";
+    try {
+      const ref = document.referrer ? new URL(document.referrer) : null;
+      if (ref && ref.origin === location.origin && ref.pathname !== location.pathname) {
+        const names = [
+          [/capabilities\/ai\/?$/, "生成式AI与应用"],
+          [/capabilities\/digital-engineering\/?$/, "数字工程与系统开发"],
+          [/capabilities\/smart-factory-robotics\/?$/, "智能制造与机器人"],
+          [/capabilities\/cloud-operations\/?$/, "云与智能运维"],
+          [/industries\/manufacturing-logistics\/?$/, "制造与物流"],
+          [/industries\/enterprise-operations\/?$/, "企业运营与专业服务"],
+          [/industries\/it-infrastructure\/?$/, "IT与基础设施"],
+          [/cases\/?$/, "案例中心"],
+          [/insights\/?$/, "洞察与新闻"],
+          [/about\/?$/, "关于我们"]
+        ];
+        const hit = names.find(([pattern]) => pattern.test(ref.pathname));
+        label = hit ? hit[1] : "返回上一页";
+        useHistory = true;
+      }
+    } catch (error) { /* referrer 不可解析时保持兜底链接 */ }
+    link.querySelector(".post-back-label").textContent = label;
+    if (useHistory) link.addEventListener("click", (event) => {
+      event.preventDefault();
+      history.back();
     });
   }
 
@@ -681,47 +808,15 @@
     }).catch(() => undefined);
   }
 
-  function initPostBack() {
-    const link = document.querySelector(".post-back");
-    if (!link) return;
-    let useHistory = false;
-    let label = "案例中心";
-    try {
-      const ref = document.referrer ? new URL(document.referrer) : null;
-      if (ref && ref.origin === location.origin && ref.pathname !== location.pathname) {
-        const names = [
-          [/capabilities\/ai\/?$/, "生成式AI与应用"],
-          [/capabilities\/digital-engineering\/?$/, "数字工程与系统开发"],
-          [/capabilities\/smart-factory-robotics\/?$/, "智能制造与机器人"],
-          [/capabilities\/cloud-operations\/?$/, "云与智能运维"],
-          [/industries\/manufacturing-logistics\/?$/, "制造与物流"],
-          [/industries\/enterprise-operations\/?$/, "企业运营与专业服务"],
-          [/industries\/it-infrastructure\/?$/, "IT与基础设施"],
-          [/cases\/?$/, "案例中心"],
-          [/insights\/?$/, "洞察与新闻"],
-          [/about\/?$/, "关于我们"]
-        ];
-        const hit = names.find(([pattern]) => pattern.test(ref.pathname));
-        label = hit ? hit[1] : "返回上一页";
-        useHistory = true;
-      }
-    } catch (error) { /* referrer 不可解析时保持兜底链接 */ }
-    link.querySelector(".post-back-label").textContent = label;
-    if (useHistory) link.addEventListener("click", (event) => {
-      event.preventDefault();
-      history.back();
-    });
-  }
-
   renderHeader();
   if (pageId) renderPage();
   renderFooter();
   initHomeHero();
   initFilm();
   initCaseFilters();
+  initPostBack();
   initForm();
   initReveals();
   initProgress();
-  initPostBack();
   initCalendarTool();
 })();
